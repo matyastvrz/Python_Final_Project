@@ -3,6 +3,8 @@ import pandas as pd
 import time
 import random
 import math
+import unidecode
+import re
 
 
 def request_sreality(page, category_main_str, category_type_str, locality_region_id=10):
@@ -88,16 +90,26 @@ def request_sreality_all():
 
 
 def get_link_and_image(df):
-    base_url = "https://www.sreality.cz"
+    base = "https://www.sreality.cz/detail"
 
-    df["url"] = df["_links"].apply(
-        lambda x: base_url + x["self"]["href"] if "self" in x else None
-    )
+    def slugify(text):
+        return unidecode.unidecode(text).lower().replace(" ", "-")
+    def clean_flat_type(x):
+        if isinstance(x, str):
+            return x.replace(" ", "")
+        return ""
+
+    def build_url(row):
+        seo = row["seo"]
+        type = clean_flat_type(row["flat_type"])
+        locality = slugify(seo["locality"])
+        hid = row["hash_id"]
+        return f"{base}/pronajem/byt/{type}/{locality}/{hid}"
+
+    df["url"] = df.apply(build_url, axis=1)
 
     df["image"] = df["_links"].apply(
-        lambda x: x["images"][0]["href"] if "images" in x and len(x["images"]) > 0 else None
-    )
-
+        lambda x: x["images"][0]["href"] if "images" in x and len(x["images"]) > 0 else None)
     return df
 
 def name_to_area(nm):
