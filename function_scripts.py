@@ -5,7 +5,11 @@ import random
 import math
 import unidecode
 import re
+import json
 
+#---------------------
+# sreality scraping
+#---------------------
 
 def request_sreality(page, category_main_str, category_type_str, locality_region_id=10):
     """
@@ -117,3 +121,93 @@ def name_to_area(nm):
     m2_idx = splitted_str.index('m²')
     return int(splitted_str[m2_idx - 1])
     
+
+
+
+#---------------------
+# bezrealitky scraping
+#---------------------
+
+def request_bezrealitky(search_url, max_pages=20):
+    all_extracted_data = []
+    session = requests.Session()
+    
+    # headers
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-GB,en;q=0.9"
+    })
+
+    for page_num in range(1, max_pages + 1):
+        # build url for page
+        current_url = f"{search_url}&page={page_num}"
+        print(f"Fetching: Page {page_num}...")
+        
+        try:
+            response = session.get(current_url, timeout=15)
+            response.raise_for_status()
+            
+            # extract json from the __NEXT_DATA__ script tag
+            html_content = response.text
+            start_marker = '<script id="__NEXT_DATA__" type="application/json">'
+            end_marker = '</script>'
+            
+            start_index = html_content.find(start_marker)
+            if start_index == -1:
+                print("End of results reached or structure changed.")
+                break
+                
+            json_start = start_index + len(start_marker)
+            json_end = html_content.find(end_marker, json_start)
+            json_str = html_content[json_start:json_end]
+            
+            data = json.loads(json_str)
+            apollo_cache = data.get('props', {}).get('pageProps', {}).get('apolloCache', {})
+            
+            # count listings
+            listings_on_page = 0
+            
+            for key, value in apollo_cache.items():
+                if key.startswith('Advert:'):
+                    listings_on_page += 1
+                    
+                    # extract variable info
+                    gps = value.get('gps', {})
+                    main_img = value.get('mainImage', {})
+                    img_id = main_img.get('__ref') if isinstance(main_img, dict) else None
+                    
+                    # get image url if exists
+                    image_url = 'N/A'
+                    if img_id and img_id in apollo_cache:
+                        image_url = apollo_cache[img_id].get('url({"filter":"RECORD_MAIN"})', 'N/A')
+
+                    all_extracted_data.append({
+                        'locality': value.get('address({"locale":"CS"})', 'N/A'),
+                        'price': value.get('price'),
+                        'flat_type': value.get('disposition', 'N/A'),
+                        'area': value.get('surface'),
+                        'url': f"https://www.bezrealitky.cz/nemovitosti-byty-domy/{value.get('uri', '')}",
+                        'image': image_url,
+                        'lat': gps.get('lat') if isinstance(gps, dict) else None,
+                        'lon': gps.get('lng') if isinstance(gps, dict) else None
+                    })
+            
+            print(f"Found {listings_on_page} listings on page {page_num}.")
+            
+            # if no listings, end
+            if listings_on_page == 0:
+                print("No more listings found. Finishing.")
+                break
+            
+            # wait between requests
+            time.sleep(2.5)
+
+        except Exception as e:
+            print(f"Error on page {page_num}: {e}")
+            break
+
+    # convert to df
+    df = pd.DataFrame(all_extracted_data)
+    
+    return df
