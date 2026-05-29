@@ -124,7 +124,7 @@
 197,8000,24,1+kk,"České Budějovice - České Budějovice 2, okres České Budějovice",České Budějovice - České Budějovice 2
 198,7000,29,2+1,"České Budějovice - České Budějovice 3, okres České Budějovice",České Budějovice - České Budějovice 3
 199,10000,46,3+1,"České Budějovice - České Budějovice 3, okres České Budějovice",České Budějovice - České Budějovice 3
-200,4000,14,14,"České Budějovice - České Budějovice 5, okres České Budějovice",České Budějovice - České Budějovice 5
+200,4000,14,other,"České Budějovice - České Budějovice 5, okres České Budějovice",České Budějovice - České Budějovice 5
 201,8000,35,2+1,"České Budějovice - České Budějovice 3, okres České Budějovice",České Budějovice - České Budějovice 3
 204,8000,24,1+kk,"České Budějovice - České Budějovice 3, okres České Budějovice",České Budějovice - České Budějovice 3
 206,5000,36,2+kk,"Písek - Vnitřní Město, okres Písek",Písek - Vnitřní Město
@@ -664,7 +664,7 @@
 1119,7000,33,2+kk,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1121,7000,29,2+kk,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1122,15000,53,3+kk,"Plzeň - Severní Předměstí, okres Plzeň-město",Plzeň - Severní Předměstí
-1123,4000,9,9,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
+1123,4000,9,other,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1128,8000,29,2+kk,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1129,5000,11,1+kk,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
 1130,5000,18,1+kk,"Plzeň - Severní Předměstí, okres Plzeň-město",Plzeň - Severní Předměstí
@@ -675,14 +675,14 @@
 1148,11000,30,2+kk,"Dobřany, okres Plzeň-jih",Dobřany
 1151,7000,29,2+kk,"Plzeň - Východní Předměstí, okres Plzeň-město",Plzeň - Východní Předměstí
 1154,8000,19,1+kk,"Plzeň - Skvrňany, okres Plzeň-město",Plzeň - Skvrňany
-1156,5000,7,7,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
+1156,5000,7,other,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
 1157,6000,20,1+1,"Dobřany, okres Plzeň-jih",Dobřany
 1159,6000,21,1+1,"Plzeň - Skvrňany, okres Plzeň-město",Plzeň - Skvrňany
 1161,9000,35,2+kk,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1166,10000,33,2+kk,"Plzeň - Východní Předměstí, okres Plzeň-město",Plzeň - Východní Předměstí
 1168,7000,26,1+kk,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1171,11000,34,2+1,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
-1172,5000,10,10,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
+1172,5000,10,other,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1173,11000,42,3+kk,"Dobřany, okres Plzeň-jih",Dobřany
 1174,11000,44,3+kk,"Dobřany, okres Plzeň-jih",Dobřany
 1175,12000,32,2+1,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
@@ -691,7 +691,7 @@
 1184,10000,33,2+kk,"Plzeň - Východní Předměstí, okres Plzeň-město",Plzeň - Východní Předměstí
 1186,7000,26,1+kk,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1189,11000,34,2+1,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
-1190,5000,10,10,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
+1190,5000,10,other,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1191,11000,42,3+kk,"Dobřany, okres Plzeň-jih",Dobřany
 1192,11000,44,3+kk,"Dobřany, okres Plzeň-jih",Dobřany
 1193,8000,23,2+kk,"Dobřany, okres Plzeň-jih",Dobřany
@@ -700,7 +700,7 @@
 1199,10000,47,3+1,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1200,10000,47,3+1,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
 1204,8000,34,1+1,"Plzeň - Jižní Předměstí, okres Plzeň-město",Plzeň - Jižní Předměstí
-1210,4000,11,11,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
+1210,4000,11,other,"Plzeň - Lobzy, okres Plzeň-město",Plzeň - Lobzy
 1212,8000,41,2+kk,"Plzeň - Východní Předměstí, okres Plzeň-město",Plzeň - Východní Předměstí
 1213,6000,20,1+kk,"Plzeň - Východní Předměstí, okres Plzeň-město",Plzeň - Východní Předměstí
 1215,8000,31,1+kk,"Plzeň - Bolevec, okres Plzeň-město",Plzeň - Bolevec
@@ -823,7 +823,7 @@
 1370,6000,19,2+kk,"Karlovy Vary - Stará Role, okres Karlovy Vary",Karlovy Vary - Stará Role
 1371,8000,28,2+kk,Sokolov,Sokolov
 1372,5000,12,1+kk,"Karlovy Vary - Drahovice, okres Karlovy Vary",Karlovy Vary - Drahovice
-1373,10000,14,14,Cheb,Cheb
+1373,10000,14,other,Cheb,Cheb
 1374,7000,31,2+1,Karlovy Vary,Karlovy Vary
 1375,5000,28,2+1,"Nejdek, okres Karlovy Vary",Nejdek
 1376,10000,26,2+kk,Karlovy Vary,Karlovy Vary
@@ -955,7 +955,7 @@
 1556,7000,33,2+1,"Karlovy Vary - Rybáře, okres Karlovy Vary",Karlovy Vary - Rybáře
 1558,8000,38,2+1,Cheb,Cheb
 1559,4000,23,1+kk,"Aš, okres Cheb",Aš
-1560,5000,11,11,"Mariánské Lázně, okres Cheb",Mariánské Lázně
+1560,5000,11,other,"Mariánské Lázně, okres Cheb",Mariánské Lázně
 1562,7000,32,2+kk,Karlovy Vary,Karlovy Vary
 1563,5000,17,1+1,"Karlovy Vary - Rybáře, okres Karlovy Vary",Karlovy Vary - Rybáře
 1564,4000,26,1+1,Sokolov,Sokolov
@@ -979,12 +979,12 @@
 1591,7000,47,3+1,Cheb,Cheb
 1592,6000,26,1+1,"Mariánské Lázně, okres Cheb",Mariánské Lázně
 1594,5000,29,2+1,Sokolov,Sokolov
-1595,28000,334,6,Karlovy Vary,Karlovy Vary
+1595,28000,334,other,Karlovy Vary,Karlovy Vary
 1596,5000,35,1+1,"Karlovy Vary - Rybáře, okres Karlovy Vary",Karlovy Vary - Rybáře
 1597,7000,47,3+1,Cheb,Cheb
 1598,6000,26,1+1,"Mariánské Lázně, okres Cheb",Mariánské Lázně
 1600,5000,29,2+1,Sokolov,Sokolov
-1601,4000,9,9,"Mariánské Lázně, okres Cheb",Mariánské Lázně
+1601,4000,9,other,"Mariánské Lázně, okres Cheb",Mariánské Lázně
 1602,7000,33,2+1,"Mariánské Lázně, okres Cheb",Mariánské Lázně
 1604,7000,32,2+kk,Karlovy Vary,Karlovy Vary
 1605,4000,34,2+1,"Habartov, okres Sokolov",Habartov
@@ -1019,7 +1019,7 @@
 1653,4000,20,1+1,"Aš, okres Cheb",Aš
 1654,5000,21,1+1,"Habartov, okres Sokolov",Habartov
 1658,9000,21,1+1,"Karlovy Vary - Drahovice, okres Karlovy Vary",Karlovy Vary - Drahovice
-1660,32000,131,6,Sokolov,Sokolov
+1660,32000,131,other,Sokolov,Sokolov
 1671,4000,31,2+1,"Habartov, okres Sokolov",Habartov
 1674,4000,37,2+1,"Horní Slavkov, okres Sokolov",Horní Slavkov
 1677,4000,31,2+1,"Horní Slavkov, okres Sokolov",Horní Slavkov
@@ -1797,7 +1797,7 @@
 2699,4000,21,1+1,Chomutov,Chomutov
 2700,8000,28,2+kk,"Roudnice nad Labem, okres Litoměřice",Roudnice nad Labem
 2701,5000,32,2+1,Most,Most
-2704,16000,173,6,"Ústí nad Labem - Klíše, okres Ústí nad Labem",Ústí nad Labem - Klíše
+2704,16000,173,other,"Ústí nad Labem - Klíše, okres Ústí nad Labem",Ústí nad Labem - Klíše
 2705,7000,44,2+1,"Děčín - Děčín IV-Podmokly, okres Děčín",Děčín - Děčín IV-Podmokly
 2706,5000,23,2+kk,Louny,Louny
 2707,7000,32,2+1,"Děčín - Děčín II-Nové Město, okres Děčín",Děčín - Děčín II-Nové Město
@@ -1806,7 +1806,7 @@
 2711,7000,32,1+1,Most,Most
 2714,10000,32,2+1,Most,Most
 2716,4000,14,1+kk,"Ústí nad Labem - Ústí nad Labem-centrum, okres Ústí nad Labem",Ústí nad Labem - Ústí nad Labem-centrum
-2717,4000,38,38,"Litoměřice - Předměstí, okres Litoměřice",Litoměřice - Předměstí
+2717,4000,38,other,"Litoměřice - Předměstí, okres Litoměřice",Litoměřice - Předměstí
 2721,4000,26,1+1,"Děčín - Děčín VI-Letná, okres Děčín",Děčín - Děčín VI-Letná
 2723,5000,16,1+kk,Chomutov,Chomutov
 2725,4000,23,2+kk,Most,Most
@@ -2065,7 +2065,7 @@
 3252,8000,34,2+kk,"Hradec Králové, okres Hradec Králové",Hradec Králové
 3253,11000,32,3+kk,"Hradec Králové - Pražské Předměstí, okres Hradec Králové",Hradec Králové - Pražské Předměstí
 3254,5000,19,1+kk,"Hradec Králové - Pražské Předměstí, okres Hradec Králové",Hradec Králové - Pražské Předměstí
-3255,6000,29,29,"Hradec Králové - Pražské Předměstí, okres Hradec Králové",Hradec Králové - Pražské Předměstí
+3255,6000,29,other,"Hradec Králové - Pražské Předměstí, okres Hradec Králové",Hradec Králové - Pražské Předměstí
 3257,12000,29,2+kk,"Hradec Králové - Nový Hradec Králové, okres Hradec Králové",Hradec Králové - Nový Hradec Králové
 3258,7000,14,1+kk,Hradec Králové,Hradec Králové
 3263,5000,10,1+kk,"Hradec Králové - Pražské Předměstí, okres Hradec Králové",Hradec Králové - Pražské Předměstí
@@ -2132,7 +2132,7 @@
 3359,11000,29,1+kk,Hradec Králové,Hradec Králové
 3363,11000,44,3+1,"Hradec Králové - Třebeš, okres Hradec Králové",Hradec Králové - Třebeš
 3364,8000,39,2+1,"Hradec Králové - Nový Hradec Králové, okres Hradec Králové",Hradec Králové - Nový Hradec Králové
-3365,4000,11,11,Hradec Králové,Hradec Králové
+3365,4000,11,other,Hradec Králové,Hradec Králové
 3366,8000,21,2+kk,"Hradec Králové - Pražské Předměstí, okres Hradec Králové",Hradec Králové - Pražské Předměstí
 3367,13000,47,3+1,"Hradec Králové - Nový Hradec Králové, okres Hradec Králové",Hradec Králové - Nový Hradec Králové
 3369,8000,34,1+1,Hradec Králové,Hradec Králové
@@ -2249,8 +2249,8 @@
 3642,6000,21,1+1,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3645,8000,29,2+kk,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3649,9000,32,2+kk,"Pardubice - Zelené Předměstí, okres Pardubice",Pardubice - Zelené Předměstí
-3650,6000,11,11,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
-3651,6000,11,11,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
+3650,6000,11,other,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
+3651,6000,11,other,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
 3658,12000,50,3+kk,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
 3662,8000,44,2+1,"Pardubice - Zelené Předměstí, okres Pardubice",Pardubice - Zelené Předměstí
 3663,9000,45,3+1,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
@@ -2284,14 +2284,14 @@
 3728,11000,45,3+kk,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3729,7000,33,2+1,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3730,5000,20,1+kk,"Česká Třebová, okres Ústí nad Orlicí",Česká Třebová
-3731,5000,11,11,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
+3731,5000,11,other,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
 3735,6000,23,1+1,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3736,7000,18,1+1,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3742,7000,32,2+1,"Svitavy - Předměstí, okres Svitavy",Svitavy - Předměstí
 3746,9000,35,2+kk,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
 3747,9000,32,2+kk,"Pardubice - Zelené Předměstí, okres Pardubice",Pardubice - Zelené Předměstí
 3748,10000,32,2+1,"Pardubice - Zelené Předměstí, okres Pardubice",Pardubice - Zelené Předměstí
-3749,5000,11,11,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
+3749,5000,11,other,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
 3752,6000,23,1+1,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3753,7000,18,1+1,"Chrudim - Chrudim IV, okres Chrudim",Chrudim - Chrudim IV
 3762,9000,35,2+kk,"Pardubice - Bílé Předměstí, okres Pardubice",Pardubice - Bílé Předměstí
@@ -2392,7 +2392,7 @@
 3946,7000,26,1+1,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 3947,7000,31,2+1,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 3949,8000,30,2+kk,"Olomouc - Povel, okres Olomouc",Olomouc - Povel
-3950,4000,11,11,"Olomouc - Hodolany, okres Olomouc",Olomouc - Hodolany
+3950,4000,11,other,"Olomouc - Hodolany, okres Olomouc",Olomouc - Hodolany
 3951,9000,42,2+1,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
 3952,10000,29,2+kk,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 3953,8000,29,2+kk,Olomouc,Olomouc
@@ -2439,7 +2439,7 @@
 4000,16000,71,4+kk,Prostějov,Prostějov
 4001,14000,62,3+kk,Prostějov,Prostějov
 4002,10000,35,2+kk,"Olomouc - Povel, okres Olomouc",Olomouc - Povel
-4003,5000,8,8,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
+4003,5000,8,other,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
 4004,10000,31,2+kk,"Olomouc - Povel, okres Olomouc",Olomouc - Povel
 4005,16000,71,3+kk,Prostějov,Prostějov
 4006,11000,31,2+kk,"Olomouc - Slavonín, okres Olomouc",Olomouc - Slavonín
@@ -2649,8 +2649,8 @@
 4245,8000,32,2+kk,"Olomouc - Nové Sady, okres Olomouc",Olomouc - Nové Sady
 4246,12000,71,3+1,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4247,10000,25,1+kk,"Olomouc, okres Olomouc",Olomouc
-4248,5000,9,9,Olomouc,Olomouc
-4249,4000,7,7,Olomouc,Olomouc
+4248,5000,9,other,Olomouc,Olomouc
+4249,4000,7,other,Olomouc,Olomouc
 4250,7000,16,1+kk,"Olomouc, okres Olomouc",Olomouc
 4251,10000,29,2+1,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4252,10000,35,2+1,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
@@ -2769,13 +2769,13 @@
 4380,8000,40,3+kk,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
 4381,4000,22,1+1,"Zábřeh, okres Šumperk",Zábřeh
 4382,10000,41,3+1,"Olomouc - Povel, okres Olomouc",Olomouc - Povel
-4383,4000,41,41,Olomouc,Olomouc
+4383,4000,41,other,Olomouc,Olomouc
 4385,10000,52,3+kk,"Olomouc - Nové Sady, okres Olomouc",Olomouc - Nové Sady
 4386,6000,15,1+kk,"Olomouc - Hodolany, okres Olomouc",Olomouc - Hodolany
 4387,10000,48,3+1,"Olomouc - Nové Sady, okres Olomouc",Olomouc - Nové Sady
 4388,9000,35,2+1,"Hranice - Hranice I-Město, okres Přerov",Hranice - Hranice I-Město
 4389,7000,45,2+kk,"Olomouc - Hodolany, okres Olomouc",Olomouc - Hodolany
-4391,5000,11,11,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
+4391,5000,11,other,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4392,8000,33,2+kk,Olomouc,Olomouc
 4393,8000,33,2+kk,Olomouc,Olomouc
 4394,25000,52,3+kk,"Olomouc - Hodolany, okres Olomouc",Olomouc - Hodolany
@@ -2795,7 +2795,7 @@
 4409,11000,50,3+kk,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4410,6000,25,2+1,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
 4411,6000,16,1+kk,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
-4412,4000,10,10,Olomouc,Olomouc
+4412,4000,10,other,Olomouc,Olomouc
 4415,8000,28,2+1,"Olomouc - Nové Sady, okres Olomouc",Olomouc - Nové Sady
 4416,7000,28,2+kk,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
 4417,13000,53,2+1,Olomouc,Olomouc
@@ -2814,10 +2814,10 @@
 4435,10000,34,2+kk,Olomouc,Olomouc
 4436,8000,17,1+kk,Olomouc,Olomouc
 4439,8000,66,2+1,"Zábřeh, okres Šumperk",Zábřeh
-4440,4000,11,11,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
+4440,4000,11,other,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4443,12000,49,3+kk,"Olomouc - Povel, okres Olomouc",Olomouc - Povel
 4444,8000,66,2+1,"Zábřeh, okres Šumperk",Zábřeh
-4445,4000,11,11,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
+4445,4000,11,other,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4447,10000,38,2+1,"Olomouc - Hodolany, okres Olomouc",Olomouc - Hodolany
 4449,6000,25,1+1,Prostějov,Prostějov
 4450,8000,48,2+1,"Šternberk, okres Olomouc",Šternberk
@@ -2862,7 +2862,7 @@
 4496,12000,43,2+kk,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
 4497,10000,37,2+kk,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
 4499,9000,22,2+kk,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
-4500,5000,10,10,Olomouc,Olomouc
+4500,5000,10,other,Olomouc,Olomouc
 4501,6000,29,2+1,"Hranice - Hranice I-Město, okres Přerov",Hranice - Hranice I-Město
 4502,7000,36,3+1,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4503,7000,28,2+kk,Olomouc,Olomouc
@@ -2888,7 +2888,7 @@
 4529,7000,41,3+1,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
 4530,11000,49,3+kk,"Olomouc, okres Olomouc",Olomouc
 4534,7000,33,2+1,"Olomouc - Neředín, okres Olomouc",Olomouc - Neředín
-4535,5000,10,10,Olomouc,Olomouc
+4535,5000,10,other,Olomouc,Olomouc
 4536,6000,29,2+1,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
 4538,5000,28,2+1,Prostějov,Prostějov
 4539,4000,17,1+kk,"Zábřeh, okres Šumperk",Zábřeh
@@ -2897,10 +2897,10 @@
 4545,8000,28,1+kk,"Olomouc - Nové Sady, okres Olomouc",Olomouc - Nové Sady
 4546,10000,32,2+kk,Olomouc,Olomouc
 4547,5000,27,1+kk,"Zábřeh, okres Šumperk",Zábřeh
-4548,5000,9,9,Olomouc,Olomouc
+4548,5000,9,other,Olomouc,Olomouc
 4549,8000,20,1+kk,"Olomouc - Řepčín, okres Olomouc",Olomouc - Řepčín
 4550,8000,43,3+1,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
-4552,5000,5,5,Olomouc,Olomouc
+4552,5000,5,other,Olomouc,Olomouc
 4553,7000,33,2+1,Prostějov,Prostějov
 4554,13000,50,3+1,Olomouc,Olomouc
 4555,7000,19,1+kk,Prostějov,Prostějov
@@ -2930,7 +2930,7 @@
 4590,9000,35,2+kk,"Hranice - Hranice I-Město, okres Přerov",Hranice - Hranice I-Město
 4591,9000,34,2+kk,"Hranice - Hranice I-Město, okres Přerov",Hranice - Hranice I-Město
 4592,7000,48,2+kk,"Hranice - Hranice I-Město, okres Přerov",Hranice - Hranice I-Město
-4593,4000,26,26,Olomouc,Olomouc
+4593,4000,26,other,Olomouc,Olomouc
 4594,10000,26,2+kk,Olomouc,Olomouc
 4595,10000,45,2+kk,Olomouc,Olomouc
 4598,12000,65,4+1,Olomouc,Olomouc
@@ -2938,7 +2938,7 @@
 4601,6000,27,1+1,"Hranice - Hranice I-Město, okres Přerov",Hranice - Hranice I-Město
 4602,7000,32,2+kk,Šumperk,Šumperk
 4603,7000,28,1+kk,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
-4605,5000,11,11,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
+4605,5000,11,other,"Olomouc - Nová Ulice, okres Olomouc",Olomouc - Nová Ulice
 4607,5000,25,2+1,"Přerov - Přerov I-Město, okres Přerov",Přerov - Přerov I-Město
 4608,11000,43,2+kk,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
 4609,12000,38,2+kk,"Olomouc - Holice, okres Olomouc",Olomouc - Holice
@@ -3129,7 +3129,7 @@
 4860,8000,53,3+1,Zlín,Zlín
 4861,7000,32,2+1,Zlín,Zlín
 4862,7000,44,3+kk,"Luhačovice, okres Zlín",Luhačovice
-4863,6000,12,12,"Otrokovice, okres Zlín",Otrokovice
+4863,6000,12,other,"Otrokovice, okres Zlín",Otrokovice
 4864,11000,41,3+kk,Zlín,Zlín
 4865,12000,45,3+1,"Valašské Meziříčí, okres Vsetín",Valašské Meziříčí
 4866,8000,31,2+1,"Rožnov pod Radhoštěm, okres Vsetín",Rožnov pod Radhoštěm
@@ -3160,7 +3160,7 @@
 4901,14000,64,3+kk,"Zlín, okres Zlín",Zlín
 4902,11000,35,2+kk,Zlín,Zlín
 4903,7000,44,2+kk,"Bystřice pod Hostýnem, okres Kroměříž",Bystřice pod Hostýnem
-4904,4000,7,7,Zlín,Zlín
+4904,4000,7,other,Zlín,Zlín
 4905,7000,32,2+1,"Rožnov pod Radhoštěm, okres Vsetín",Rožnov pod Radhoštěm
 4907,7000,34,2+kk,"Bystřice pod Hostýnem, okres Kroměříž",Bystřice pod Hostýnem
 4908,8000,39,3+kk,"Bystřice pod Hostýnem, okres Kroměříž",Bystřice pod Hostýnem
@@ -3419,12 +3419,12 @@
 5218,25000,42,2+kk,Praha 9 - Prosek,Praha 9 - Prosek
 5219,16000,26,2+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 5220,8000,19,1+kk,Praha 4 - Michle,Praha 4 - Michle
-5221,58000,161,6,Praha 6 - Střešovice,Praha 6 - Střešovice
+5221,58000,161,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 5222,29000,57,3+kk,Praha 9 - Hrdlořezy,Praha 9 - Hrdlořezy
 5223,28000,58,3+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 5225,13000,31,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
 5226,30000,68,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
-5227,58000,146,6,Praha 6 - Střešovice,Praha 6 - Střešovice
+5227,58000,146,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 5228,14000,33,2+1,Praha 10 - Vršovice,Praha 10 - Vršovice
 5229,14000,19,1+1,Praha 1 - Malá Strana,Praha 1 - Malá Strana
 5230,31000,72,3+1,Praha 1 - Nové Město,Praha 1 - Nové Město
@@ -3644,7 +3644,7 @@
 5455,14000,35,2+1,Praha 1 - Nové Město,Praha 1 - Nové Město
 5456,15000,29,2+kk,Praha 1 - Staré Město,Praha 1 - Staré Město
 5457,13000,23,1+1,Praha 2 - Vinohrady,Praha 2 - Vinohrady
-5458,6000,7,7,Praha 8 - Libeň,Praha 8 - Libeň
+5458,6000,7,other,Praha 8 - Libeň,Praha 8 - Libeň
 5459,13000,27,2+kk,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 5460,13000,41,2+1,Praha 8 - Libeň,Praha 8 - Libeň
 5461,11000,22,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
@@ -3670,7 +3670,7 @@
 5481,10000,25,2+kk,Praha 4 - Háje,Praha 4 - Háje
 5482,35000,62,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
 5483,19000,56,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
-5484,4000,7,7,Praha 8 - Kobylisy,Praha 8 - Kobylisy
+5484,4000,7,other,Praha 8 - Kobylisy,Praha 8 - Kobylisy
 5485,35000,45,3+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 5486,25000,59,3+1,Praha 5 - Smíchov,Praha 5 - Smíchov
 5487,14000,29,2+1,Praha 8 - Karlín,Praha 8 - Karlín
@@ -3813,7 +3813,7 @@
 5632,12000,18,1+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 5633,12000,29,2+kk,Praha 5 - Stodůlky,Praha 5 - Stodůlky
 5634,11000,23,2+kk,Praha 8 - Karlín,Praha 8 - Karlín
-5635,6000,7,7,Praha 2 - Vinohrady,Praha 2 - Vinohrady
+5635,6000,7,other,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 5636,10000,23,1+kk,Praha 6 - Ruzyně,Praha 6 - Ruzyně
 5637,14000,29,2+kk,Praha 10 - Michle,Praha 10 - Michle
 5638,16000,40,3+1,Praha 3 - Žižkov,Praha 3 - Žižkov
@@ -3898,7 +3898,7 @@
 5725,16000,43,3+1,Praha 10 - Vršovice,Praha 10 - Vršovice
 5726,12000,28,2+kk,Praha 10 - Vršovice,Praha 10 - Vršovice
 5727,10000,19,1+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
-5728,58000,162,6,Praha 6 - Střešovice,Praha 6 - Střešovice
+5728,58000,162,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 5729,8000,14,1+kk,Praha 10 - Vršovice,Praha 10 - Vršovice
 5730,10000,28,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 5731,11000,16,1+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
@@ -3915,9 +3915,9 @@
 5743,9000,14,1+kk,Praha 8 - Libeň,Praha 8 - Libeň
 5744,53000,106,4+kk,Praha 1 - Malá Strana,Praha 1 - Malá Strana
 5745,35000,62,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
-5746,5000,8,8,Praha 3 - Žižkov,Praha 3 - Žižkov
-5747,6000,8,8,Praha 8 - Libeň,Praha 8 - Libeň
-5748,6000,8,8,Praha 6,Praha 6
+5746,5000,8,other,Praha 3 - Žižkov,Praha 3 - Žižkov
+5747,6000,8,other,Praha 8 - Libeň,Praha 8 - Libeň
+5748,6000,8,other,Praha 6,Praha 6
 5750,58000,178,5+1,Praha 6 - Střešovice,Praha 6 - Střešovice
 5751,11000,26,2+kk,Praha 6 - Střešovice,Praha 6 - Střešovice
 5753,20000,34,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
@@ -3955,7 +3955,7 @@
 5787,11000,29,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
 5788,9000,26,2+kk,Praha 9 - Černý Most,Praha 9 - Černý Most
 5790,7000,8,1+kk,Praha 9 - Čakovice,Praha 9 - Čakovice
-5791,5000,7,7,Praha 9 - Horní Počernice,Praha 9 - Horní Počernice
+5791,5000,7,other,Praha 9 - Horní Počernice,Praha 9 - Horní Počernice
 5792,11000,11,1+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 5793,41000,67,4+kk,Praha 2 - Nusle,Praha 2 - Nusle
 5794,13000,31,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
@@ -4092,7 +4092,7 @@
 5935,13000,29,2+kk,Praha 10 - Michle,Praha 10 - Michle
 5936,22000,52,2+1,Praha 1 - Nové Město,Praha 1 - Nové Město
 5937,17000,51,3+1,Praha 7 - Holešovice,Praha 7 - Holešovice
-5938,55000,135,6,Praha 9 - Vysočany,Praha 9 - Vysočany
+5938,55000,135,other,Praha 9 - Vysočany,Praha 9 - Vysočany
 5939,20000,50,2+1,Praha 1 - Nové Město,Praha 1 - Nové Město
 5940,13000,22,1+kk,Praha 9 - Hloubětín,Praha 9 - Hloubětín
 5941,17000,38,2+kk,Praha 8 - Karlín,Praha 8 - Karlín
@@ -4304,8 +4304,8 @@
 6163,13000,31,2+kk,Praha 9 - Kyje,Praha 9 - Kyje
 6164,9000,14,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 6165,11000,27,2+kk,Praha 4 - Chodov,Praha 4 - Chodov
-6166,7000,11,11,Praha 1 - Nové Město,Praha 1 - Nové Město
-6167,7000,17,17,Praha 6 - Dejvice,Praha 6 - Dejvice
+6166,7000,11,other,Praha 1 - Nové Město,Praha 1 - Nové Město
+6167,7000,17,other,Praha 6 - Dejvice,Praha 6 - Dejvice
 6168,26000,55,3+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 6170,17000,36,2+1,Praha 8 - Karlín,Praha 8 - Karlín
 6171,11000,22,2+kk,Praha 9 - Černý Most,Praha 9 - Černý Most
@@ -4385,7 +4385,7 @@
 6251,18000,28,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
 6252,11000,29,2+kk,Praha 5 - Stodůlky,Praha 5 - Stodůlky
 6253,35000,71,4+kk,Praha 1 - Josefov,Praha 1 - Josefov
-6254,55000,135,6,Praha 9 - Vysočany,Praha 9 - Vysočany
+6254,55000,135,other,Praha 9 - Vysočany,Praha 9 - Vysočany
 6255,20000,38,2+kk,Praha 8 - Karlín,Praha 8 - Karlín
 6256,19000,42,2+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 6257,24000,68,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
@@ -4482,7 +4482,7 @@
 6351,16000,29,2+kk,Praha 5 - Stodůlky,Praha 5 - Stodůlky
 6352,16000,16,1+kk,Praha 4 - Nusle,Praha 4 - Nusle
 6353,35000,80,4+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
-6354,58000,146,6,Praha 6 - Střešovice,Praha 6 - Střešovice
+6354,58000,146,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 6355,50000,69,3+1,Praha 1 - Nové Město,Praha 1 - Nové Město
 6356,35000,62,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
 6357,29000,35,2+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
@@ -4778,7 +4778,7 @@
 6669,32000,68,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 6670,20000,61,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
 6671,19000,42,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
-6672,59000,152,6,Praha 2 - Vinohrady,Praha 2 - Vinohrady
+6672,59000,152,other,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 6673,9000,23,1+kk,Praha 9 - Letňany,Praha 9 - Letňany
 6674,17000,41,2+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 6675,41000,67,3+kk,Praha 6 - Břevnov,Praha 6 - Břevnov
@@ -4834,7 +4834,7 @@
 6730,13000,20,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 6731,13000,22,1+kk,Praha 5 - Malá Strana,Praha 5 - Malá Strana
 6732,14000,41,2+1,Praha 10 - Vršovice,Praha 10 - Vršovice
-6733,59000,152,6,Praha 2 - Vinohrady,Praha 2 - Vinohrady
+6733,59000,152,other,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 6734,32000,68,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 6736,19000,59,3+kk,Praha 5 - Jinonice,Praha 5 - Jinonice
 6737,22000,39,1+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
@@ -4972,7 +4972,7 @@
 6879,13000,27,1+kk,Praha 9 - Hloubětín,Praha 9 - Hloubětín
 6880,15000,34,3+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 6881,12000,19,1+1,Praha 4 - Nusle,Praha 4 - Nusle
-6882,7000,11,11,Praha 5 - Smíchov,Praha 5 - Smíchov
+6882,7000,11,other,Praha 5 - Smíchov,Praha 5 - Smíchov
 6883,11000,22,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 6884,10000,22,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 6885,19000,34,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
@@ -5143,7 +5143,7 @@
 7065,25000,53,2+kk,Praha 6 - Střešovice,Praha 6 - Střešovice
 7066,19000,39,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7067,23000,43,3+1,Praha 1 - Malá Strana,Praha 1 - Malá Strana
-7068,9000,59,59,Praha 10,Praha 10
+7068,9000,59,other,Praha 10,Praha 10
 7069,12000,44,3+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 7070,11000,22,1+kk,Praha 2 - Nové Město,Praha 2 - Nové Město
 7072,16000,41,2+1,Praha 2 - Vinohrady,Praha 2 - Vinohrady
@@ -5161,7 +5161,7 @@
 7086,11000,35,2+1,Praha 8 - Kobylisy,Praha 8 - Kobylisy
 7087,9000,16,1+kk,Praha 4 - Podolí,Praha 4 - Podolí
 7089,15000,33,2+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
-7090,5000,8,8,Praha 4 - Kunratice,Praha 4 - Kunratice
+7090,5000,8,other,Praha 4 - Kunratice,Praha 4 - Kunratice
 7091,13000,36,3+kk,Praha 10 - Hostivař,Praha 10 - Hostivař
 7092,10000,33,2+kk,Praha 5 - Košíře,Praha 5 - Košíře
 7094,13000,32,2+1,Praha 4 - Michle,Praha 4 - Michle
@@ -5201,14 +5201,14 @@
 7130,5000,151,atypické,Praha 2 - Nové Město,Praha 2 - Nové Město
 7131,13000,33,2+kk,Praha 9 - Letňany,Praha 9 - Letňany
 7132,17000,42,2+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
-7133,59000,152,6,Praha 2 - Vinohrady,Praha 2 - Vinohrady
+7133,59000,152,other,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 7135,41000,67,4+kk,Praha 2 - Nusle,Praha 2 - Nusle
 7136,17000,35,3+1,Praha 6 - Dejvice,Praha 6 - Dejvice
 7137,26000,76,4+1,Praha 4 - Chodov,Praha 4 - Chodov
 7138,5000,151,atypické,Praha 2 - Nové Město,Praha 2 - Nové Město
 7139,13000,33,2+kk,Praha 9 - Letňany,Praha 9 - Letňany
 7140,17000,42,2+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
-7141,59000,152,6,Praha 2 - Vinohrady,Praha 2 - Vinohrady
+7141,59000,152,other,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 7143,13000,22,1+kk,Praha 6 - Bubeneč,Praha 6 - Bubeneč
 7145,32000,72,4+kk,Praha 5 - Jinonice,Praha 5 - Jinonice
 7146,15000,23,1+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
@@ -5293,7 +5293,7 @@
 7229,11000,20,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 7230,12000,34,2+kk,Praha 8 - Libeň,Praha 8 - Libeň
 7231,13000,42,3+1,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
-7232,8000,13,13,Praha 5 - Košíře,Praha 5 - Košíře
+7232,8000,13,other,Praha 5 - Košíře,Praha 5 - Košíře
 7233,12000,29,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
 7234,13000,23,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7235,14000,48,3+1,Praha 5 - Smíchov,Praha 5 - Smíchov
@@ -5341,7 +5341,7 @@
 7280,17000,42,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 7281,32000,92,4+1,Praha 2 - Nové Město,Praha 2 - Nové Město
 7282,23000,42,3+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
-7283,7000,8,8,Praha 8 - Libeň,Praha 8 - Libeň
+7283,7000,8,other,Praha 8 - Libeň,Praha 8 - Libeň
 7284,15000,34,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7285,11000,25,2+kk,Praha 6 - Ruzyně,Praha 6 - Ruzyně
 7286,10000,24,2+kk,Praha 4 - Kamýk,Praha 4 - Kamýk
@@ -5410,21 +5410,21 @@
 7349,11000,26,2+kk,Praha 4 - Krč,Praha 4 - Krč
 7350,11000,20,1+kk,Praha 6 - Břevnov,Praha 6 - Břevnov
 7351,13000,34,2+1,Praha 10 - Vršovice,Praha 10 - Vršovice
-7352,4000,8,8,Praha 6,Praha 6
+7352,4000,8,other,Praha 6,Praha 6
 7353,11000,22,2+kk,Praha 4 - Krč,Praha 4 - Krč
 7354,10000,22,1+kk,Praha 4 - Michle,Praha 4 - Michle
 7355,10000,22,1+kk,Praha 4 - Michle,Praha 4 - Michle
 7356,10000,22,1+kk,Praha 4 - Michle,Praha 4 - Michle
 7358,11000,23,2+kk,Praha 8 - Libeň,Praha 8 - Libeň
 7359,14000,38,2+1,Praha 3 - Žižkov,Praha 3 - Žižkov
-7360,8000,8,8,Praha 2 - Nové Město,Praha 2 - Nové Město
+7360,8000,8,other,Praha 2 - Nové Město,Praha 2 - Nové Město
 7361,14000,25,2+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 7362,20000,61,3+1,Praha 6 - Dejvice,Praha 6 - Dejvice
 7363,12000,35,2+kk,Praha 8 - Libeň,Praha 8 - Libeň
 7364,17000,29,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7365,17000,34,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7366,20000,59,3+1,Praha 5 - Smíchov,Praha 5 - Smíchov
-7367,4000,10,10,Praha 9 - Černý Most,Praha 9 - Černý Most
+7367,4000,10,other,Praha 9 - Černý Most,Praha 9 - Černý Most
 7368,14000,34,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
 7369,11000,30,2+1,Praha 9 - Letňany,Praha 9 - Letňany
 7370,25000,63,4+1,Praha 2 - Vinohrady,Praha 2 - Vinohrady
@@ -5475,7 +5475,7 @@
 7417,8000,11,1+kk,Praha 8 - Karlín,Praha 8 - Karlín
 7418,14000,30,2+kk,Praha 8 - Karlín,Praha 8 - Karlín
 7419,21000,38,3+kk,Praha 7 - Bubeneč,Praha 7 - Bubeneč
-7420,41000,119,6,Praha 7 - Bubeneč,Praha 7 - Bubeneč
+7420,41000,119,other,Praha 7 - Bubeneč,Praha 7 - Bubeneč
 7421,19000,33,2+kk,Praha 3,Praha 3
 7422,38000,68,4+kk,Praha 3,Praha 3
 7423,14000,19,1+kk,Praha 3,Praha 3
@@ -5484,7 +5484,7 @@
 7426,12000,29,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 7427,14000,35,3+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 7428,14000,29,2+kk,Praha 9 - Libeň,Praha 9 - Libeň
-7429,4000,7,7,Praha 6 - Ruzyně,Praha 6 - Ruzyně
+7429,4000,7,other,Praha 6 - Ruzyně,Praha 6 - Ruzyně
 7430,10000,21,1+1,Praha 5 - Košíře,Praha 5 - Košíře
 7431,13000,31,2+kk,Praha 2 - Nové Město,Praha 2 - Nové Město
 7432,20000,59,3+kk,Praha 4 - Podolí,Praha 4 - Podolí
@@ -5557,7 +5557,7 @@
 7511,20000,53,3+kk,Praha 5 - Jinonice,Praha 5 - Jinonice
 7512,11000,35,2+1,Praha 8 - Kobylisy,Praha 8 - Kobylisy
 7513,9000,16,1+kk,Praha 4 - Podolí,Praha 4 - Podolí
-7515,5000,8,8,Praha 4 - Kunratice,Praha 4 - Kunratice
+7515,5000,8,other,Praha 4 - Kunratice,Praha 4 - Kunratice
 7516,13000,36,3+kk,Praha 10 - Hostivař,Praha 10 - Hostivař
 7517,10000,33,2+kk,Praha 5 - Košíře,Praha 5 - Košíře
 7519,13000,32,2+1,Praha 4 - Michle,Praha 4 - Michle
@@ -5688,7 +5688,7 @@
 7656,12000,20,1+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 7657,16000,33,2+kk,Praha 4 - Modřany,Praha 4 - Modřany
 7658,17000,46,3+kk,Praha 10 - Horní Měcholupy,Praha 10 - Horní Měcholupy
-7659,6000,11,11,Praha 5 - Zbraslav,Praha 5 - Zbraslav
+7659,6000,11,other,Praha 5 - Zbraslav,Praha 5 - Zbraslav
 7660,16000,31,2+kk,Praha 9 - Prosek,Praha 9 - Prosek
 7661,15000,43,3+kk,Praha 9 - Letňany,Praha 9 - Letňany
 7662,14000,32,2+kk,Praha 9 - Hrdlořezy,Praha 9 - Hrdlořezy
@@ -5761,7 +5761,7 @@
 7735,21000,69,3+kk,Praha 5 - Řeporyje,Praha 5 - Řeporyje
 7736,20000,54,3+kk,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 7737,14000,32,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
-7738,50000,150,6,Praha 5 - Malá Strana,Praha 5 - Malá Strana
+7738,50000,150,other,Praha 5 - Malá Strana,Praha 5 - Malá Strana
 7739,15000,42,3+kk,Praha 8 - Bohnice,Praha 8 - Bohnice
 7740,19000,41,3+kk,Praha 1 - Staré Město,Praha 1 - Staré Město
 7741,10000,26,2+kk,Praha 9,Praha 9
@@ -5793,7 +5793,7 @@
 7768,14000,25,2+kk,Praha 5 - Řeporyje,Praha 5 - Řeporyje
 7770,9000,23,1+1,Praha 8 - Libeň,Praha 8 - Libeň
 7771,10000,24,2+kk,Praha 4 - Kamýk,Praha 4 - Kamýk
-7772,7000,8,8,Praha 9 - Černý Most,Praha 9 - Černý Most
+7772,7000,8,other,Praha 9 - Černý Most,Praha 9 - Černý Most
 7773,13000,22,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7775,8000,25,2+kk,Praha 4 - Kamýk,Praha 4 - Kamýk
 7777,14000,32,2+kk,Praha 4 - Michle,Praha 4 - Michle
@@ -5875,14 +5875,14 @@
 7859,17000,42,2+1,Praha 1 - Malá Strana,Praha 1 - Malá Strana
 7860,10000,8,1+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 7861,10000,8,1+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
-7862,7000,17,17,Praha 7 - Holešovice,Praha 7 - Holešovice
-7863,6000,9,9,Praha 7 - Holešovice,Praha 7 - Holešovice
-7864,6000,18,18,Praha 7 - Holešovice,Praha 7 - Holešovice
+7862,7000,17,other,Praha 7 - Holešovice,Praha 7 - Holešovice
+7863,6000,9,other,Praha 7 - Holešovice,Praha 7 - Holešovice
+7864,6000,18,other,Praha 7 - Holešovice,Praha 7 - Holešovice
 7865,17000,53,3+kk,Praha 2 - Nové Město,Praha 2 - Nové Město
 7866,11000,31,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7867,18000,26,2+1,Praha 7 - Holešovice,Praha 7 - Holešovice
-7868,6000,9,9,Praha 7 - Holešovice,Praha 7 - Holešovice
-7869,6000,18,18,Praha 7 - Holešovice,Praha 7 - Holešovice
+7868,6000,9,other,Praha 7 - Holešovice,Praha 7 - Holešovice
+7869,6000,18,other,Praha 7 - Holešovice,Praha 7 - Holešovice
 7870,17000,53,3+kk,Praha 2 - Nové Město,Praha 2 - Nové Město
 7871,11000,31,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 7872,17000,35,2+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
@@ -5952,7 +5952,7 @@
 7942,12000,20,1+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 7943,16000,33,2+kk,Praha 4 - Modřany,Praha 4 - Modřany
 7944,17000,46,3+kk,Praha 10 - Horní Měcholupy,Praha 10 - Horní Měcholupy
-7945,6000,11,11,Praha 5 - Zbraslav,Praha 5 - Zbraslav
+7945,6000,11,other,Praha 5 - Zbraslav,Praha 5 - Zbraslav
 7946,16000,31,2+kk,Praha 9 - Prosek,Praha 9 - Prosek
 7947,17000,36,2+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 7948,14000,31,2+1,Praha 3 - Vinohrady,Praha 3 - Vinohrady
@@ -6028,11 +6028,11 @@
 8023,17000,34,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8024,13000,34,2+kk,Praha 5 - Stodůlky,Praha 5 - Stodůlky
 8025,24000,48,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
-8026,11000,10,10,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
+8026,11000,10,other,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 8027,8000,8,1+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 8028,25000,46,3+kk,Praha 9 - Hrdlořezy,Praha 9 - Hrdlořezy
 8030,12000,33,2+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
-8031,4000,9,9,Praha 9 - Vysočany,Praha 9 - Vysočany
+8031,4000,9,other,Praha 9 - Vysočany,Praha 9 - Vysočany
 8032,31000,72,4+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 8034,12000,23,2+kk,Praha 5 - Košíře,Praha 5 - Košíře
 8035,10000,28,2+kk,Praha 6 - Řepy,Praha 6 - Řepy
@@ -6072,7 +6072,7 @@
 8074,14000,29,2+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 8075,41000,67,4+kk,Praha 2 - Nusle,Praha 2 - Nusle
 8076,38000,56,3+kk,Praha 2 - Nusle,Praha 2 - Nusle
-8077,9000,10,10,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
+8077,9000,10,other,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 8078,13000,33,2+kk,Praha 4 - Kamýk,Praha 4 - Kamýk
 8079,10000,21,1+kk,Praha 10 - Záběhlice,Praha 10 - Záběhlice
 8080,13000,36,3+kk,Praha 4 - Chodov,Praha 4 - Chodov
@@ -6110,9 +6110,9 @@
 8115,20000,44,3+kk,Praha 2 - Nové Město,Praha 2 - Nové Město
 8116,8000,13,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 8117,11000,23,1+1,Praha 4 - Podolí,Praha 4 - Podolí
-8118,8000,10,10,Praha 10 - Vršovice,Praha 10 - Vršovice
+8118,8000,10,other,Praha 10 - Vršovice,Praha 10 - Vršovice
 8119,10000,26,2+kk,Praha 4 - Michle,Praha 4 - Michle
-8120,7000,7,7,Praha 6 - Břevnov,Praha 6 - Břevnov
+8120,7000,7,other,Praha 6 - Břevnov,Praha 6 - Břevnov
 8121,19000,49,3+kk,Praha 4 - Chodov,Praha 4 - Chodov
 8122,24000,75,4+1,Praha 6 - Bubeneč,Praha 6 - Bubeneč
 8123,13000,20,2+kk,Praha 9 - Libeň,Praha 9 - Libeň
@@ -6139,9 +6139,9 @@
 8150,15000,38,3+1,Praha 8 - Kobylisy,Praha 8 - Kobylisy
 8152,29000,60,3+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 8153,12000,41,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
-8154,7000,11,11,Praha 3 - Vinohrady,Praha 3 - Vinohrady
+8154,7000,11,other,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 8155,9000,17,1+kk,Praha 9 - Libeň,Praha 9 - Libeň
-8156,5000,9,9,Praha 3 - Vinohrady,Praha 3 - Vinohrady
+8156,5000,9,other,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 8157,14000,40,2+1,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 8158,14000,45,2+kk,Praha 6 - Břevnov,Praha 6 - Břevnov
 8159,10000,16,1+kk,Praha 4 - Háje,Praha 4 - Háje
@@ -6226,9 +6226,9 @@
 8239,11000,28,2+kk,Praha 10 - Vinohrady,Praha 10 - Vinohrady
 8240,8000,16,1+kk,Praha 4 - Nusle,Praha 4 - Nusle
 8241,13000,34,2+kk,Praha 5 - Zličín,Praha 5 - Zličín
-8242,11000,14,14,Praha 10 - Strašnice,Praha 10 - Strašnice
+8242,11000,14,other,Praha 10 - Strašnice,Praha 10 - Strašnice
 8243,26000,62,3+1,Praha 1 - Nové Město,Praha 1 - Nové Město
-8244,10000,11,11,Praha 10 - Strašnice,Praha 10 - Strašnice
+8244,10000,11,other,Praha 10 - Strašnice,Praha 10 - Strašnice
 8245,26000,57,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8246,23000,79,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8247,53000,71,4+kk,Praha 6 - Břevnov,Praha 6 - Břevnov
@@ -6405,8 +6405,8 @@
 8428,11000,28,2+kk,Praha 10 - Vinohrady,Praha 10 - Vinohrady
 8429,8000,16,1+kk,Praha 4 - Nusle,Praha 4 - Nusle
 8430,13000,34,2+kk,Praha 5 - Zličín,Praha 5 - Zličín
-8431,11000,14,14,Praha 10 - Strašnice,Praha 10 - Strašnice
-8432,10000,11,11,Praha 10 - Strašnice,Praha 10 - Strašnice
+8431,11000,14,other,Praha 10 - Strašnice,Praha 10 - Strašnice
+8432,10000,11,other,Praha 10 - Strašnice,Praha 10 - Strašnice
 8433,26000,57,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8434,23000,79,3+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8435,53000,71,4+kk,Praha 6 - Břevnov,Praha 6 - Břevnov
@@ -6601,7 +6601,7 @@
 8635,41000,50,3+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 8636,10000,32,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8637,10000,26,1+1,Praha 5 - Smíchov,Praha 5 - Smíchov
-8638,6000,7,7,Praha 2 - Nové Město,Praha 2 - Nové Město
+8638,6000,7,other,Praha 2 - Nové Město,Praha 2 - Nové Město
 8639,13000,34,2+kk,Praha 9 - Letňany,Praha 9 - Letňany
 8640,13000,29,2+kk,Praha 4 - Kamýk,Praha 4 - Kamýk
 8641,11000,27,1+kk,Praha 4 - Nusle,Praha 4 - Nusle
@@ -6643,10 +6643,10 @@
 8678,15000,26,2+kk,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 8680,20000,58,3+1,Praha 10 - Vršovice,Praha 10 - Vršovice
 8681,26000,44,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
-8682,8000,7,7,Praha 6 - Bubeneč,Praha 6 - Bubeneč
+8682,8000,7,other,Praha 6 - Bubeneč,Praha 6 - Bubeneč
 8683,31000,42,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
-8684,58000,163,6,Praha 6 - Střešovice,Praha 6 - Střešovice
-8685,58000,162,6,Praha 6 - Střešovice,Praha 6 - Střešovice
+8684,58000,163,other,Praha 6 - Střešovice,Praha 6 - Střešovice
+8685,58000,162,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 8686,10000,18,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 8687,14000,30,2+kk,Praha 9 - Střížkov,Praha 9 - Střížkov
 8688,17000,26,2+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
@@ -6658,7 +6658,7 @@
 8694,12000,23,2+kk,Praha 10 - Dolní Měcholupy,Praha 10 - Dolní Měcholupy
 8695,20000,37,2+kk,Praha 10 - Strašnice,Praha 10 - Strašnice
 8696,20000,47,3+1,Praha 2 - Nové Město,Praha 2 - Nové Město
-8697,5000,10,10,Praha 9,Praha 9
+8697,5000,10,other,Praha 9,Praha 9
 8698,15000,42,3+1,Praha 4 - Braník,Praha 4 - Braník
 8699,23000,73,4+kk,Praha 5 - Stodůlky,Praha 5 - Stodůlky
 8700,26000,87,atypické,Praha 10 - Vinohrady,Praha 10 - Vinohrady
@@ -6696,10 +6696,10 @@
 8735,13000,30,2+1,Praha 3 - Žižkov,Praha 3 - Žižkov
 8736,11000,31,2+1,Praha 10 - Malešice,Praha 10 - Malešice
 8737,17000,35,2+kk,Praha 5 - Košíře,Praha 5 - Košíře
-8738,7000,10,10,Praha 4 - Michle,Praha 4 - Michle
+8738,7000,10,other,Praha 4 - Michle,Praha 4 - Michle
 8739,11000,29,2+kk,Praha 4 - Michle,Praha 4 - Michle
-8740,7000,10,10,Praha 6 - Břevnov,Praha 6 - Břevnov
-8741,4000,7,7,Praha 6 - Břevnov,Praha 6 - Břevnov
+8740,7000,10,other,Praha 6 - Břevnov,Praha 6 - Břevnov
+8741,4000,7,other,Praha 6 - Břevnov,Praha 6 - Břevnov
 8742,11000,17,2+1,Praha 6 - Břevnov,Praha 6 - Břevnov
 8743,10000,18,1+kk,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 8744,8000,23,1+1,Praha 4 - Krč,Praha 4 - Krč
@@ -6731,7 +6731,7 @@
 8772,11000,29,2+1,Praha 8 - Libeň,Praha 8 - Libeň
 8773,17000,25,2+kk,Praha 8 - Karlín,Praha 8 - Karlín
 8774,15000,29,2+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
-8775,8000,20,20,Praha 9,Praha 9
+8775,8000,20,other,Praha 9,Praha 9
 8776,8000,20,1+kk,Praha 8 - Karlín,Praha 8 - Karlín
 8777,22000,44,3+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 8778,14000,28,1+kk,Praha 10 - Vinohrady,Praha 10 - Vinohrady
@@ -6763,10 +6763,10 @@
 8805,15000,26,2+kk,Praha 5 - Hlubočepy,Praha 5 - Hlubočepy
 8807,20000,58,3+1,Praha 10 - Vršovice,Praha 10 - Vršovice
 8808,26000,44,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
-8809,8000,7,7,Praha 6 - Bubeneč,Praha 6 - Bubeneč
+8809,8000,7,other,Praha 6 - Bubeneč,Praha 6 - Bubeneč
 8810,31000,42,2+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
-8811,58000,163,6,Praha 6 - Střešovice,Praha 6 - Střešovice
-8812,58000,162,6,Praha 6 - Střešovice,Praha 6 - Střešovice
+8811,58000,163,other,Praha 6 - Střešovice,Praha 6 - Střešovice
+8812,58000,162,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 8813,10000,18,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 8814,14000,30,2+kk,Praha 9 - Střížkov,Praha 9 - Střížkov
 8815,17000,26,2+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
@@ -6853,8 +6853,8 @@
 8902,20000,29,2+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 8903,12000,13,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 8904,18000,26,2+1,Praha 7 - Holešovice,Praha 7 - Holešovice
-8905,4000,7,7,Praha 6 - Břevnov,Praha 6 - Břevnov
-8906,8000,10,10,Praha 6 - Břevnov,Praha 6 - Břevnov
+8905,4000,7,other,Praha 6 - Břevnov,Praha 6 - Břevnov
+8906,8000,10,other,Praha 6 - Břevnov,Praha 6 - Břevnov
 8907,41000,65,3+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 8908,12000,19,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 8909,11000,27,2+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
@@ -6889,7 +6889,7 @@
 8938,16000,19,2+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 8939,16000,36,2+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 8940,19000,35,2+kk,Praha 1 - Staré Město,Praha 1 - Staré Město
-8941,5000,6,6,Praha 9 - Prosek,Praha 9 - Prosek
+8941,5000,6,other,Praha 9 - Prosek,Praha 9 - Prosek
 8942,53000,120,4+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 8943,17000,40,3+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 8945,16000,44,3+1,Praha 4 - Chodov,Praha 4 - Chodov
@@ -7057,7 +7057,7 @@
 9116,15000,47,3+1,Praha 10 - Vršovice,Praha 10 - Vršovice
 9117,10000,23,1+kk,Praha 9 - Libeň,Praha 9 - Libeň
 9118,8000,12,1+kk,Praha 6 - Břevnov,Praha 6 - Břevnov
-9119,6000,9,9,Praha 7 - Holešovice,Praha 7 - Holešovice
+9119,6000,9,other,Praha 7 - Holešovice,Praha 7 - Holešovice
 9120,13000,50,2+kk,Praha 8 - Bohnice,Praha 8 - Bohnice
 9121,19000,34,2+kk,Praha 10,Praha 10
 9122,10000,16,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
@@ -7116,7 +7116,7 @@
 9182,17000,54,3+1,Praha 10 - Strašnice,Praha 10 - Strašnice
 9183,14000,26,2+kk,Praha 8 - Libeň,Praha 8 - Libeň
 9184,13000,23,1+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
-9185,6000,5,5,Praha 6 - Bubeneč,Praha 6 - Bubeneč
+9185,6000,5,other,Praha 6 - Bubeneč,Praha 6 - Bubeneč
 9186,23000,38,3+kk,Praha 10 - Vršovice,Praha 10 - Vršovice
 9187,11000,41,3+1,Praha 5 - Košíře,Praha 5 - Košíře
 9189,8000,19,1+1,Praha 4 - Modřany,Praha 4 - Modřany
@@ -7191,7 +7191,7 @@
 9275,12000,23,1+kk,Praha 9 - Vysočany,Praha 9 - Vysočany
 9276,31000,46,3+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 9277,12000,24,2+1,Praha 5 - Smíchov,Praha 5 - Smíchov
-9278,4000,10,10,Praha 8 - Kobylisy,Praha 8 - Kobylisy
+9278,4000,10,other,Praha 8 - Kobylisy,Praha 8 - Kobylisy
 9279,13000,27,1+kk,Praha 9 - Hloubětín,Praha 9 - Hloubětín
 9280,12000,32,2+1,Praha 10 - Malešice,Praha 10 - Malešice
 9281,10000,23,1+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
@@ -7258,11 +7258,11 @@
 9343,8000,16,1+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 9344,13000,14,1+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 9345,15000,17,1+kk,Praha 5 - Košíře,Praha 5 - Košíře
-9346,7000,5,5,Praha 6 - Střešovice,Praha 6 - Střešovice
+9346,7000,5,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 9347,19000,43,2+kk,Praha 4 - Podolí,Praha 4 - Podolí
-9348,8000,8,8,Praha 6 - Střešovice,Praha 6 - Střešovice
-9349,8000,8,8,Praha 6 - Střešovice,Praha 6 - Střešovice
-9350,7000,5,5,Praha 6 - Střešovice,Praha 6 - Střešovice
+9348,8000,8,other,Praha 6 - Střešovice,Praha 6 - Střešovice
+9349,8000,8,other,Praha 6 - Střešovice,Praha 6 - Střešovice
+9350,7000,5,other,Praha 6 - Střešovice,Praha 6 - Střešovice
 9351,17000,42,2+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 9352,18000,48,3+kk,Praha 3 - Žižkov,Praha 3 - Žižkov
 9353,51000,82,3+1,Praha 1 - Josefov,Praha 1 - Josefov
@@ -7313,7 +7313,7 @@
 9401,8000,16,1+kk,Praha 5 - Smíchov,Praha 5 - Smíchov
 9403,16000,61,3+1,Praha 5 - Smíchov,Praha 5 - Smíchov
 9404,17000,68,1+kk,Praha 1 - Staré Město,Praha 1 - Staré Město
-9407,5000,7,7,Praha 4 - Modřany,Praha 4 - Modřany
+9407,5000,7,other,Praha 4 - Modřany,Praha 4 - Modřany
 9408,20000,38,2+kk,Praha 3,Praha 3
 9409,13000,25,1+kk,Praha 3 - Strašnice,Praha 3 - Strašnice
 9410,20000,35,2+kk,Praha 3,Praha 3
@@ -7374,7 +7374,7 @@
 9469,11000,25,2+kk,Praha 9 - Prosek,Praha 9 - Prosek
 9471,13000,25,2+kk,Praha 4 - Nusle,Praha 4 - Nusle
 9472,29000,35,2+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
-9473,4000,5,5,Praha 10 - Vršovice,Praha 10 - Vršovice
+9473,4000,5,other,Praha 10 - Vršovice,Praha 10 - Vršovice
 9474,41000,87,3+kk,Praha 7 - Holešovice,Praha 7 - Holešovice
 9475,28000,47,3+kk,Praha 6 - Dejvice,Praha 6 - Dejvice
 9476,14000,14,1+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
@@ -7396,7 +7396,7 @@
 9494,29000,35,2+kk,Praha 3 - Vinohrady,Praha 3 - Vinohrady
 9495,19000,41,2+kk,Praha 2 - Vinohrady,Praha 2 - Vinohrady
 9496,19000,38,3+1,Praha 4 - Nusle,Praha 4 - Nusle
-9497,6000,7,7,Praha 6 - Bubeneč,Praha 6 - Bubeneč
+9497,6000,7,other,Praha 6 - Bubeneč,Praha 6 - Bubeneč
 9498,28000,58,3+kk,Praha 1 - Nové Město,Praha 1 - Nové Město
 9499,20000,31,2+kk,Praha 7 - Bubeneč,Praha 7 - Bubeneč
 9500,22000,26,2+kk,Praha 2 - Nové Město,Praha 2 - Nové Město
@@ -7789,7 +7789,7 @@
 10303,7000,14,1+kk,"Čáslav - Čáslav-Nové Město, okres Kutná Hora",Čáslav - Čáslav-Nové Město
 10310,10000,31,2+1,Kladno,Kladno
 10311,9000,19,1+kk,"Český Brod, okres Kolín",Český Brod
-10312,5000,11,11,"Říčany, okres Praha-východ",Říčany
+10312,5000,11,other,"Říčany, okres Praha-východ",Říčany
 10313,10000,23,2+kk,"Kladno - Dubí, okres Kladno",Kladno - Dubí
 10314,8000,31,2+1,Kladno,Kladno
 10324,11000,16,1+kk,"Říčany, okres Praha-východ",Říčany
@@ -8095,7 +8095,7 @@
 10666,7000,22,2+kk,"Ostrava - Mariánské Hory, okres Ostrava-město",Ostrava - Mariánské Hory
 10668,5000,14,1+kk,"Frýdek-Místek - Frýdek, okres Frýdek-Místek",Frýdek-Místek - Frýdek
 10669,12000,40,4+kk,"Třinec - Lyžbice, okres Frýdek-Místek",Třinec - Lyžbice
-10670,4000,11,11,"Ostrava - Moravská Ostrava, okres Ostrava-město",Ostrava - Moravská Ostrava
+10670,4000,11,other,"Ostrava - Moravská Ostrava, okres Ostrava-město",Ostrava - Moravská Ostrava
 10671,8000,32,2+1,"Havířov - Město, okres Karviná",Havířov - Město
 10672,5000,16,1+kk,"Ostrava - Poruba, okres Ostrava-město",Ostrava - Poruba
 10673,5000,20,1+1,"Ostrava - Poruba, okres Ostrava-město",Ostrava - Poruba
@@ -8140,7 +8140,7 @@
 10720,11000,69,3+1,"Ostrava - Moravská Ostrava, okres Ostrava-město",Ostrava - Moravská Ostrava
 10721,7000,30,2+1,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10723,7000,34,3+kk,"Ostrava, okres Ostrava-město",Ostrava
-10724,4000,11,11,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
+10724,4000,11,other,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10725,10000,42,3+kk,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10726,8000,44,3+1,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10727,5000,26,2+1,"Ostrava - Dubina, okres Ostrava-město",Ostrava - Dubina
@@ -8197,7 +8197,7 @@
 10790,11000,69,3+1,"Ostrava - Moravská Ostrava, okres Ostrava-město",Ostrava - Moravská Ostrava
 10791,7000,30,2+1,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10793,7000,34,3+kk,"Ostrava, okres Ostrava-město",Ostrava
-10794,4000,11,11,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
+10794,4000,11,other,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10795,10000,42,3+kk,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10796,8000,44,3+1,"Třinec - Staré Město, okres Frýdek-Místek",Třinec - Staré Město
 10797,10000,41,2+kk,Nový Jičín,Nový Jičín
@@ -9119,7 +9119,7 @@
 12064,8000,38,2+1,Jihlava,Jihlava
 12065,6000,43,3+1,"Třešť, okres Jihlava",Třešť
 12069,6000,19,1+1,Jihlava,Jihlava
-12071,13000,95,6,"Třebíč - Horka-Domky, okres Třebíč",Třebíč - Horka-Domky
+12071,13000,95,other,"Třebíč - Horka-Domky, okres Třebíč",Třebíč - Horka-Domky
 12072,8000,40,4+1,"Humpolec, okres Pelhřimov",Humpolec
 12073,9000,44,3+1,Jihlava,Jihlava
 12075,7000,33,2+kk,Jihlava,Jihlava
@@ -9206,7 +9206,7 @@
 12206,8000,25,2+kk,Jihlava,Jihlava
 12210,8000,25,1+kk,Havlíčkův Brod,Havlíčkův Brod
 12212,8000,56,2+1,"Světlá nad Sázavou, okres Havlíčkův Brod",Světlá nad Sázavou
-12218,17000,149,6,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
+12218,17000,149,other,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
 12219,8000,18,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 12220,14000,45,3+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 12221,16000,26,2+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
@@ -9242,7 +9242,7 @@
 12260,14000,36,2+kk,Brno - Brno-město,Brno - Brno-město
 12261,18000,47,3+kk,Brno - Brno-město,Brno - Brno-město
 12262,13000,48,3+1,"Brno - Židenice, okres Brno-město",Brno - Židenice
-12263,6000,14,14,"Brno - Veveří, okres Brno-město",Brno - Veveří
+12263,6000,14,other,"Brno - Veveří, okres Brno-město",Brno - Veveří
 12264,12000,28,2+1,"Brno - Veveří, okres Brno-město",Brno - Veveří
 12265,12000,31,2+kk,Brno - Brno-město,Brno - Brno-město
 12266,15000,51,2+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
@@ -9509,7 +9509,7 @@
 12576,4000,16,1+kk,Břeclav,Břeclav
 12577,9000,19,1+kk,"Brno - Židenice, okres Brno-město",Brno - Židenice
 12579,9000,13,1+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
-12580,5000,14,14,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
+12580,5000,14,other,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 12581,9000,22,1+1,"Brno - Bystrc, okres Brno-město",Brno - Bystrc
 12582,5000,16,1+kk,Hodonín,Hodonín
 12583,13000,28,2+kk,Brno - Brno-město,Brno - Brno-město
@@ -9678,9 +9678,9 @@
 12787,6000,22,1+1,"Brno - Bystrc, okres Brno-město",Brno - Bystrc
 12788,14000,40,3+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
 12790,8000,28,1+kk,Znojmo,Znojmo
-12791,6000,44,44,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
-12793,7000,50,50,"Brno - Židenice, okres Brno-město",Brno - Židenice
-12794,6000,6,6,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
+12791,6000,44,other,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
+12793,7000,50,other,"Brno - Židenice, okres Brno-město",Brno - Židenice
+12794,6000,6,other,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
 12795,10000,29,2+kk,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
 12796,21000,89,5+kk,"Brno - Černovice, okres Brno-město",Brno - Černovice
 12798,10000,34,2+1,"Brno - Černovice, okres Brno-město",Brno - Černovice
@@ -9824,9 +9824,9 @@
 12969,13000,46,4+1,"Brno - Nový Lískovec, okres Brno-město",Brno - Nový Lískovec
 12970,10000,29,2+kk,"Brno - Husovice, okres Brno-město",Brno - Husovice
 12972,13000,53,3+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
-12973,4000,50,50,"Brno - Bohunice, okres Brno-město",Brno - Bohunice
-12974,4000,11,11,"Brno - Nový Lískovec, okres Brno-město",Brno - Nový Lískovec
-12975,6000,11,11,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
+12973,4000,50,other,"Brno - Bohunice, okres Brno-město",Brno - Bohunice
+12974,4000,11,other,"Brno - Nový Lískovec, okres Brno-město",Brno - Nový Lískovec
+12975,6000,11,other,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
 12976,17000,67,4+1,Brno - Brno-město,Brno - Brno-město
 12977,11000,28,2+kk,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
 12978,13000,39,2+1,"Brno - Veveří, okres Brno-město",Brno - Veveří
@@ -9980,7 +9980,7 @@
 13163,11000,32,2+1,"Brno - Židenice, okres Brno-město",Brno - Židenice
 13164,6000,23,1+kk,Znojmo,Znojmo
 13165,17000,39,3+kk,"Brno - Pisárky, okres Brno-město",Brno - Pisárky
-13166,32000,137,6,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
+13166,32000,137,other,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13167,6000,18,1+1,"Hodonín, okres Hodonín",Hodonín
 13168,11000,24,2+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13169,7000,34,2+kk,Znojmo,Znojmo
@@ -10075,7 +10075,7 @@
 13275,13000,42,3+kk,"Brno - Líšeň, okres Brno-město",Brno - Líšeň
 13277,8000,16,1+kk,"Brno - Slatina, okres Brno-město",Brno - Slatina
 13279,6000,17,1+kk,"Modřice, okres Brno-venkov",Modřice
-13280,4000,5,5,Břeclav,Břeclav
+13280,4000,5,other,Břeclav,Břeclav
 13283,14000,29,2+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
 13284,13000,26,2+kk,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
 13286,7000,25,1+1,Znojmo,Znojmo
@@ -10111,7 +10111,7 @@
 13323,9000,15,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13324,9000,17,1+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13325,15000,17,2+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
-13326,5000,17,17,"Modřice, okres Brno-venkov",Modřice
+13326,5000,17,other,"Modřice, okres Brno-venkov",Modřice
 13328,8000,20,1+kk,"Brno - Žebětín, okres Brno-město",Brno - Žebětín
 13329,8000,13,1+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13330,8000,17,1+kk,"Brno - Bystrc, okres Brno-město",Brno - Bystrc
@@ -10122,7 +10122,7 @@
 13338,18000,47,3+kk,Brno - Brno-město,Brno - Brno-město
 13339,8000,20,1+kk,"Brno - Komín, okres Brno-město",Brno - Komín
 13340,15000,51,2+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
-13341,9000,10,10,"Brno - Komárov, okres Brno-město",Brno - Komárov
+13341,9000,10,other,"Brno - Komárov, okres Brno-město",Brno - Komárov
 13342,7000,15,1+kk,"Brno - Líšeň, okres Brno-město",Brno - Líšeň
 13343,5000,22,1+1,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
 13346,11000,34,2+kk,"Brno - Slatina, okres Brno-město",Brno - Slatina
@@ -10170,7 +10170,7 @@
 13401,8000,20,1+kk,"Brno - Žebětín, okres Brno-město",Brno - Žebětín
 13402,17000,45,2+1,"Brno - Horní Heršpice, okres Brno-město",Brno - Horní Heršpice
 13403,7000,23,1+1,Znojmo,Znojmo
-13404,7000,16,16,"Brno - Veveří, okres Brno-město",Brno - Veveří
+13404,7000,16,other,"Brno - Veveří, okres Brno-město",Brno - Veveří
 13405,9000,22,2+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
 13406,7000,19,1+1,Znojmo,Znojmo
 13408,6000,24,1+kk,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
@@ -10186,7 +10186,7 @@
 13421,14000,43,3+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13423,17000,34,2+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13424,12000,29,2+kk,"Brno - Slatina, okres Brno-město",Brno - Slatina
-13425,4000,35,35,"Brno - Černovice, okres Brno-město",Brno - Černovice
+13425,4000,35,other,"Brno - Černovice, okres Brno-město",Brno - Černovice
 13426,11000,35,2+1,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
 13427,7000,14,1+1,"Boskovice, okres Blansko",Boskovice
 13428,7000,25,2+kk,Znojmo,Znojmo
@@ -10196,7 +10196,7 @@
 13432,17000,44,3+kk,"Brno - Líšeň, okres Brno-město",Brno - Líšeň
 13433,7000,28,1+1,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
 13434,9000,40,2+1,"Mikulov, okres Břeclav",Mikulov
-13436,5000,12,12,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
+13436,5000,12,other,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
 13437,14000,42,3+kk,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
 13438,14000,44,2+1,"Brno, okres Brno-město",Brno
 13439,8000,35,1+1,"Šlapanice, okres Brno-venkov",Šlapanice
@@ -10222,7 +10222,7 @@
 13462,9000,16,1+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13463,21000,84,3+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13464,26000,96,3+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
-13465,5000,9,9,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
+13465,5000,9,other,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
 13466,8000,34,3+1,Břeclav,Břeclav
 13470,7000,23,1+1,"Brno - Královo Pole, okres Brno-město",Brno - Královo Pole
 13471,7000,15,1+1,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
@@ -10276,7 +10276,7 @@
 13532,9000,32,2+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13533,7000,34,2+1,"Boskovice, okres Blansko",Boskovice
 13534,13000,39,3+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
-13536,4000,89,89,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
+13536,4000,89,other,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13538,8000,35,2+1,"Ivančice, okres Brno-venkov",Ivančice
 13540,9000,14,1+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13541,10000,14,1+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
@@ -10288,7 +10288,7 @@
 13549,9000,32,2+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13550,7000,34,2+1,"Boskovice, okres Blansko",Boskovice
 13551,13000,39,3+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
-13552,4000,89,89,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
+13552,4000,89,other,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13553,8000,31,2+1,"Slavkov u Brna, okres Vyškov",Slavkov u Brna
 13554,16000,45,3+kk,"Brno - Komín, okres Brno-město",Brno - Komín
 13555,13000,43,3+kk,"Brno, okres Brno-město",Brno
@@ -10323,8 +10323,8 @@
 13597,11000,32,2+1,"Brno - Bystrc, okres Brno-město",Brno - Bystrc
 13598,4000,78,atypické,"Brno - Husovice, okres Brno-město",Brno - Husovice
 13599,8000,22,2+kk,"Brno - Husovice, okres Brno-město",Brno - Husovice
-13600,5000,7,7,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
-13601,5000,7,7,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
+13600,5000,7,other,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
+13601,5000,7,other,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13602,16000,56,3+kk,"Brno - Královo Pole, okres Brno-město",Brno - Královo Pole
 13604,15000,50,3+1,"Brno - Ponava, okres Brno-město",Brno - Ponava
 13605,10000,36,2+kk,"Mikulov, okres Břeclav",Mikulov
@@ -10352,7 +10352,7 @@
 13637,12000,30,2+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13638,12000,46,2+1,"Brno - Královo Pole, okres Brno-město",Brno - Královo Pole
 13639,8000,31,1+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
-13640,4000,43,43,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
+13640,4000,43,other,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
 13641,9000,40,3+1,Břeclav,Břeclav
 13642,7000,40,3+1,Znojmo,Znojmo
 13643,9000,11,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
@@ -10377,7 +10377,7 @@
 13665,12000,26,1+kk,Brno - Brno-město,Brno - Brno-město
 13666,14000,40,3+kk,Znojmo,Znojmo
 13667,7000,22,1+kk,"Brno - Žebětín, okres Brno-město",Brno - Žebětín
-13668,5000,11,11,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
+13668,5000,11,other,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13669,10000,22,1+1,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
 13671,10000,33,2+1,Znojmo,Znojmo
 13672,10000,31,2+kk,"Modřice, okres Brno-venkov",Modřice
@@ -10392,7 +10392,7 @@
 13685,7000,35,2+1,Znojmo,Znojmo
 13688,7000,23,1+1,Břeclav,Břeclav
 13689,8000,31,2+1,"Mikulov, okres Břeclav",Mikulov
-13690,4000,81,81,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
+13690,4000,81,other,"Brno - Žabovřesky, okres Brno-město",Brno - Žabovřesky
 13691,11000,59,2+1,Břeclav,Břeclav
 13692,8000,14,1+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13693,8000,38,2+1,Hodonín,Hodonín
@@ -10402,14 +10402,14 @@
 13698,20000,79,3+1,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13700,7000,33,2+1,Hodonín,Hodonín
 13701,13000,20,1+kk,"Brno - Židenice, okres Brno-město",Brno - Židenice
-13702,4000,26,26,Brno - Brno-město,Brno - Brno-město
+13702,4000,26,other,Brno - Brno-město,Brno - Brno-město
 13703,9000,16,1+kk,"Brno, okres Brno-město",Brno
 13705,6000,26,2+1,"Břeclav, okres Břeclav",Břeclav
 13706,13000,53,3+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13707,9000,25,2+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13708,13000,74,4+1,Hodonín,Hodonín
 13711,14000,59,3+kk,"Ivančice, okres Brno-venkov",Ivančice
-13713,5000,8,8,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
+13713,5000,8,other,"Brno - Starý Lískovec, okres Brno-město",Brno - Starý Lískovec
 13714,23000,44,3+kk,"Brno - Komárov, okres Brno-město",Brno - Komárov
 13715,8000,22,1+kk,"Brno - Židenice, okres Brno-město",Brno - Židenice
 13716,8000,19,1+kk,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
@@ -10434,7 +10434,7 @@
 13744,14000,39,3+1,"Brno - Lesná, okres Brno-město",Brno - Lesná
 13745,8000,13,1+kk,Brno - Brno-město,Brno - Brno-město
 13746,10000,20,1+1,"Brno - Veveří, okres Brno-město",Brno - Veveří
-13747,7000,7,7,Brno - Brno-město,Brno - Brno-město
+13747,7000,7,other,Brno - Brno-město,Brno - Brno-město
 13749,17000,32,2+1,"Brno - Černovice, okres Brno-město",Brno - Černovice
 13750,9000,14,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13751,9000,14,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
@@ -10442,52 +10442,52 @@
 13753,9000,25,1+1,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
 13754,9000,32,2+kk,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
 13755,9000,23,1+1,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
-13756,5000,32,32,Brno - Brno-město,Brno - Brno-město
-13757,5000,38,38,Brno - Brno-město,Brno - Brno-město
+13756,5000,32,other,Brno - Brno-město,Brno - Brno-město
+13757,5000,38,other,Brno - Brno-město,Brno - Brno-město
 13758,8000,26,1+1,"Brno - Řečkovice, okres Brno-město",Brno - Řečkovice
 13761,7000,26,2+1,Hodonín,Hodonín
 13764,9000,13,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13765,9000,13,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13766,9000,13,1+kk,"Brno - Staré Brno, okres Brno-město",Brno - Staré Brno
 13767,8000,16,1+kk,Hodonín,Hodonín
-13768,4000,42,42,Brno - Brno-město,Brno - Brno-město
+13768,4000,42,other,Brno - Brno-město,Brno - Brno-město
 13769,11000,17,1+kk,"Brno - Komárov, okres Brno-město",Brno - Komárov
 13770,6000,19,1+1,"Brno - Štýřice, okres Brno-město",Brno - Štýřice
-13771,5000,47,47,"Brno - Pisárky, okres Brno-město",Brno - Pisárky
+13771,5000,47,other,"Brno - Pisárky, okres Brno-město",Brno - Pisárky
 13772,12000,36,2+kk,Znojmo,Znojmo
 13773,5000,22,1+1,Hodonín,Hodonín
-13774,4000,8,8,"Brno - Černá Pole, okres Brno-město",Brno - Černá Pole
+13774,4000,8,other,"Brno - Černá Pole, okres Brno-město",Brno - Černá Pole
 13775,11000,53,4+kk,Břeclav,Břeclav
 13776,19000,39,3+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
 13777,11000,77,3+1,"Veselí nad Moravou, okres Hodonín",Veselí nad Moravou
 13779,8000,19,1+1,"Brno - Královo Pole, okres Brno-město",Brno - Královo Pole
 13780,26000,72,3+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
 13781,41000,178,5+kk,"Brno - Veveří, okres Brno-město",Brno - Veveří
-13782,4000,28,28,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
+13782,4000,28,other,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13783,8000,45,2+1,Znojmo,Znojmo
 13784,7000,37,3+1,Znojmo,Znojmo
 13785,7000,13,1+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13786,7000,20,1+1,"Ivančice, okres Brno-venkov",Ivančice
 13787,11000,20,1+kk,"Brno, okres Brno-město",Brno
-13788,5000,11,11,"Modřice, okres Brno-venkov",Modřice
-13791,5000,28,28,Brno - Brno-město,Brno - Brno-město
-13792,5000,26,26,Brno - Brno-město,Brno - Brno-město
-13794,4000,28,28,Brno - Brno-město,Brno - Brno-město
-13795,7000,42,42,"Brno - Černá Pole, okres Brno-město",Brno - Černá Pole
-13796,4000,32,32,Brno - Brno-město,Brno - Brno-město
+13788,5000,11,other,"Modřice, okres Brno-venkov",Modřice
+13791,5000,28,other,Brno - Brno-město,Brno - Brno-město
+13792,5000,26,other,Brno - Brno-město,Brno - Brno-město
+13794,4000,28,other,Brno - Brno-město,Brno - Brno-město
+13795,7000,42,other,"Brno - Černá Pole, okres Brno-město",Brno - Černá Pole
+13796,4000,32,other,Brno - Brno-město,Brno - Brno-město
 13797,18000,57,4+kk,Znojmo,Znojmo
 13798,17000,63,4+kk,Znojmo,Znojmo
 13799,13000,50,3+kk,Znojmo,Znojmo
 13800,11000,16,1+kk,Brno - Brno-město,Brno - Brno-město
-13803,7000,26,26,Brno - Brno-město,Brno - Brno-město
+13803,7000,26,other,Brno - Brno-město,Brno - Brno-město
 13804,8000,17,1+kk,"Brno - Zábrdovice, okres Brno-město",Brno - Zábrdovice
 13805,9000,28,1+1,"Brno - Černá Pole, okres Brno-město",Brno - Černá Pole
 13806,11000,38,2+1,"Brno, okres Brno-město",Brno
 13807,6000,17,1+kk,Hodonín,Hodonín
 13808,8000,15,1+kk,Brno - Brno-město,Brno - Brno-město
-13809,5000,50,50,Brno - Brno-město,Brno - Brno-město
-13810,5000,50,50,Brno - Brno-město,Brno - Brno-město
-13811,5000,50,50,Brno - Brno-město,Brno - Brno-město
+13809,5000,50,other,Brno - Brno-město,Brno - Brno-město
+13810,5000,50,other,Brno - Brno-město,Brno - Brno-město
+13811,5000,50,other,Brno - Brno-město,Brno - Brno-město
 13817,20000,54,3+kk,"Brno - Trnitá, okres Brno-město",Brno - Trnitá
 13846,36000,86,3+kk,"Poděbradská, Praha - Hloubětín",Poděbradská
 13858,17000,34,1+kk,"Poděbradská, Praha - Hloubětín",Poděbradská

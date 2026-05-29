@@ -65,21 +65,44 @@ def process_data(update = False):
     df_bezrealitky['flat_type'] = df_bezrealitky['flat_type'].map(mapping)
     df_bezrealitky_clean = df_bezrealitky
 
+    # remove non-czech properties
+    df_sreality_clean = df_sreality_clean[
+        (df_sreality_clean['lat'] >= 48.5) &
+        (df_sreality_clean['lat'] <= 51.1) &
+        (df_sreality_clean['lon'] >= 12.0) &
+        (df_sreality_clean['lon'] <= 18.9)
+    ]
+
+    df_bezrealitky_clean = df_bezrealitky_clean[
+        (df_bezrealitky_clean['lat'] >= 48.5) &
+        (df_bezrealitky_clean['lat'] <= 51.1) &
+        (df_bezrealitky_clean['lon'] >= 12.0) &
+        (df_bezrealitky_clean['lon'] <= 18.9)
+    ]
+
+    # concatenate datasets
     df_all = pd.concat([df_sreality_clean, df_bezrealitky_clean], ignore_index=True)
 
-    # remove non-czech properties (approximate)
-    df_all = df_all[
-        (df_all['lat'] >= 48.5) &
-        (df_all['lat'] <= 51.1) &
-        (df_all['lon'] >= 12.0) &
-        (df_all['lon'] <= 18.9)
-    ]
+
+    # change non-standard flat types to "other"
+    standard = {
+    '1+kk', '1+1',
+    '2+kk', '2+1',
+    '3+kk', '3+1',
+    '4+kk', '4+1',
+    '5+kk', '5+1',
+    'atypické'
+    }
+
+    df_all['flat_type'] = df_all['flat_type'].where(
+        df_all['flat_type'].isin(standard), other='other'
+    )
 
     # save df_all as csv
     df_all.to_csv("data/df_all.csv")
 
     # datasets for map
-    df_heatmap = df_all[['lat', 'lon', 'price', 'area']].copy()
+    df_heatmap = df_all[['lat', 'lon', 'price', 'area', 'flat_type']].copy()
     df_sreality_property = df_sreality_clean[['lat', 'lon', 'price','locality', 'flat_type', 'area', 'url', 'image']].copy()
     df_bezrealitky_property = df_bezrealitky_clean[['lat', 'lon', 'price','locality', 'flat_type', 'area', 'url', 'image']].copy()
 
@@ -87,6 +110,8 @@ def process_data(update = False):
     df_heatmap.to_parquet("data/df_heatmap.parquet")
     df_sreality_property.to_parquet("data/df_sreality_property.parquet")
     df_bezrealitky_property.to_parquet("data/df_bezrealitky_property.parquet")
+
+
 
     # Dataframe for analysis
     df_reg = df_all[['price', 'area', 'flat_type', 'locality']].dropna().copy()

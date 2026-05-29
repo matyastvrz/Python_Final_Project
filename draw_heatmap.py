@@ -6,7 +6,9 @@ from function_scripts import add_choropleth_layer
 from function_scripts import add_properties
 import webbrowser
 
-
+#---------------------
+# standalone heatmap
+#---------------------
 
 def draw_heatmap():
 
@@ -201,11 +203,11 @@ def draw_heatmap():
 
 
 
+#---------------------
+# streamlit heatmap
+#---------------------
 
-
-
-
-def draw_heatmap_streamlit(region_level="Kraje", property_layer="All", show_heatmap=True):
+def draw_heatmap_streamlit(region_level="Okresy", property_layer="All", show_heatmap=True, selected_flat_types=None, area_range=(0, 200), price_range=(0, 100_000)):
     
     # read geojson files on administrative regions
     okresy = gpd.read_file("data/okresy.json") 
@@ -217,8 +219,17 @@ def draw_heatmap_streamlit(region_level="Kraje", property_layer="All", show_heat
     df_sreality_property = pd.read_parquet("data/df_sreality_property.parquet")
     df_bezrealitky_property = pd.read_parquet("data/df_bezrealitky_property.parquet")
 
+    # apply filters to heatmap data
+    if selected_flat_types is not None:
+        df_heatmap = df_heatmap[df_heatmap['flat_type'].isin(selected_flat_types)]
+
+    df_heatmap = df_heatmap[
+        df_heatmap['area'].between(*area_range) &
+        df_heatmap['price'].between(*price_range)
+    ]
+
     # base map, centered on CZ
-    m = folium.Map(location=(49.75, 15.40), zoom_start = 8)
+    m = folium.Map(location=(49.75, 15.40), zoom_start = 7.3)
 
     # remove invalid areas
     df_heatmap = df_heatmap.dropna(subset=['area'])
@@ -263,33 +274,19 @@ def draw_heatmap_streamlit(region_level="Kraje", property_layer="All", show_heat
     df_sreality_property['source'] = 'Sreality'
     df_bezrealitky_property['source'] = 'Bezrealitky'
 
+    from function_scripts import filter_properties 
+
     if property_layer == "All":
-
-        all_df = pd.concat(
-            [
-                df_sreality_property.assign(source="Sreality"),
-                df_bezrealitky_property.assign(source="Bezrealitky")
-            ],
-            ignore_index=True
-        )
-
-        add_properties(all_df, m)
-
+        all_df = pd.concat([
+            df_sreality_property.assign(source="Sreality"),
+            df_bezrealitky_property.assign(source="Bezrealitky")
+        ], ignore_index=True)
+        add_properties(filter_properties(all_df, selected_flat_types, area_range, price_range), m)
 
     elif property_layer == "Sreality":
-
-        add_properties(
-            df_sreality_property.assign(source="Sreality"),
-            m
-        )
-
+        add_properties(filter_properties(df_sreality_property.assign(source="Sreality"), selected_flat_types, area_range, price_range), m)
 
     elif property_layer == "Bezrealitky":
-
-        add_properties(
-            df_bezrealitky_property.assign(source="Bezrealitky"),
-            m
-        )
-
+        add_properties(filter_properties(df_bezrealitky_property.assign(source="Bezrealitky"), selected_flat_types, area_range, price_range), m)
 
     return m

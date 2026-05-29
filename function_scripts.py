@@ -306,6 +306,18 @@ def load_data():
         df_bezrealitky_property
     )
 
+# filter properties based on toggles and sliders
+def filter_properties(df, selected_flat_types, area_range, price_range):
+    df = df.copy()
+    if selected_flat_types is not None:
+        df = df[df['flat_type'].isin(selected_flat_types)]
+    df = df[
+        df['area'].between(*area_range) &
+        df['price'].between(*price_range)
+    ]
+    return df
+
+
 def add_properties(df, m):
     cluster = MarkerCluster().add_to(m)
 
