@@ -87,3 +87,23 @@ def process_data(update = False):
     df_heatmap.to_parquet("data/df_heatmap.parquet")
     df_sreality_property.to_parquet("data/df_sreality_property.parquet")
     df_bezrealitky_property.to_parquet("data/df_bezrealitky_property.parquet")
+
+    # Dataframe for analysis
+    df_reg = df_all[['price', 'area', 'flat_type', 'locality']].dropna().copy()
+
+    # Extract district from locality
+    df_reg['district'] = df_reg['locality'].str.extract(r'^([^,]+)')
+
+    # Drop extreme outliers (top/bottom 1%)
+    q_low  = df_reg['price'].quantile(0.01)
+    q_high = df_reg['price'].quantile(0.99)
+    df_reg = df_reg[(df_reg['price'] > q_low) & (df_reg['price'] < q_high)]
+
+    # Keep only districts with enough observations
+    min_obs = 10
+    district_counts = df_reg['district'].value_counts()
+    df_reg = df_reg[df_reg['district'].isin(district_counts[district_counts >= min_obs].index)]
+
+    # Save analysis dataframe
+    df_reg.to_csv("data/df_reg.csv")
+
