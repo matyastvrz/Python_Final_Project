@@ -60,9 +60,6 @@ with col1:
 from draw_heatmap import draw_heatmap_streamlit
 
 m = draw_heatmap_streamlit(
-    df_heatmap,
-    df_sreality_property,
-    df_bezrealitky_property,
     region_level=region_level,
     property_layer=property_layer,
     show_heatmap=show_heatmap

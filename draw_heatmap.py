@@ -8,15 +8,20 @@ import webbrowser
 
 
 
-def draw_heatmap(df_heatmap, df_sreality_property, df_bezrealitky_property):
+def draw_heatmap():
+
+    # read geojson files on administrative regions
+    okresy = gpd.read_file("data/okresy.json") 
+    kraje = gpd.read_file("data/kraje.json") 
+    obce = gpd.read_file("data/obce.json")
+
+    #read parquet files on properties 
+    df_heatmap = pd.read_parquet("data/df_heatmap.parquet")
+    df_sreality_property = pd.read_parquet("data/df_sreality_property.parquet")
+    df_bezrealitky_property = pd.read_parquet("data/df_bezrealitky_property.parquet")
+
     # base map, centered on CZ
     m = folium.Map(location=(49.75, 15.40), zoom_start = 8)
-
-    okresy = gpd.read_file("data/okresy.json") 
-
-    kraje = gpd.read_file("data/kraje.json") 
-
-    obce = gpd.read_file("data/obce.json")
 
     # remove invalid areas
     df_heatmap = df_heatmap.dropna(subset=['area'])
@@ -194,15 +199,26 @@ def draw_heatmap(df_heatmap, df_sreality_property, df_bezrealitky_property):
     webbrowser.open(f"file://{path}")
 
 
-def draw_heatmap_streamlit(df_heatmap, df_sreality_property, df_bezrealitky_property, region_level="Kraje", property_layer="All", show_heatmap=True):
+
+
+
+
+
+
+def draw_heatmap_streamlit(region_level="Kraje", property_layer="All", show_heatmap=True):
+    
+    # read geojson files on administrative regions
+    okresy = gpd.read_file("data/okresy.json") 
+    kraje = gpd.read_file("data/kraje.json") 
+    obce = gpd.read_file("data/obce.json")
+
+    #read parquet files on properties 
+    df_heatmap = pd.read_parquet("data/df_heatmap.parquet")
+    df_sreality_property = pd.read_parquet("data/df_sreality_property.parquet")
+    df_bezrealitky_property = pd.read_parquet("data/df_bezrealitky_property.parquet")
+
     # base map, centered on CZ
     m = folium.Map(location=(49.75, 15.40), zoom_start = 8)
-
-    okresy = gpd.read_file("data/okresy.json") 
-
-    kraje = gpd.read_file("data/kraje.json") 
-
-    obce = gpd.read_file("data/obce.json")
 
     # remove invalid areas
     df_heatmap = df_heatmap.dropna(subset=['area'])
