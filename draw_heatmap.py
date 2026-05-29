@@ -4,6 +4,7 @@ import geopandas as gpd
 import pandas as pd
 from function_scripts import add_choropleth_layer
 from function_scripts import add_properties
+import webbrowser
 
 
 
@@ -186,8 +187,11 @@ def draw_heatmap(df_heatmap, df_sreality_property, df_bezrealitky_property):
         collapsed=False
     ).add_to(m)
 
-    # save
-    #m.save("heatmap.html")
+    path = "/tmp/heatmap.html"
+
+    m.save(path)
+
+    webbrowser.open(f"file://{path}")
 
 
 def draw_heatmap_streamlit(df_heatmap, df_sreality_property, df_bezrealitky_property, region_level="Kraje", property_layer="All", show_heatmap=True):
