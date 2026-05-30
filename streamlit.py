@@ -13,7 +13,7 @@ import pandas as pd
 st.set_page_config(layout="wide")
 
 # set title 
-st.title("Rental Price Determinants in the Czech Republic")
+st.title("Rental Prices in the Czech Republic")
 
 # about
 st.header("About")
@@ -30,7 +30,7 @@ with col1:
     show_heatmap = st.checkbox("Show Heatmap", value=True)
 
     property_layer = st.radio(
-        "Property Layer",
+        "Property Source",
         ["All", "Sreality", "Bezrealitky", "None"],
         index=0
     )
@@ -59,7 +59,7 @@ with col1:
     price_max = int(df_max['price'].quantile(0.999))
 
     area_range = st.slider("Area (m²)", min_value=0, max_value=area_max, value=(0, area_max))
-    price_range = st.slider("Total price (CZK)", min_value=0, max_value=price_max, step=1_000, value=(0, price_max))
+    price_range = st.slider("Total price per month (CZK)", min_value=0, max_value=price_max, step=1_000, value=(0, price_max))
 
 from draw_heatmap import draw_heatmap_streamlit
 
@@ -78,7 +78,7 @@ with col2:
 
 
 # analysis
-st.header("Analysis")
+st.header("Analysis od Determinants")
 
 df_reg = pd.read_csv("data/df_reg.csv")
 
@@ -87,13 +87,13 @@ st.subheader("Filters")
 
 col1, col2, col3 = st.columns(3)
 
-# filter districts based on name
+# filter cities based on name
 with col1:
-    all_districts = sorted(df_reg["district"].unique())
-    selected_districts = st.multiselect(
-        "Districts",
-        options=all_districts,
-        default=all_districts
+    all_cities = sorted(df_reg["city"].unique())
+    selected_cities = st.multiselect(
+        "Cities",
+        options=all_cities,
+        default=all_cities
     )
 
 # filter flat types
@@ -107,23 +107,60 @@ with col2:
 
 # slider for area (meters squared)
 with col3:
-    area_min, area_max = int(df_reg["area"].min()), int(df_reg["area"].max())
     area_range = st.slider(
-        "Area (m²)",
-        min_value=area_min,
-        max_value=area_max,
-        value=(area_min, area_max)
-    )
+    "Area (m²)",
+    min_value=0,
+    max_value=area_max,
+    value=(0, area_max),
+    key="area_range_analysis"
+)
 
 # apply filters
 df_filtered = df_reg[
-    df_reg["district"].isin(selected_districts) &
+    df_reg["city"].isin(selected_cities) &
     df_reg["flat_type"].isin(selected_flat_types) &
     df_reg["area"].between(*area_range)
 ]
 
 # count of observations based on selected filter
 st.caption(f"{len(df_filtered):,} listings selected out of {len(df_reg):,}")
+
+# summary stats for filtered selection
+st.subheader("Summary Statistics")
+
+df_filtered_stats = df_filtered.copy()
+df_filtered_stats['price_m2'] = df_filtered_stats['price'] / df_filtered_stats['area']
+
+tab1, tab2 = st.tabs(["By Flat Type", "By District"])
+
+with tab1:
+    by_flat = (
+        df_filtered_stats.groupby('flat_type')
+        .agg(
+            count=('price', 'count'),
+            median_price=('price', 'median'),
+            mean_price=('price', 'mean'),
+            median_price_m2=('price_m2', 'median'),
+        )
+        .round(0)
+        .sort_values('median_price', ascending=False)
+    )
+    st.dataframe(by_flat, use_container_width=True)
+
+with tab2:
+    by_district = (
+        df_filtered_stats.groupby('district')
+        .agg(
+            count=('price', 'count'),
+            median_price=('price', 'median'),
+            mean_price=('price', 'mean'),
+            median_price_m2=('price_m2', 'median'),
+            distance_prague_km=('distance_prague_km', 'mean'),
+        )
+        .round(0)
+        .sort_values('median_price', ascending=False)
+    )
+    st.dataframe(by_district, use_container_width=True)
 
 # toggle between standard ols and log ols
 model_choice = st.radio(

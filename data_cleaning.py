@@ -1,10 +1,12 @@
+# import packages
 import pandas as pd
 import json 
 import os
 import requests  
 import time
 import re 
-import random 
+import random
+from geopy.distance import geodesic
 
 def process_data(update = False):
 
@@ -114,10 +116,26 @@ def process_data(update = False):
 
 
     # Dataframe for analysis
-    df_reg = df_all[['price', 'area', 'flat_type', 'locality']].dropna().copy()
+    df_reg = df_all[['price', 'area', 'flat_type', 'locality', 'lat', 'lon']].dropna().copy()
+
+    # Add distance to Prague as a variable
+    prague_coords = (50.0873, 14.420109) # Old Town Square coords
+
+    # Calculate distance using geopy
+    df_reg['distance_prague_km'] = df_reg.apply(
+        lambda row: geodesic((row['lat'], row['lon']), prague_coords).km,
+        axis=1
+    )
+
+    # Drop lat/lon — not needed in regression
+    df_reg = df_reg.drop(columns=['lat', 'lon'])
 
     # Extract district from locality
     df_reg['district'] = df_reg['locality'].str.extract(r'^([^,]+)')
+
+    # Extract city from district
+    from function_scripts import extract_city
+    df_reg['city'] = df_reg['district'].apply(extract_city)
 
     # Drop extreme outliers (top/bottom 1%)
     q_low  = df_reg['price'].quantile(0.01)
@@ -128,6 +146,9 @@ def process_data(update = False):
     min_obs = 10
     district_counts = df_reg['district'].value_counts()
     df_reg = df_reg[df_reg['district'].isin(district_counts[district_counts >= min_obs].index)]
+
+
+
 
     # Save analysis dataframe
     df_reg.to_csv("data/df_reg.csv")

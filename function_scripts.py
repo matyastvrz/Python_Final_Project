@@ -1,3 +1,4 @@
+# import packages
 import requests
 import pandas as pd
 import time
@@ -338,3 +339,15 @@ def add_properties(df, m):
             fill=True,
             popup=folium.Popup(popup_html, max_width=250)
         ).add_to(cluster)
+
+
+
+#---------------------
+# misc functions
+#---------------------
+
+# Extract city
+def extract_city(district):
+    if ' - ' in district:
+        return district.split(' - ')[0].strip()
+    return district
