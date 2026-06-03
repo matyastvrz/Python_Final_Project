@@ -207,34 +207,94 @@ def plot_eda(df_reg):
     return fig
 
     
-# run OLS in log form 
-def run_log_ols(df_reg):
-    df_reg['log_price'] = np.log(df_reg['price'])
-
-    model_log = smf.ols(
-        formula='log_price ~ area + distance_prague_km + C(flat_type) + C(district)',
-        data=df_reg
-    ).fit()
-
-    print(model_log.summary())
-
-    # Coefficient interpretation: area coef ≈ % change in price per extra m²
-    print(f"\nArea coefficient: {model_log.params['area']:.4f}")
-    print(f"→ Each extra m² is associated with ~{model_log.params['area']*100:.2f}% higher rent")
-
-    return model_log
-
-# plot district fixed effects
-def plot_district_fe(model_log):
-    fe = model_log.params.filter(like='C(district)')
-    fe.index = fe.index.str.replace(r'C\(district\)\[T\.', '', regex=True).str.replace(']', '')
-    fe_sorted = fe.sort_values(ascending=False)
-
-    fig = plt.figure(figsize=(10, max(4, len(fe_sorted)*0.3)))
-    fe_sorted.plot(kind='barh')
-    plt.axvline(0, color='red', lw=1)
-    plt.xlabel('Log-price premium vs baseline district')
-    plt.title('District Fixed Effects')
+# ── Diagnostic plots ──────────────────────────────────────────────────────────
+def plot_diagnostics(df_reg, model):
+    """
+    Three-panel diagnostic figure:
+      • Residuals vs Fitted  (with LOWESS smoother)
+      • Normal Q-Q of standardised residuals
+      • Rent distribution with log-normal overlay
+    """
+    fig, axes = plt.subplots(1, 3, figsize=(17, 5))
+    fig.patch.set_facecolor("white")
+ 
+    std_resid = model.get_influence().resid_studentized_internal
+ 
+    # residuals vs fitted
+    axes[0].scatter(model.fittedvalues, model.resid,
+                    alpha=0.25, s=10, color=ACCENT)
+    axes[0].axhline(0, color=RED, lw=1.2)
+    sm = lowess(model.resid, model.fittedvalues, frac=0.3)
+    axes[0].plot(sm[:, 0], sm[:, 1], color=RED, lw=1.8, label="LOWESS")
+    axes[0].legend(fontsize=9)
+    axes[0].yaxis.set_major_formatter(
+        mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}k"))
+    _style_ax(axes[0], "Residuals vs Fitted", "Fitted values", "Residuals")
+ 
+    # Q-Q plot
+    (osm, osr), (slope, intercept, _) = stats.probplot(std_resid)
+    axes[1].scatter(osm, osr, alpha=0.35, s=10, color=ACCENT)
+    axes[1].plot(osm, slope * np.array(osm) + intercept,
+                 color=RED, lw=1.5, ls="--")
+    _style_ax(axes[1], "Normal Q-Q Plot",
+              "Theoretical quantiles", "Std. residuals")
+ 
+    # price distribution with log-normal fit
+    prices = df_reg["price"]
+    axes[2].hist(prices / 1000, bins=50,
+                 color=ACCENT, edgecolor="white", alpha=0.85, density=True)
+    mu, sigma = np.log(prices).mean(), np.log(prices).std()
+    xs  = np.linspace(prices.min(), prices.max(), 300)
+    pdf = stats.lognorm.pdf(xs, s=sigma, scale=np.exp(mu))
+    axes[2].plot(xs / 1000, pdf * 1000, color=RED, lw=2, label="Log-normal fit")
+    axes[2].legend(fontsize=9)
+    axes[2].xaxis.set_major_formatter(
+        mticker.FuncFormatter(lambda x, _: f"{x:.0f}k"))
+    _style_ax(axes[2], "Rent Distribution", "Rent (CZK thousands)", "Density")
+ 
+    fig.suptitle("OLS Diagnostics", fontsize=15, fontweight="bold", y=1.02)
     plt.tight_layout()
     plt.close()
     return fig
+ 
+
+# ── District fixed effects ────────────────────────────────────────────────────
+def plot_district_fe(model_log):
+    """
+    Horizontal bar chart of district FE with 95% CI error bars,
+    coloured by sign (premium / discount vs. baseline district).
+    """
+    clean = lambda s: s.replace("C(district)[T.", "").replace("]", "")
+ 
+    fe_params = model_log.params.filter(like="C(district)")
+    fe_conf   = model_log.conf_int().filter(like="C(district)", axis=0)
+    fe_params.index = fe_params.index.map(clean)
+    fe_conf.index   = fe_conf.index.map(clean)
+ 
+    fe_sorted = fe_params.sort_values(ascending=True)
+    ci_low    = fe_conf.loc[fe_sorted.index, 0]
+    ci_high   = fe_conf.loc[fe_sorted.index, 1]
+    colors    = [ACCENT if v >= 0 else RED for v in fe_sorted]
+ 
+    fig, ax = plt.subplots(figsize=(10, max(5, len(fe_sorted) * 0.32)))
+    fig.patch.set_facecolor("white")
+ 
+    ax.barh(fe_sorted.index, fe_sorted.values,
+            color=colors, edgecolor="white", height=0.65, alpha=0.85)
+    ax.errorbar(fe_sorted.values, fe_sorted.index,
+                xerr=[fe_sorted - ci_low, ci_high - fe_sorted],
+                fmt="none", color="#495057", lw=1, capsize=3)
+    ax.axvline(0, color="#333333", lw=1.0, ls="--")
+ 
+    for name, val in fe_sorted.items():
+        ax.text(val + (0.005 if val >= 0 else -0.005), name,
+                f"{val:+.3f}", va="center",
+                ha="left" if val >= 0 else "right", fontsize=7.5)
+ 
+    _style_ax(ax, "District Fixed Effects (log-OLS)",
+              "Log-price premium / discount vs. baseline district", "")
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    plt.close()
+    return fig
+ 
