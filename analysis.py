@@ -206,7 +206,29 @@ def plot_eda(df_reg):
     plt.close()
     return fig
 
-    
+
+# ── Log-OLS ───────────────────────────────────────────────────────────────────
+def run_log_ols(df_reg):
+    df_reg = df_reg.copy()
+    df_reg["log_price"] = np.log(df_reg["price"])
+ 
+    model_log = smf.ols(
+        formula="log_price ~ area + distance_prague_km + C(flat_type) + C(district)",
+        data=df_reg
+    ).fit()
+ 
+    print(model_log.summary())
+ 
+    area_coef = model_log.params["area"]
+    dist_coef = model_log.params["distance_prague_km"]
+    print(f"\n── Coefficient interpretation ──────────────────────────────")
+    print(f"  area            : {area_coef:.4f}  →  +{area_coef*100:.2f}% rent per extra m²")
+    print(f"  distance_prague : {dist_coef:.4f}  →  {dist_coef*100:.2f}% rent per extra km from Prague")
+    print(f"────────────────────────────────────────────────────────────")
+ 
+    return model_log
+
+
 # ── Diagnostic plots ──────────────────────────────────────────────────────────
 def plot_diagnostics(df_reg, model):
     """
