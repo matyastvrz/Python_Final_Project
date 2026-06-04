@@ -1,322 +1,377 @@
-# import packages
+# ── imports ───────────────────────────────────────────────────────────────────
 import pandas as pd
 import statsmodels.formula.api as smf
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
+import matplotlib.patches as mpatches
 import seaborn as sns
 import numpy as np
 import ipywidgets as widgets
 from IPython.display import display
 from scipy import stats
 from statsmodels.nonparametric.smoothers_lowess import lowess
- 
-# ── shared style constants ───────────────────────────────────────────────────
-PALETTE  = "Set2"
-ACCENT   = "#2a9d8f"
-RED      = "#e76f51"
-BG       = "#f8f9fa"
-TITLE_FS = 13
-LABEL_FS = 11
- 
-def _style_ax(ax, title="", xlabel="", ylabel=""):
-    ax.set_facecolor(BG)
-    ax.set_title(title,   fontsize=TITLE_FS, fontweight="bold", pad=10)
-    ax.set_xlabel(xlabel, fontsize=LABEL_FS)
-    ax.set_ylabel(ylabel, fontsize=LABEL_FS)
-    ax.spines[["top", "right"]].set_visible(False)
-    ax.tick_params(labelsize=9)
- 
-# ── load data ────────────────────────────────────────────────────────────────
+
+# ── design system ─────────────────────────────────────────────────────────────
+NAVY     = "#1d3557"
+BLUE     = "#457b9d"
+TEAL     = "#2a9d8f"
+CORAL    = "#e63946"
+BG       = "#ffffff"
+BG_LIGHT = "#f8f9fa"
+GRID_COL = "#e9ecef"
+TEXT     = "#2b2d42"
+MUTED    = "#868e96"
+
+MAIN_TYPES  = ['1+kk', '1+1', '2+kk', '2+1', '3+kk', '3+1', '4+kk', '4+1']
+TYPE_COLORS = dict(zip(MAIN_TYPES,
+    ['#457b9d','#2a9d8f','#f4a261','#e63946','#6d6875','#b5838d','#1d3557','#52b788']))
+
+plt.rcParams.update({
+    'figure.facecolor'   : BG,
+    'axes.facecolor'     : BG_LIGHT,
+    'axes.grid'          : True,
+    'grid.color'         : GRID_COL,
+    'grid.linewidth'     : 0.8,
+    'axes.axisbelow'     : True,
+    'axes.spines.top'    : False,
+    'axes.spines.right'  : False,
+    'axes.spines.left'   : False,
+    'axes.spines.bottom' : True,
+    'xtick.color'        : MUTED,
+    'ytick.color'        : MUTED,
+    'axes.labelcolor'    : TEXT,
+    'axes.titlecolor'    : TEXT,
+    'axes.titlesize'     : 13,
+    'axes.titleweight'   : 'bold',
+    'axes.titlepad'      : 12,
+    'axes.labelsize'     : 10,
+    'font.size'          : 10,
+    'legend.framealpha'  : 0.9,
+    'legend.edgecolor'   : GRID_COL,
+})
+
+# ── helpers ───────────────────────────────────────────────────────────────────
+def _fmt_kczk(ax, axis='x'):
+    fmt = mticker.FuncFormatter(lambda v, _: f"{v/1000:.0f}k")
+    if axis == 'x': ax.xaxis.set_major_formatter(fmt)
+    else:           ax.yaxis.set_major_formatter(fmt)
+
+def _main_df(df):
+    """Keep only the 8 main flat types."""
+    return df[df['flat_type'].isin(MAIN_TYPES)].copy()
+
+def _sample_by_type(df, n=50):
+    """
+    Sample up to n rows per flat type. 
+    Uses a simple loop to stay compatible with pandas 2.x.
+    """
+    parts = [
+        g.sample(min(len(g), n), random_state=42)
+        for ft in MAIN_TYPES
+        for g in [df[df['flat_type'] == ft]]
+        if len(g) >= 3
+    ]
+    return pd.concat(parts) if parts else df
+
+def _big_title(fig, text, y=0.97):
+    fig.text(0.5, y, text, ha='center', va='bottom',
+             fontsize=15, fontweight='bold', color=TEXT)
+
+
+# ── load data ─────────────────────────────────────────────────────────────────
 def load_data(path="data/df_reg.csv"):
-    df_reg = pd.read_csv(path)
-    return df_reg
- 
-# ── summary stats by flat type ───────────────────────────────────────────────
+    return pd.read_csv(path)
+
+
+# ── summary stats by flat type ────────────────────────────────────────────────
 def summary_stats_type(df_reg):
     df = df_reg.copy()
     df['price_m2'] = df['price'] / df['area']
- 
-    type_stats = (
+    return (
         df.groupby('flat_type')
-        .agg(
-            count=('price', 'count'),
-            median_price=('price', 'median'),
-            mean_price=('price', 'mean'),
-            median_price_m2=('price_m2', 'median'),
-        )
-        .round(0)
-        .sort_values('median_price', ascending=False)
+          .agg(count          = ('price', 'count'),
+               median_price   = ('price', 'median'),
+               mean_price     = ('price', 'mean'),
+               median_price_m2= ('price_m2', 'median'))
+          .round(0)
+          .sort_values('median_price', ascending=False)
     )
-    return type_stats
- 
-# ── interactive summary stats by city / district ─────────────────────────────
+
+
+# ── interactive summary stats ─────────────────────────────────────────────────
 def summary_stats_loc_interactive(df_reg):
     df = df_reg.copy()
     df['price_m2'] = df['price'] / df['area']
- 
-    by_city = (
-        df.groupby('city')
-        .agg(
-            count=('price', 'count'),
-            median_price=('price', 'median'),
-            mean_price=('price', 'mean'),
-            median_price_m2=('price_m2', 'median'),
-            distance_prague_km=('distance_prague_km', 'mean'),
-        )
-        .round(0)
-        .sort_values('median_price', ascending=False)
-    )
- 
+
+    # top 25 districts by listing count
+    top25 = df['district'].value_counts().head(25).index.tolist()
+
     by_district = (
-        df.groupby(['city', 'district'])
-        .agg(
-            count=('price', 'count'),
-            median_price=('price', 'median'),
-            mean_price=('price', 'mean'),
-            median_price_m2=('price_m2', 'median'),
-        )
-        .round(0)
+        df[df['district'].isin(top25)]
+          .groupby('district')
+          .agg(count              = ('price', 'count'),
+               median_price       = ('price', 'median'),
+               mean_price         = ('price', 'mean'),
+               median_price_m2    = ('price_m2', 'median'),
+               distance_prague_km = ('distance_prague_km', 'mean'))
+          .round(0)
+          .sort_values('median_price', ascending=False)
     )
- 
-    cities    = ['All'] + sorted(df['city'].unique().tolist())
-    dropdown  = widgets.Dropdown(options=cities, description='City:')
+
+    cols = ['count', 'median_price', 'mean_price', 'median_price_m2', 'distance_prague_km']
+    districts = ['All'] + sorted(top25)
+    dropdown  = widgets.Dropdown(options=districts, description='District:')
     out       = widgets.Output()
- 
-    def show(city):
+
+    def show(district):
         out.clear_output(wait=True)
         with out:
-            if city == 'All':
-                display(
-                    by_city.style
-                    .format('{:,.0f}', subset=['median_price', 'mean_price',
-                                               'median_price_m2', 'distance_prague_km'])
-                    .set_caption('All cities')
-                )
+            if district == 'All':
+                display(by_district.style
+                        .format('{:,.0f}', subset=cols[1:])
+                        .set_caption('Top 25 districts by listing count'))
             else:
-                display(
-                    by_city.loc[[city]].style
-                    .format('{:,.0f}', subset=['median_price', 'mean_price',
-                                               'median_price_m2', 'distance_prague_km'])
-                    .set_caption(f'{city} — overview')
-                )
-                if city in by_district.index.get_level_values('city'):
-                    sub = by_district.loc[city]
-                    if len(sub) > 1:
-                        display(
-                            sub.style
-                            .format('{:,.0f}', subset=['median_price', 'mean_price',
-                                                       'median_price_m2'])
-                            .set_caption(f'{city} — by district')
-                        )
- 
-    dropdown.observe(lambda change: show(change['new']), names='value')
+                display(by_district.loc[[district]].style
+                        .format('{:,.0f}', subset=cols[1:])
+                        .set_caption(district))
+
+    dropdown.observe(lambda c: show(c['new']), names='value')
     show('All')
     display(widgets.VBox([dropdown, out]))
- 
-# ── EDA visualizations ───────────────────────────────────────────────────────
+
+
+# ── EDA — four-panel overview ─────────────────────────────────────────────────
 def plot_eda(df_reg):
     """
-    Four-panel EDA figure:
-      A – Median rent by district (ranked horizontal bar)
-      B – Price per m² by flat type (boxplot)
-      C – Correlation matrix of numeric variables
-      D – Rent vs Distance to Prague, coloured by flat type
+    A  Median rent by district — top 15 markets
+    B  Price per m² — violin by flat type
+    C  Correlation matrix
+    D  Rent vs Distance to Prague — coloured by flat type
     """
-    df = df_reg.copy()
-    df["price_per_m2"] = df["price"] / df["area"]
- 
-    fig = plt.figure(figsize=(18, 14))
-    fig.patch.set_facecolor("white")
-    gs  = fig.add_gridspec(2, 2, hspace=0.42, wspace=0.35)
- 
-    # ── A: median price by district ──────────────────────────────────────────
+    df   = df_reg.copy()
+    df_m = _main_df(df)
+    df_m['price_per_m2'] = df_m['price'] / df_m['area']
+
+    # top 15 districts by listing count
+    top15 = df['district'].value_counts().head(15).index.tolist()
+
+    fig = plt.figure(figsize=(20, 14))
+    fig.patch.set_facecolor(BG)
+    gs  = fig.add_gridspec(2, 2, hspace=0.48, wspace=0.35,
+                           left=0.07, right=0.97, top=0.91, bottom=0.07)
+
+    # ── A: median rent by district ─────────────────────────────────────────
     ax_a = fig.add_subplot(gs[0, 0])
-    med  = df.groupby("district")["price"].median().sort_values(ascending=True)
-    overall_med = med.median()
-    colors = [ACCENT if v >= overall_med else "#adb5bd" for v in med]
-    bars   = ax_a.barh(med.index, med.values / 1000,
-                       color=colors, edgecolor="white", height=0.7)
-    ax_a.axvline(overall_med / 1000, color=RED, lw=1.4, ls="--",
-                 label=f"overall median ({overall_med/1000:.0f}k)")
+    med  = (df[df['district'].isin(top15)]
+              .groupby('district')['price']
+              .median()
+              .sort_values())
+    pivot = med.median()
+    clrs  = [TEAL if v >= pivot else MUTED for v in med]
+    ax_a.barh(med.index, med.values / 1000, color=clrs, edgecolor=BG, height=0.7)
+    ax_a.axvline(pivot / 1000, color=CORAL, lw=1.4, ls='--',
+                 label=f'median  {pivot/1000:.0f} k')
+    for i, (nm, val) in enumerate(med.items()):
+        ax_a.text(val / 1000 + 0.3, i, f'{val/1000:.0f}',
+                  va='center', fontsize=8, color=TEXT)
+    ax_a.set_xlabel('Median rent (CZK thousands)')
+    ax_a.set_title('Median Rent by District')
     ax_a.legend(fontsize=9)
-    for bar, val in zip(bars, med.values):
-        ax_a.text(bar.get_width() + 0.3, bar.get_y() + bar.get_height() / 2,
-                  f"{val/1000:.0f}k", va="center", fontsize=8)
-    _style_ax(ax_a, "Median Rent by District",
-              "Median rent (CZK thousands)", "")
- 
-    # ── B: price/m² boxplot by flat type ─────────────────────────────────────
+    ax_a.tick_params(axis='y', labelsize=8.5)
+    ax_a.grid(axis='x')
+    ax_a.grid(axis='y', alpha=0)
+
+    # ── B: price/m² violin by flat type ───────────────────────────────────
     ax_b = fig.add_subplot(gs[0, 1])
-    order = (df.groupby("flat_type")["price_per_m2"]
-               .median()
-               .sort_values(ascending=False)
-               .index.tolist())
-    palette = sns.color_palette(PALETTE, n_colors=len(order))
-    sns.boxplot(data=df, x="flat_type", y="price_per_m2",
-                order=order, palette=palette,
-                flierprops=dict(marker=".", markersize=3, alpha=0.4),
-                ax=ax_b)
-    ax_b.yaxis.set_major_formatter(
-        mticker.FuncFormatter(lambda x, _: f"{x:,.0f}"))
-    _style_ax(ax_b, "Price per m² by Flat Type", "Flat type", "CZK / m²")
- 
-    # ── C: correlation matrix ─────────────────────────────────────────────────
+    order   = (df_m.groupby('flat_type')['price_per_m2']
+                   .median().sort_values(ascending=False).index.tolist())
+    palette = [TYPE_COLORS[t] for t in order]
+    sns.violinplot(data=df_m, x='flat_type', y='price_per_m2',
+                   order=order, palette=palette,
+                   inner='box', linewidth=0.8, cut=0.5, ax=ax_b)
+    ax_b.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
+    ax_b.set_xlabel('Flat type')
+    ax_b.set_ylabel('CZK per m²')
+    ax_b.set_title('Price per m² by Flat Type')
+    ax_b.grid(axis='y')
+    ax_b.grid(axis='x', alpha=0)
+
+    # ── C: correlation matrix ──────────────────────────────────────────────
     ax_c = fig.add_subplot(gs[1, 0])
-    num_cols = ["price", "area", "distance_prague_km", "price_per_m2"]
-    existing = [c for c in num_cols if c in df.columns]
-    corr     = df[existing].corr()
-    labels   = {"price": "Rent", "area": "Area (m²)",
-                "distance_prague_km": "Dist. Prague (km)",
-                "price_per_m2": "Price / m²"}
+    df['price_per_m2'] = df['price'] / df['area']
+    existing = [c for c in ['price', 'area', 'distance_prague_km', 'price_per_m2']
+                if c in df.columns]
+    corr = df[existing].corr()
+    labels = {'price': 'Rent', 'area': 'Area (m²)',
+               'distance_prague_km': 'Dist. to Prague', 'price_per_m2': 'Price / m²'}
     corr.index   = [labels.get(c, c) for c in corr.index]
     corr.columns = [labels.get(c, c) for c in corr.columns]
     mask = np.triu(np.ones_like(corr, dtype=bool), k=1)
-    cmap = sns.diverging_palette(220, 20, as_cmap=True)
-    sns.heatmap(corr, mask=mask, cmap=cmap, vmin=-1, vmax=1,
-                annot=True, fmt=".2f", linewidths=0.5,
-                annot_kws={"size": 10}, ax=ax_c,
-                cbar_kws={"shrink": 0.8})
-    ax_c.set_title("Correlation Matrix", fontsize=TITLE_FS,
-                   fontweight="bold", pad=10)
-    ax_c.tick_params(labelsize=9)
- 
-    # ── D: price vs distance, coloured by flat type ───────────────────────────
+    sns.heatmap(corr, mask=mask,
+                cmap=sns.diverging_palette(220, 20, as_cmap=True),
+                vmin=-1, vmax=1, annot=True, fmt='.2f',
+                linewidths=1, linecolor=BG,
+                annot_kws={'size': 11, 'weight': 'bold'},
+                ax=ax_c, cbar_kws={'shrink': 0.75, 'pad': 0.02})
+    ax_c.set_title('Correlation Matrix')
+    ax_c.tick_params(labelsize=10)
+    ax_c.set_facecolor(BG)
+
+    # ── D: rent vs distance, coloured by flat type (50 pts/type) ──────────
     ax_d = fig.add_subplot(gs[1, 1])
-    flat_types = df["flat_type"].unique()
-    pal_d = dict(zip(flat_types,
-                     sns.color_palette(PALETTE, n_colors=len(flat_types))))
-    for ft, grp in df.groupby("flat_type"):
-        ax_d.scatter(grp["distance_prague_km"], grp["price"] / 1000,
-                     alpha=0.35, s=15, label=ft, color=pal_d[ft])
-    x      = df["distance_prague_km"].values
-    y      = df["price"].values / 1000
-    slope, intercept, *_ = stats.linregress(x, y)
-    xline  = np.linspace(x.min(), x.max(), 200)
-    ax_d.plot(xline, intercept + slope * xline,
-              color=RED, lw=1.8, ls="--", zorder=5, label="OLS trend")
-    ax_d.legend(fontsize=8, markerscale=1.5, framealpha=0.7)
-    ax_d.yaxis.set_major_formatter(
-        mticker.FuncFormatter(lambda v, _: f"{v:.0f}k"))
-    _style_ax(ax_d, "Rent vs Distance to Prague",
-              "Distance to Prague (km)", "Rent (CZK thousands)")
- 
-    fig.suptitle("Czech Rental Market — Exploratory Analysis",
-                 fontsize=16, fontweight="bold", y=1.01)
-    plt.tight_layout()
+    sample = _sample_by_type(df_m, n=50)
+    for ft in MAIN_TYPES:
+        grp = sample[sample['flat_type'] == ft]
+        if grp.empty: continue
+        ax_d.scatter(grp['distance_prague_km'], grp['price'] / 1000,
+                     alpha=0.6, s=25, label=ft,
+                     color=TYPE_COLORS[ft], linewidths=0)
+    x = df_m['distance_prague_km'].values
+    y = df_m['price'].values / 1000
+    sl, ic, *_ = stats.linregress(x, y)
+    xl = np.linspace(x.min(), x.max(), 200)
+    ax_d.plot(xl, ic + sl * xl, color=CORAL, lw=2, ls='--',
+              zorder=5, label='OLS trend')
+    ax_d.yaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f'{v:.0f}k'))
+    ax_d.set_xlabel('Distance to Prague (km)')
+    ax_d.set_ylabel('Rent (CZK thousands)')
+    ax_d.set_title('Rent vs Distance to Prague')
+    ax_d.legend(fontsize=8, markerscale=1.4, ncol=2, loc='upper right')
+    ax_d.grid()
+
+    _big_title(fig, 'Czech Rental Market — Exploratory Analysis')
     plt.close()
     return fig
 
 
-# ── Log-OLS ───────────────────────────────────────────────────────────────────
-def run_log_ols(df_reg):
-    df_reg = df_reg.copy()
-    df_reg["log_price"] = np.log(df_reg["price"])
- 
-    model_log = smf.ols(
-        formula="log_price ~ area + distance_prague_km + C(flat_type) + C(district)",
+# ── OLS (levels) ──────────────────────────────────────────────────────────────
+def run_ols(df_reg):
+    model = smf.ols(
+        formula='price ~ area + distance_prague_km + C(flat_type) + C(district)',
         data=df_reg
     ).fit()
- 
-    print(model_log.summary())
- 
-    area_coef = model_log.params["area"]
-    dist_coef = model_log.params["distance_prague_km"]
-    print(f"\n── Coefficient interpretation ──────────────────────────────")
-    print(f"  area            : {area_coef:.4f}  →  +{area_coef*100:.2f}% rent per extra m²")
-    print(f"  distance_prague : {dist_coef:.4f}  →  {dist_coef*100:.2f}% rent per extra km from Prague")
-    print(f"────────────────────────────────────────────────────────────")
- 
-    return model_log
+    print(model.summary())
+    return model
 
 
-# ── Diagnostic plots ──────────────────────────────────────────────────────────
+# ── diagnostic plots ──────────────────────────────────────────────────────────
 def plot_diagnostics(df_reg, model):
     """
-    Three-panel diagnostic figure:
-      • Residuals vs Fitted  (with LOWESS smoother)
-      • Normal Q-Q of standardised residuals
-      • Rent distribution with log-normal overlay
+    Three-panel OLS diagnostics:
+      Residuals vs Fitted · Normal Q-Q · Rent Distribution
     """
-    fig, axes = plt.subplots(1, 3, figsize=(17, 5))
-    fig.patch.set_facecolor("white")
- 
+    fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+    fig.patch.set_facecolor(BG)
+    fig.subplots_adjust(left=0.06, right=0.97, top=0.86,
+                        bottom=0.14, wspace=0.34)
+
     std_resid = model.get_influence().resid_studentized_internal
- 
+
     # residuals vs fitted
     axes[0].scatter(model.fittedvalues, model.resid,
-                    alpha=0.25, s=10, color=ACCENT)
-    axes[0].axhline(0, color=RED, lw=1.2)
-    sm = lowess(model.resid, model.fittedvalues, frac=0.3)
-    axes[0].plot(sm[:, 0], sm[:, 1], color=RED, lw=1.8, label="LOWESS")
+                    alpha=0.2, s=12, color=BLUE, linewidths=0)
+    axes[0].axhline(0, color=CORAL, lw=1.2, ls='--')
+    sm_pts = lowess(model.resid, model.fittedvalues, frac=0.35)
+    axes[0].plot(sm_pts[:, 0], sm_pts[:, 1], color=CORAL, lw=2, label='LOWESS')
     axes[0].legend(fontsize=9)
-    axes[0].yaxis.set_major_formatter(
-        mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}k"))
-    _style_ax(axes[0], "Residuals vs Fitted", "Fitted values", "Residuals")
- 
+    _fmt_kczk(axes[0], 'y')
+    _fmt_kczk(axes[0], 'x')
+    axes[0].set_xlabel('Fitted values')
+    axes[0].set_ylabel('Residuals')
+    axes[0].set_title('Residuals vs Fitted')
+
     # Q-Q plot
     (osm, osr), (slope, intercept, _) = stats.probplot(std_resid)
-    axes[1].scatter(osm, osr, alpha=0.35, s=10, color=ACCENT)
+    axes[1].scatter(osm, osr, alpha=0.3, s=12, color=BLUE, linewidths=0)
     axes[1].plot(osm, slope * np.array(osm) + intercept,
-                 color=RED, lw=1.5, ls="--")
-    _style_ax(axes[1], "Normal Q-Q Plot",
-              "Theoretical quantiles", "Std. residuals")
- 
-    # price distribution with log-normal fit
-    prices = df_reg["price"]
+                 color=CORAL, lw=1.8, ls='--')
+    axes[1].set_xlabel('Theoretical quantiles')
+    axes[1].set_ylabel('Std. residuals')
+    axes[1].set_title('Normal Q-Q Plot')
+
+    # rent distribution + log-normal
+    prices = df_reg['price']
     axes[2].hist(prices / 1000, bins=50,
-                 color=ACCENT, edgecolor="white", alpha=0.85, density=True)
+                 color=BLUE, edgecolor=BG, alpha=0.80, density=True)
     mu, sigma = np.log(prices).mean(), np.log(prices).std()
     xs  = np.linspace(prices.min(), prices.max(), 300)
     pdf = stats.lognorm.pdf(xs, s=sigma, scale=np.exp(mu))
-    axes[2].plot(xs / 1000, pdf * 1000, color=RED, lw=2, label="Log-normal fit")
+    axes[2].plot(xs / 1000, pdf * 1000, color=CORAL, lw=2.2, label='Log-normal fit')
     axes[2].legend(fontsize=9)
     axes[2].xaxis.set_major_formatter(
-        mticker.FuncFormatter(lambda x, _: f"{x:.0f}k"))
-    _style_ax(axes[2], "Rent Distribution", "Rent (CZK thousands)", "Density")
- 
-    fig.suptitle("OLS Diagnostics", fontsize=15, fontweight="bold", y=1.02)
-    plt.tight_layout()
+        mticker.FuncFormatter(lambda x, _: f'{x:.0f}k'))
+    axes[2].set_xlabel('Rent (CZK thousands)')
+    axes[2].set_ylabel('Density')
+    axes[2].set_title('Rent Distribution')
+
+    _big_title(fig, 'OLS Model Diagnostics')
     plt.close()
     return fig
- 
 
-# ── District fixed effects ────────────────────────────────────────────────────
+
+# ── log-OLS ───────────────────────────────────────────────────────────────────
+def run_log_ols(df_reg):
+    df_reg = df_reg.copy()
+    df_reg['log_price'] = np.log(df_reg['price'])
+    model_log = smf.ols(
+        formula='log_price ~ area + distance_prague_km + C(flat_type) + C(district)',
+        data=df_reg
+    ).fit()
+    print(model_log.summary())
+    a = model_log.params['area']
+    d = model_log.params['distance_prague_km']
+    print(f'\n── Coefficient interpretation ──────────────────────────────')
+    print(f'  area            : {a:.4f}  →  +{a*100:.2f}% rent per extra m²')
+    print(f'  dist. to Prague : {d:.4f}  →  {d*100:+.2f}% rent per extra km')
+    print(f'────────────────────────────────────────────────────────────')
+    return model_log
+
+
+# ── district fixed effects ────────────────────────────────────────────────────
 def plot_district_fe(model_log):
     """
-    Horizontal bar chart of district FE with 95% CI error bars,
-    coloured by sign (premium / discount vs. baseline district).
+    Top 8 premium and top 8 discount districts, with 95% CI bars.
     """
-    clean = lambda s: s.replace("C(district)[T.", "").replace("]", "")
- 
-    fe_params = model_log.params.filter(like="C(district)")
-    fe_conf   = model_log.conf_int().filter(like="C(district)", axis=0)
-    fe_params.index = fe_params.index.map(clean)
-    fe_conf.index   = fe_conf.index.map(clean)
- 
-    fe_sorted = fe_params.sort_values(ascending=True)
-    ci_low    = fe_conf.loc[fe_sorted.index, 0]
-    ci_high   = fe_conf.loc[fe_sorted.index, 1]
-    colors    = [ACCENT if v >= 0 else RED for v in fe_sorted]
- 
-    fig, ax = plt.subplots(figsize=(10, max(5, len(fe_sorted) * 0.32)))
-    fig.patch.set_facecolor("white")
- 
-    ax.barh(fe_sorted.index, fe_sorted.values,
-            color=colors, edgecolor="white", height=0.65, alpha=0.85)
-    ax.errorbar(fe_sorted.values, fe_sorted.index,
-                xerr=[fe_sorted - ci_low, ci_high - fe_sorted],
-                fmt="none", color="#495057", lw=1, capsize=3)
-    ax.axvline(0, color="#333333", lw=1.0, ls="--")
- 
-    for name, val in fe_sorted.items():
-        ax.text(val + (0.005 if val >= 0 else -0.005), name,
-                f"{val:+.3f}", va="center",
-                ha="left" if val >= 0 else "right", fontsize=7.5)
- 
-    _style_ax(ax, "District Fixed Effects (log-OLS)",
-              "Log-price premium / discount vs. baseline district", "")
-    ax.spines[["top", "right"]].set_visible(False)
-    fig.tight_layout()
+    clean = lambda s: s.replace('C(district)[T.', '').replace(']', '')
+
+    fe    = model_log.params.filter(like='C(district)')
+    fe_ci = model_log.conf_int().filter(like='C(district)', axis=0)
+    fe.index    = fe.index.map(clean)
+    fe_ci.index = fe_ci.index.map(clean)
+
+    fe_show = pd.concat([fe.nsmallest(8), fe.nlargest(8)]).sort_values()
+    ci_low  = fe_ci.loc[fe_show.index, 0]
+    ci_high = fe_ci.loc[fe_show.index, 1]
+    colors  = [TEAL if v >= 0 else CORAL for v in fe_show]
+
+    fig, ax = plt.subplots(figsize=(11, 6))
+    fig.patch.set_facecolor(BG)
+    fig.subplots_adjust(left=0.22, right=0.93, top=0.88, bottom=0.10)
+
+    ax.barh(fe_show.index, fe_show.values,
+            color=colors, edgecolor=BG, height=0.65, alpha=0.88)
+    ax.errorbar(fe_show.values, fe_show.index,
+                xerr=[fe_show - ci_low, ci_high - fe_show],
+                fmt='none', color='#495057', lw=1.1, capsize=3.5)
+    ax.axvline(0, color=TEXT, lw=1.0, ls='--', alpha=0.5)
+
+    for name, val in fe_show.items():
+        pad = 0.005 if val >= 0 else -0.005
+        ax.text(val + pad, name, f'{val:+.3f}',
+                va='center', ha='left' if val >= 0 else 'right',
+                fontsize=8.5, color=TEXT)
+
+    ax.legend(handles=[
+        mpatches.Patch(color=TEAL,  label='Rent premium'),
+        mpatches.Patch(color=CORAL, label='Rent discount'),
+    ], fontsize=9, loc='lower right')
+
+    ax.set_xlabel('Log-price premium vs. baseline district')
+    ax.set_title('District Fixed Effects — Top 8 and Bottom 8')
+    ax.set_facecolor(BG_LIGHT)
+    ax.spines['left'].set_visible(False)
+    ax.tick_params(axis='y', labelsize=9)
+    ax.grid(axis='x')
+    ax.grid(axis='y', alpha=0)
     plt.close()
     return fig
- 

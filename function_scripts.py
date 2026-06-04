@@ -1,4 +1,3 @@
-# import packages
 import requests
 import pandas as pd
 import time
@@ -7,9 +6,6 @@ import math
 import unidecode
 import re
 import json
-import folium
-import geopandas as gpd
-from folium.plugins import HeatMap, MarkerCluster
 
 #---------------------
 # sreality scraping
@@ -217,137 +213,36 @@ def request_bezrealitky(search_url, max_pages=20):
     return df
 
 
-#---------------------
-# chloropleth functions
-#---------------------
-
-def add_choropleth_layer(
-    m,
-    geo_df,
-    properties_gdf,
-    layer_name,
-    fill_color="YlOrRd"
-):
-
-    # ensure CRS
-    geo_df = geo_df.to_crs("EPSG:4326")
-
-    # spatial join
-    joined = gpd.sjoin(
-        properties_gdf,
-        geo_df,
-        how='left',
-        predicate='within'
-    )
-
-    # aggregate prices
-    prices = (
-        joined
-        .groupby('index_right')['price_m2_wins']
-        .median()
-        .reset_index()
-    )
-
-    prices.columns = ['id', 'avg_price_m2']
-
-    # merge prices into polygons
-    geo_df = geo_df.reset_index()
-
-    geo_df = geo_df.merge(
-        prices,
-        left_on='index',
-        right_on='id',
-        how='left'
-    )
-
-    # create choropleth directly on map
-    choropleth = folium.Choropleth(
-        geo_data=geo_df,
-        data=geo_df,
-        columns=['index', 'avg_price_m2'],
-        key_on='feature.properties.index',
-        fill_color=fill_color,
-        fill_opacity=0.5,
-        line_opacity=0.2,
-        legend_name=f'{layer_name} Median Rent per m² (CZK)',
-        name=layer_name,
-        highlight=True
-    )
-
-    choropleth.add_to(m)
-
-    return choropleth
-
-
-
-
-
-#---------------------
-# streamlit functions
-#---------------------
-
-# load data for streamlit heatmap
-def load_data():
-
-    df_heatmap = pd.read_parquet(
-        "data/df_heatmap.parquet"
-    )
-
-    df_sreality_property = pd.read_parquet(
-        "data/df_sreality_property.parquet"
-    )
-
-    df_bezrealitky_property = pd.read_parquet(
-        "data/df_bezrealitky_property.parquet"
-    )
-
-    return (
-        df_heatmap,
-        df_sreality_property,
-        df_bezrealitky_property
-    )
-
-# filter properties based on toggles and sliders
-def filter_properties(df, selected_flat_types, area_range, price_range):
-    df = df.copy()
-    if selected_flat_types is not None:
-        df = df[df['flat_type'].isin(selected_flat_types)]
-    df = df[
-        df['area'].between(*area_range) &
-        df['price'].between(*price_range)
-    ]
-    return df
-
-
-def add_properties(df, m):
-    cluster = MarkerCluster().add_to(m)
-
-    for _, row in df.iterrows():
-        popup_html = f"""
-        <b>{row['price']:,} CZK</b><br>
-        <b>Source:</b> {row['source']}<br>
-        {row['locality']}<br>
-        {row['flat_type']}<br>
-        {row['area']} m²<br><br>
-        <img src="{row['image']}" width="200"><br>
-        <a href="{row['url']}" target="_blank">Open listing</a>
-        """
-
-        folium.CircleMarker(
-            location=[row['lat'], row['lon']],
-            radius=4,
-            fill=True,
-            popup=folium.Popup(popup_html, max_width=250)
-        ).add_to(cluster)
-
-
-
-#---------------------
-# misc functions
-#---------------------
-
-# Extract city
 def extract_city(district):
-    if ' - ' in district:
-        return district.split(' - ')[0].strip()
-    return district
+    """Map a district string to its parent city."""
+    if not isinstance(district, str):
+        return None
+    d = district.strip()
+
+    if d.startswith('Praha'):
+        return 'Praha'
+    if d.startswith('Brno'):
+        return 'Brno'
+    if d.startswith('Ostrava'):
+        return 'Ostrava'
+    if d.startswith('Plzeň') or d.startswith('Plzen'):
+        return 'Plzeň'
+    if d.startswith('Liberec'):
+        return 'Liberec'
+    if d.startswith('Olomouc'):
+        return 'Olomouc'
+    if d.startswith('České Budějovice'):
+        return 'České Budějovice'
+    if d.startswith('Hradec Králové'):
+        return 'Hradec Králové'
+    if d.startswith('Pardubice'):
+        return 'Pardubice'
+    if d.startswith('Zlín'):
+        return 'Zlín'
+    if d.startswith('Havířov'):
+        return 'Havířov'
+    if d.startswith('Kladno'):
+        return 'Kladno'
+
+    # for all other districts, use the district name as city
+    return d
