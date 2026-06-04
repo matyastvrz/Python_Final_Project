@@ -232,9 +232,9 @@ else:
     with col_log:
         st.markdown("**Log-linear OLS**")
         st.metric("Area coefficient",     f"{model_log.params['area']:.4f}",
-                delta=f"~{model_log.params['area']*100:.2f}% per m²")
+                delta=f"{model_log.params['area']*100:.2f}% per m²")
         st.metric("Distance coefficient", f"{model_log.params['distance_prague_km']:.4f}",
-                delta=f"~{model_log.params['distance_prague_km']*100:+.2f}% per km")
+                delta=f"{model_log.params['distance_prague_km']*100:+.2f}% per km")
         st.metric("Adjusted R²",          f"{model_log.rsquared_adj:.3f}")
 
     st.divider()

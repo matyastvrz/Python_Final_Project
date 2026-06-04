@@ -57,7 +57,8 @@ plt.rcParams.update({
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 def _fmt_kczk(ax, axis='x'):
-    """Format axis tick labels as thousands of Czech koruna.
+    """
+    Format axis tick labels as thousands of Czech koruna.
 
     Args:
         ax: Matplotlib axis object.
@@ -310,6 +311,12 @@ def run_ols(df_reg, include_flat_type=True, include_district=True):
         base += f" + C(district, Treatment('{baseline_district}'))"
     model = smf.ols(formula=base, data=df_reg).fit()
     print(model.summary())
+    a = model.params['area']
+    d = model.params['distance_prague_km']
+    print(f'\n── Coefficient interpretation ──────────────────────────────')
+    print(f'  area            : {a:.4f}  →  +{a*100:.2f}Kč rent per extra m²')
+    print(f'  dist. to Prague : {d:.4f}  →  {d*100:+.2f}Kč rent per extra km')
+    print(f'────────────────────────────────────────────────────────────')
     return model
 
 
@@ -370,7 +377,8 @@ def plot_diagnostics(df_reg, model):
 
 # ── log-OLS ───────────────────────────────────────────────────────────────────
 def run_log_ols(df_reg, include_flat_type=True, include_district=True):
-    """Fit a log-level OLS regression model for rent.
+    """
+    Fit a log-level OLS regression model for rent.
 
     Args:
         df_reg: Prepared regression DataFrame.
