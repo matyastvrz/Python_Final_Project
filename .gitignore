@@ -1,4 +1,41 @@
+# Generated files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE/editor files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Python packaging
+*.egg-info/
+.eggs/
+*.egg
+
+# Logs and runtime files
+*.log
+*.sqlite3
+
+# Environment and secret files
+.env
+.env.*
+
+# Temporary files
+*.tmp
+*.temp
+
+# HTML output files
 heatmap.html
 *.html
-__pycache__
-*.pyc
