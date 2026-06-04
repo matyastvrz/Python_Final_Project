@@ -3352,8 +3352,6 @@
 5142,26000,54,4+kk,Praha 3 - Žižkov,2.507263855592773,Praha 3 - Žižkov,Praha
 5143,23000,43,2+1,Praha 1 - Malá Strana,1.5844765579365814,Praha 1 - Malá Strana,Praha
 5144,17000,48,2+kk,Praha 1 - Staré Město,0.21386912424744423,Praha 1 - Staré Město,Praha
-5145,62000,69,4+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
-5146,62000,81,4+kk,Praha 3 - Vinohrady,2.1555379338361047,Praha 3 - Vinohrady,Praha
 5147,20000,41,3+kk,Praha 2 - Nové Město,1.7257102118423904,Praha 2 - Nové Město,Praha
 5148,53000,106,4+1,Praha 1 - Malá Strana,1.8069163445854652,Praha 1 - Malá Strana,Praha
 5149,23000,42,3+kk,Praha 3 - Žižkov,2.507263855592773,Praha 3 - Žižkov,Praha
@@ -3642,7 +3640,6 @@
 5449,16000,28,2+1,Praha 1 - Staré Město,0.5712521443607456,Praha 1 - Staré Město,Praha
 5450,59000,63,4+kk,Praha 3 - Vinohrady,2.1260400799815367,Praha 3 - Vinohrady,Praha
 5452,17000,38,3+1,Praha 2 - Vinohrady,2.0085321289009634,Praha 2 - Vinohrady,Praha
-5453,62000,70,4+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
 5454,26000,55,3+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
 5455,14000,35,2+1,Praha 1 - Nové Město,0.6347221256126314,Praha 1 - Nové Město,Praha
 5456,15000,29,2+kk,Praha 1 - Staré Město,0.7211239706766103,Praha 1 - Staré Město,Praha
@@ -3921,7 +3918,6 @@
 5746,5000,8,other,Praha 3 - Žižkov,4.836804846034144,Praha 3 - Žižkov,Praha
 5747,6000,8,other,Praha 8 - Libeň,4.443619333106052,Praha 8 - Libeň,Praha
 5748,6000,8,other,Praha 6,4.566730397010409,Praha 6,Praha
-5749,62000,71,4+kk,Praha 3 - Vinohrady,2.119881451748347,Praha 3 - Vinohrady,Praha
 5750,58000,178,5+1,Praha 6 - Střešovice,2.8779281556959164,Praha 6 - Střešovice,Praha
 5751,11000,26,2+kk,Praha 6 - Střešovice,3.7790573479644043,Praha 6 - Střešovice,Praha
 5752,60000,81,4+kk,Praha 3 - Vinohrady,2.1634306673308967,Praha 3 - Vinohrady,Praha
@@ -4402,7 +4398,6 @@
 6263,18000,35,2+kk,Praha 10 - Strašnice,5.311650675716486,Praha 10 - Strašnice,Praha
 6264,10000,22,1+1,Praha 4,3.5692043255127213,Praha 4,Praha
 6265,8000,34,2+1,Praha 2 - Nové Město,1.7639764266569347,Praha 2 - Nové Město,Praha
-6266,62000,70,4+kk,Praha 3 - Vinohrady,2.1891846353014373,Praha 3 - Vinohrady,Praha
 6267,14000,44,2+1,Praha 5 - Smíchov,2.4307425259863713,Praha 5 - Smíchov,Praha
 6268,23000,41,2+kk,Praha 1 - Josefov,0.46333776251989633,Praha 1 - Josefov,Praha
 6269,14000,32,2+1,Praha 9 - Černý Most,11.833955362535393,Praha 9 - Černý Most,Praha
@@ -4420,7 +4415,6 @@
 6281,18000,26,2+1,Praha 7 - Holešovice,3.190768779339127,Praha 7 - Holešovice,Praha
 6282,10000,22,1+1,Praha 4,3.5692043255127213,Praha 4,Praha
 6283,8000,34,2+1,Praha 2 - Nové Město,1.7639764266569347,Praha 2 - Nové Město,Praha
-6284,62000,70,4+kk,Praha 3 - Vinohrady,2.1891846353014373,Praha 3 - Vinohrady,Praha
 6285,23000,41,2+kk,Praha 1 - Josefov,0.46333776251989633,Praha 1 - Josefov,Praha
 6286,14000,32,2+1,Praha 9 - Černý Most,11.833955362535393,Praha 9 - Černý Most,Praha
 6287,16000,34,2+kk,Praha 2 - Nové Město,1.1827274443099838,Praha 2 - Nové Město,Praha
@@ -4538,7 +4532,6 @@
 6406,36000,71,4+kk,Praha 3 - Žižkov,3.058371012126842,Praha 3 - Žižkov,Praha
 6407,35000,62,3+1,Praha 2 - Nové Město,1.6312010641173982,Praha 2 - Nové Město,Praha
 6408,22000,60,3+kk,Praha 9 - Hloubětín,7.939234645514448,Praha 9 - Hloubětín,Praha
-6409,62000,70,4+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
 6410,35000,60,4+kk,Praha 8 - Karlín,2.335877442914987,Praha 8 - Karlín,Praha
 6411,38000,92,4+kk,Praha 1 - Staré Město,0.5713508370133191,Praha 1 - Staré Město,Praha
 6412,43000,78,3+1,Praha 1 - Josefov,0.6758883514630541,Praha 1 - Josefov,Praha
@@ -5127,7 +5120,6 @@
 7035,44000,131,4+1,Praha 1 - Malá Strana,1.593770308395645,Praha 1 - Malá Strana,Praha
 7036,38000,77,4+kk,Praha 1 - Nové Město,0.6633855145115133,Praha 1 - Nové Město,Praha
 7037,16000,31,2+kk,Praha 2 - Vinohrady,1.855255120826104,Praha 2 - Vinohrady,Praha
-7038,62000,81,4+kk,Praha 3 - Vinohrady,2.163078681436842,Praha 3 - Vinohrady,Praha
 7039,16000,27,2+kk,Praha 7 - Holešovice,2.280293420234974,Praha 7 - Holešovice,Praha
 7040,13000,24,2+kk,Praha 2 - Nové Město,1.1358922101212767,Praha 2 - Nové Město,Praha
 7041,15000,38,2+kk,Praha 7 - Holešovice,2.4793913903663682,Praha 7 - Holešovice,Praha
@@ -5224,7 +5216,6 @@
 7141,59000,152,other,Praha 2 - Vinohrady,1.4344135953924004,Praha 2 - Vinohrady,Praha
 7142,60000,81,4+kk,Praha 3 - Vinohrady,2.112317278286041,Praha 3 - Vinohrady,Praha
 7143,13000,22,1+kk,Praha 6 - Bubeneč,2.9088205300438417,Praha 6 - Bubeneč,Praha
-7144,62000,70,4+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
 7145,32000,72,4+kk,Praha 5 - Jinonice,5.061478542550505,Praha 5 - Jinonice,Praha
 7146,15000,23,1+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
 7147,31000,72,4+kk,Praha 1 - Nové Město,0.8058767698309449,Praha 1 - Nové Město,Praha
@@ -5560,7 +5551,6 @@
 7494,11000,45,2+1,Praha 10 - Strašnice,6.619767327174554,Praha 10 - Strašnice,Praha
 7495,13000,35,2+kk,Praha 5 - Smíchov,1.3377234636253932,Praha 5 - Smíchov,Praha
 7497,8000,17,1+kk,Praha 10 - Horní Měcholupy,10.85850649155704,Praha 10 - Horní Měcholupy,Praha
-7498,62000,81,4+kk,Praha 3 - Vinohrady,2.112317278286041,Praha 3 - Vinohrady,Praha
 7499,9000,25,1+kk,Praha 10 - Horní Měcholupy,11.15356947501936,Praha 10 - Horní Měcholupy,Praha
 7501,15000,22,1+kk,Praha 7 - Holešovice,3.169632939149701,Praha 7 - Holešovice,Praha
 7503,20000,46,3+kk,Praha 9 - Vysočany,7.2839595018067165,Praha 9 - Vysočany,Praha
@@ -5756,7 +5746,6 @@
 7713,23000,65,3+1,Praha 1 - Nové Město,0.9231083492001811,Praha 1 - Nové Město,Praha
 7714,11000,25,2+kk,Praha 4 - Michle,5.16433703294093,Praha 4 - Michle,Praha
 7715,11000,23,2+kk,Praha 5 - Smíchov,4.352575143721798,Praha 5 - Smíchov,Praha
-7716,62000,70,4+kk,Praha 3 - Vinohrady,2.120063429386068,Praha 3 - Vinohrady,Praha
 7717,20000,44,3+kk,Praha 6 - Dejvice,3.6722970125142775,Praha 6 - Dejvice,Praha
 7718,29000,77,3+1,Praha 7 - Bubeneč,1.9313958928234627,Praha 7 - Bubeneč,Praha
 7719,14000,19,1+1,Praha 1 - Staré Město,0.5612432732379699,Praha 1 - Staré Město,Praha
@@ -5851,8 +5840,6 @@
 7813,53000,93,3+kk,Praha 3 - Vinohrady,2.126107133182993,Praha 3 - Vinohrady,Praha
 7814,35000,93,4+kk,Praha 1 - Nové Město,0.7552907276987413,Praha 1 - Nové Město,Praha
 7815,26000,55,3+kk,Praha 3 - Vinohrady,2.126107133182993,Praha 3 - Vinohrady,Praha
-7816,62000,70,4+kk,Praha 3 - Vinohrady,2.126107133182993,Praha 3 - Vinohrady,Praha
-7817,62000,81,4+kk,Praha 3 - Vinohrady,2.1556052669629615,Praha 3 - Vinohrady,Praha
 7818,21000,43,3+kk,Praha 3 - Žižkov,4.182999448550501,Praha 3 - Žižkov,Praha
 7819,38000,93,3+kk,Praha 5 - Hlubočepy,6.0538014866615075,Praha 5 - Hlubočepy,Praha
 7820,11000,17,1+kk,Praha 3 - Vinohrady,2.4292501838864022,Praha 3 - Vinohrady,Praha
@@ -6066,12 +6053,10 @@
 8046,11000,12,1+kk,Praha 3 - Žižkov,1.7641704071576028,Praha 3 - Žižkov,Praha
 8047,35000,93,5+kk,Praha 1 - Nové Město,0.5303134244110775,Praha 1 - Nové Město,Praha
 8048,14000,26,2+kk,Praha 4 - Nusle,3.0759332043507066,Praha 4 - Nusle,Praha
-8049,62000,70,4+kk,Praha 3 - Vinohrady,2.1260400799815367,Praha 3 - Vinohrady,Praha
 8050,18000,26,2+1,Praha 7 - Holešovice,3.190768779339127,Praha 7 - Holešovice,Praha
 8051,11000,12,1+kk,Praha 3 - Žižkov,1.7641704071576028,Praha 3 - Žižkov,Praha
 8052,35000,93,5+kk,Praha 1 - Nové Město,0.5303134244110775,Praha 1 - Nové Město,Praha
 8053,14000,26,2+kk,Praha 4 - Nusle,3.0759332043507066,Praha 4 - Nusle,Praha
-8054,62000,70,4+kk,Praha 3 - Vinohrady,2.1260400799815367,Praha 3 - Vinohrady,Praha
 8055,12000,23,2+kk,Praha 9 - Kyje,10.170071670891693,Praha 9 - Kyje,Praha
 8056,59000,63,4+kk,Praha 3 - Vinohrady,2.1260400799815367,Praha 3 - Vinohrady,Praha
 8057,17000,45,2+kk,Praha 6 - Břevnov,3.600261929550211,Praha 6 - Břevnov,Praha
@@ -6147,7 +6132,6 @@
 8135,11000,28,1+1,Praha 6 - Dejvice,3.352081988994621,Praha 6 - Dejvice,Praha
 8136,12000,24,2+kk,Praha 10 - Dolní Měcholupy,9.728578335185109,Praha 10 - Dolní Měcholupy,Praha
 8137,6000,14,1+kk,Praha 10 - Vršovice,2.53665171203036,Praha 10 - Vršovice,Praha
-8138,62000,81,4+kk,Praha 3 - Vinohrady,2.126268263669674,Praha 3 - Vinohrady,Praha
 8140,38000,54,3+kk,Praha 3 - Vinohrady,2.151235148163084,Praha 3 - Vinohrady,Praha
 8141,17000,50,4+kk,Praha 4 - Chodov,9.201800342333204,Praha 4 - Chodov,Praha
 8142,11000,17,1+kk,Praha 3 - Vinohrady,2.4976682993972306,Praha 3 - Vinohrady,Praha
@@ -6731,7 +6715,6 @@
 8748,19000,35,2+kk,Praha 2 - Vinohrady,2.1316487383148846,Praha 2 - Vinohrady,Praha
 8749,33000,63,3+kk,Praha 2 - Vinohrady,1.3701270787949793,Praha 2 - Vinohrady,Praha
 8750,15000,44,3+kk,Praha 8 - Bohnice,5.536336896453557,Praha 8 - Bohnice,Praha
-8751,62000,80,3+1,Praha 3 - Vinohrady,2.1555379338361047,Praha 3 - Vinohrady,Praha
 8753,17000,40,2+kk,Praha 8 - Libeň,4.192387919613048,Praha 8 - Libeň,Praha
 8754,9000,14,1+kk,Praha 2 - Nusle,2.281900440431234,Praha 2 - Nusle,Praha
 8755,27000,59,4+kk,Praha 5 - Jinonice,4.8107779741392545,Praha 5 - Jinonice,Praha
@@ -7101,7 +7084,6 @@
 9138,12000,19,1+kk,Praha 9 - Vysočany,6.3763859103379845,Praha 9 - Vysočany,Praha
 9139,26000,55,3+kk,Praha 3 - Vinohrady,2.1891846353014373,Praha 3 - Vinohrady,Praha
 9140,14000,32,2+kk,Praha 7 - Holešovice,2.9725795179982053,Praha 7 - Holešovice,Praha
-9141,62000,81,4+kk,Praha 3 - Vinohrady,2.1367548389746838,Praha 3 - Vinohrady,Praha
 9142,11000,12,1+kk,Praha 2 - Vinohrady,2.0416344216856146,Praha 2 - Vinohrady,Praha
 9143,29000,35,2+kk,Praha 2 - Vinohrady,2.144330911843391,Praha 2 - Vinohrady,Praha
 9144,8000,17,1+kk,Praha 4 - Chodov,9.082850309837871,Praha 4 - Chodov,Praha
@@ -7126,7 +7108,6 @@
 9165,24000,43,3+kk,Praha 3,3.180299534454914,Praha 3,Praha
 9166,12000,17,1+kk,Praha 6,3.5440365312263813,Praha 6,Praha
 9167,60000,81,4+kk,Praha 3 - Vinohrady,2.1636328538769023,Praha 3 - Vinohrady,Praha
-9168,62000,70,4+kk,Praha 3 - Vinohrady,2.120419474354494,Praha 3 - Vinohrady,Praha
 9169,15000,13,2+kk,Praha 2 - Nové Město,1.5169037854846754,Praha 2 - Nové Město,Praha
 9170,8000,16,1+kk,Praha 5 - Smíchov,3.5820362034085367,Praha 5 - Smíchov,Praha
 9171,10000,23,1+kk,Praha 5 - Smíchov,3.5820362034085367,Praha 5 - Smíchov,Praha
@@ -7179,7 +7160,6 @@
 9232,27000,38,1+kk,Praha 5 - Smíchov,2.4139591467174983,Praha 5 - Smíchov,Praha
 9233,23000,29,2+kk,Praha 2 - Vinohrady,2.080947575763043,Praha 2 - Vinohrady,Praha
 9234,20000,39,3+kk,Praha 8 - Karlín,2.7234672326911338,Praha 8 - Karlín,Praha
-9235,62000,70,4+kk,Praha 3 - Vinohrady,2.144330911843391,Praha 3 - Vinohrady,Praha
 9236,12000,35,2+1,Praha 6 - Dejvice,4.369901757488899,Praha 6 - Dejvice,Praha
 9237,11000,31,2+kk,Praha 4 - Modřany,8.024972391225345,Praha 4 - Modřany,Praha
 9238,29000,71,4+1,Praha 6 - Bubeneč,2.4271076232085216,Praha 6 - Bubeneč,Praha
@@ -10517,143 +10497,136 @@
 13810,5000,50,other,Brno - Brno-město,186.30801188643534,Brno - Brno-město,Brno
 13811,5000,50,other,Brno - Brno-město,186.30801188643534,Brno - Brno-město,Brno
 13817,20000,54,3+kk,"Brno - Trnitá, okres Brno-město",187.14175046550062,Brno - Trnitá,Brno
-13856,20500,43,1+kk,"Poděbradská, Praha - Hloubětín",7.740708642104824,Poděbradská,Praha
-13921,19500,28,1+kk,"Poděbradská, Praha - Hloubětín",7.740700495164213,Poděbradská,Praha
-14037,15000,39,1+kk,"Bělohorská, Brno - Židenice, Jihomoravský kraj",189.977665070419,Bělohorská,Bělohorská
-14044,15250,80,4+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.6539290392963,Hlavní třída,Hlavní třída
-14066,21000,60,2+kk,"Bělohorská, Praha - Břevnov",3.060701911241788,Bělohorská,Praha
-14079,11000,32,1+1,"Školní, Otrokovice - Otrokovice, Zlínský kraj",242.98522937732633,Školní,Školní
-14087,16490,35,1+kk,"Poděbradská, Praha - Hloubětín",7.754076045911142,Poděbradská,Praha
-14112,17500,23,1+kk,"Poděbradská, Praha - Vysočany",7.276152012127442,Poděbradská,Praha
-14134,22400,70,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.43200439984025,Hybešova,Hybešova
-14170,21000,20,1+kk,"Plzeňská, Praha - Smíchov",2.349744511990553,Plzeňská,Praha
-14273,12500,20,1+kk,"Bělohorská, Praha - Břevnov",6.7145042263506935,Bělohorská,Praha
-14314,18000,48,2+kk,"Bělohorská, Praha - Břevnov",3.060701911241788,Bělohorská,Praha
-14347,16500,17,1+kk,"Sokolská, Praha - Nové Město",2.0287869226850717,Sokolská,Praha
-14364,15500,30,1+kk,"Poděbradská, Praha - Hloubětín",7.6519802412066795,Poděbradská,Praha
-14383,15000,32,1+kk,"Brno - Trnitá, Jihomoravský kraj",187.44732814994737,Brno - Trnitá,Brno
-14386,15000,28,1+kk,"Bělohorská, Praha - Břevnov",6.7145042263506935,Bělohorská,Praha
-14400,11950,66,2+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.30258464967613,Hlavní třída,Hlavní třída
-14423,9500,55,2+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.2445747562518,Hlavní třída,Hlavní třída
-14435,10600,70,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.1602920289691,Hlavní třída,Hlavní třída
-14441,12950,73,3+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.34655284169133,Slovenská,Slovenská
-14449,11000,61,2+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.53383066587503,Hlavní třída,Hlavní třída
-14457,6650,21,1+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.51710718309994,Hlavní třída,Hlavní třída
-14467,11550,55,2+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.41085121017227,Slovenská,Slovenská
-14478,29390,29,atypické,"Plzeňská, Praha - Motol",5.94025874284584,Plzeňská,Praha
-14481,50384,45,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-14482,49165,43,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-14534,13500,48,2+kk,"Sokolská, Chlumec nad Cidlinou - Chlumec nad Cidlinou, Královéhradecký kraj",74.7516283711799,Sokolská,Sokolská
-14535,21000,58,2+1,"Antala Staška, Praha - Krč",5.351932399901672,Antala Staška,Praha
-14539,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
-14541,14000,60,2+kk,"Školní, Drásov - Drásov, Jihomoravský kraj",170.55129717130833,Školní,Školní
-14546,21500,47,1+kk,"Poděbradská, Praha - Vysočany",7.297307879107369,Poděbradská,Praha
-14639,10550,78,3+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.63706770855225,Hlavní třída,Hlavní třída
-14641,7250,35,1+kk,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3411688110442,Slovenská,Slovenská
-14670,12900,72,3+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3411688110442,Slovenská,Slovenská
-14674,12250,82,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.01802776423375,Hlavní třída,Hlavní třída
-14743,12550,52,2+1,"Hybešova, Havířov - Havířov-město, Moravskoslezský kraj",289.3280264912748,Hybešova,Hybešova
-14755,11350,68,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.0533297061106,Hlavní třída,Hlavní třída
-14759,8750,37,1+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.4140583857465,Slovenská,Slovenská
-14763,26233,36,1+kk,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-14764,11450,77,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.6712081627977,Hlavní třída,Hlavní třída
-14792,9750,54,2+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.08779022371476,Hlavní třída,Hlavní třída
-14914,8400,35,1+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.4177282902935,Slovenská,Slovenská
-14927,8000,35,1+kk,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.4123494028312,Slovenská,Slovenská
-14949,7400,35,1+kk,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3440535482052,Slovenská,Slovenská
-14975,23000,46,1+kk,"Poděbradská, Praha - Hloubětín",7.381682561913642,Poděbradská,Praha
-14977,18900,46,1+kk,"Bělohorská, Praha - Břevnov",4.166644762934474,Bělohorská,Praha
-14985,8500,40,1+1,"Ostrava - Mariánské Hory, Moravskoslezský kraj",276.559980601535,Ostrava - Mariánské Hory,Ostrava
-15000,22500,33,1+kk,"Poděbradská, Praha - Vysočany",6.4280547864392625,Poděbradská,Praha
-15046,25000,86,2+1,"Sokolská, Brno - Veveří, Jihomoravský kraj",185.54658691834075,Sokolská,Sokolská
-15069,27000,56,2+kk,"Poděbradská, Praha - Hloubětín",7.611044121854354,Poděbradská,Praha
-15101,17990,32,1+kk,"Poděbradská, Praha - Vysočany",6.465538878007063,Poděbradská,Praha
-15103,25900,30,2+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
-15105,15900,22,1+kk,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.28289561211403,Václavská,Václavská
-15106,15900,17,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38108111473176,Hybešova,Hybešova
-15108,25000,53,2+kk,"Pod Harfou, Praha - Vysočany",6.75834170087511,Pod Harfou,Praha
-15111,32900,95,3+1,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
-15117,25900,30,2+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38108111473176,Hybešova,Hybešova
-15120,15900,30,1+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
-15121,15900,27,1+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
-15122,15900,31,1+1,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.2195128947843,Václavská,Václavská
-15125,15900,19,1+kk,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.28289561211403,Václavská,Václavská
-15126,15900,29,1+1,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
-15127,15900,20,1+kk,"Václavská, Staré Brno, Jihomoravský kraj",186.16950848646553,Václavská,Václavská
-15128,15900,32,1+1,"Václavská, Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
-15161,11700,53,2+1,"Sokolská, Vratimov - Vratimov, Moravskoslezský kraj",281.44408020241076,Sokolská,Sokolská
-15246,13000,70,3+kk,"Školní, Chomutov - Chomutov I, Ústecký kraj",82.9500488864783,Školní,Školní
-15274,32000,63,3+kk,"Pod Harfou, Praha - Vysočany",6.782776664444976,Pod Harfou,Praha
-15333,19000,57,2+1,"Antala Staška, Praha - Krč",5.352925068336998,Antala Staška,Praha
-15394,56462,117,atypické,"Plzeňská, Praha - Smíchov",2.029027880407129,Plzeňská,Praha
-15400,28900,80,3+kk,"Bělohorská, Praha - Břevnov",4.166644762934474,Bělohorská,Praha
-15414,18500,32,1+kk,"Bělohorská, Praha - Břevnov",4.425171791584384,Bělohorská,Praha
-15417,12250,53,2+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.34907910943645,Slovenská,Slovenská
-15432,20000,56,2+kk,"Plzeňská, Praha - Smíchov",2.4922936038265315,Plzeňská,Praha
-15477,20500,35,1+kk,"Poděbradská, Praha - Vysočany",6.476538904462471,Poděbradská,Praha
-15491,20990,42,1+kk,"Poděbradská, Praha - Hloubětín",7.702318985293345,Poděbradská,Praha
-15512,22000,50,2+kk,"Pod Harfou, Praha - Vysočany",6.735816079213669,Pod Harfou,Praha
-15537,36496,23,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
-15562,20990,54,2+1,"Poděbradská, Praha - Vysočany",7.214574475343503,Poděbradská,Praha
-15606,24000,54,2+kk,"Pod Harfou, Praha - Vysočany",6.745307314003063,Pod Harfou,Praha
-15608,22900,45,1+1,"Plzeňská, Praha - Smíchov",2.48109126236284,Plzeňská,Praha
-15643,26500,68,2+1,"Václavská, Praha - Nové Město",1.408441954284853,Václavská,Praha
-15647,12000,83,3+1,"Antala Staška, Frýdek-Místek - Frýdek, Moravskoslezský kraj",286.04604913937203,Antala Staška,Antala Staška
-15703,10500,64,2+1,"Antala Staška, Frýdek-Místek - Frýdek, Moravskoslezský kraj",286.0460511502407,Antala Staška,Antala Staška
-15705,46251,51,atypické,"Plzeňská, Praha - Košíře",3.9214606310646105,Plzeňská,Praha
-15715,13200,25,1+kk,"Poděbradská, Praha - Vysočany",6.567117958307079,Poděbradská,Praha
-15806,17000,54,2+kk,"Olomouc - Nová Ulice, Olomoucký kraj",209.69968704445793,Olomouc - Nová Ulice,Olomouc
-15826,41038,36,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-15832,16000,32,1+kk,"Bělohorská, Praha - Břevnov",3.6077209386507776,Bělohorská,Praha
-15837,16990,54,2+1,"Poděbradská, Praha - Vysočany",7.214574475343503,Poděbradská,Praha
-15845,41267,35,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
-15886,12000,70,3+1,"Školní, Chomutov - Chomutov I, Ústecký kraj",82.95014299206451,Školní,Školní
-15904,10000,30,1+1,"Plzeňská, České Budějovice - České Budějovice 3, Jihočeský kraj",122.10432158595482,Plzeňská,Plzeňská
-15979,18000,43,1+kk,"Antala Staška, Praha - Krč",5.38878466507733,Antala Staška,Praha
-15987,17990,32,1+kk,"Poděbradská, Praha - Hloubětín",7.6519802412066795,Poděbradská,Praha
-15988,37648,20,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
-16006,15900,17,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
-16014,15900,19,1+kk,"Václavská, Staré Brno, Jihomoravský kraj",186.16950848646553,Václavská,Václavská
-16016,25900,31,2+1,"Václavská, Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
-16017,25900,32,2+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38108111473176,Hybešova,Hybešova
-16019,23500,51,2+1,"Bělohorská, Praha - Břevnov",4.186682827997769,Bělohorská,Praha
-16031,19500,28,1+kk,"Poděbradská, Praha - Hloubětín",7.7590542661469275,Poděbradská,Praha
-16039,13490,33,1+kk,"Poděbradská, Praha - Vysočany",6.779946823812635,Poděbradská,Praha
-16049,36559,23,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
-16075,42664,28,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16078,51603,46,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16079,43070,28,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16085,7000,36,1+1,"Školní, Horní Slavkov - Horní Slavkov, Karlovarský kraj",116.27102627350402,Školní,Školní
-16089,20990,51,2+kk,"Pod Harfou, Praha - Vysočany",6.790567508587046,Pod Harfou,Praha
-16108,19990,39,1+kk,"Poděbradská, Praha - Hloubětín",7.702318985293345,Poděbradská,Praha
-16116,15900,23,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
-16147,45102,30,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16148,45102,37,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16149,42257,31,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16150,8000,38,1+1,"Antala Staška, Frýdek-Místek - Frýdek, Moravskoslezský kraj",286.0454729894924,Antala Staška,Antala Staška
-16174,36599,20,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
-16180,42257,30,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16204,38903,25,atypické,"Sokolská, Praha - Nové Město",1.7159416385998072,Sokolská,Praha
-16225,50790,45,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
-16233,41658,24,atypické,"Sokolská, Praha - Nové Město",2.0166543182540644,Sokolská,Praha
-16303,10250,53,2+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3384865851369,Slovenská,Slovenská
-16305,13500,48,2+kk,"Sokolská, Chlumec nad Cidlinou - Chlumec nad Cidlinou, Královéhradecký kraj",74.7516283711799,Sokolská,Sokolská
-16306,21000,58,2+1,"Antala Staška, Praha - Krč",5.351932399901672,Antala Staška,Praha
-16317,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
-16318,14000,60,2+kk,"Školní, Drásov - Drásov, Jihomoravský kraj",170.55129717130833,Školní,Školní
-16320,13500,48,2+kk,"Sokolská, Chlumec nad Cidlinou - Chlumec nad Cidlinou, Královéhradecký kraj",74.7516283711799,Sokolská,Sokolská
-16321,21000,58,2+1,"Antala Staška, Praha - Krč",5.351932399901672,Antala Staška,Praha
-16332,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
-16333,14000,60,2+kk,"Školní, Drásov - Drásov, Jihomoravský kraj",170.55129717130833,Školní,Školní
-16335,13500,48,2+kk,"Sokolská, Chlumec nad Cidlinou - Chlumec nad Cidlinou, Královéhradecký kraj",74.7516283711799,Sokolská,Sokolská
-16336,21000,58,2+1,"Antala Staška, Praha - Krč",5.351932399901672,Antala Staška,Praha
-16347,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
-16348,14000,60,2+kk,"Školní, Drásov - Drásov, Jihomoravský kraj",170.55129717130833,Školní,Školní
-16350,13500,48,2+kk,"Sokolská, Chlumec nad Cidlinou - Chlumec nad Cidlinou, Královéhradecký kraj",74.7516283711799,Sokolská,Sokolská
-16351,21000,58,2+1,"Antala Staška, Praha - Krč",5.351932399901672,Antala Staška,Praha
-16362,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
-16363,14000,60,2+kk,"Školní, Drásov - Drásov, Jihomoravský kraj",170.55129717130833,Školní,Školní
-16365,13500,48,2+kk,"Sokolská, Chlumec nad Cidlinou - Chlumec nad Cidlinou, Královéhradecký kraj",74.7516283711799,Sokolská,Sokolská
-16366,21000,58,2+1,"Antala Staška, Praha - Krč",5.351932399901672,Antala Staška,Praha
-16377,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
-16378,14000,60,2+kk,"Školní, Drásov - Drásov, Jihomoravský kraj",170.55129717130833,Školní,Školní
+13863,20500,43,1+kk,"Poděbradská, Praha - Hloubětín",7.740708642104824,Poděbradská,Praha
+13926,19500,28,1+kk,"Poděbradská, Praha - Hloubětín",7.740700495164213,Poděbradská,Praha
+14019,26500,60,3+1,"Svitavská, Brno - Husovice, Jihomoravský kraj",186.89727894789908,Svitavská,Svitavská
+14042,15000,39,1+kk,"Bělohorská, Brno - Židenice, Jihomoravský kraj",189.977665070419,Bělohorská,Bělohorská
+14049,15250,80,4+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.6539290392963,Hlavní třída,Hlavní třída
+14071,21000,60,2+kk,"Bělohorská, Praha - Břevnov",3.060701911241788,Bělohorská,Praha
+14091,16490,35,1+kk,"Poděbradská, Praha - Hloubětín",7.754076045911142,Poděbradská,Praha
+14092,18700,40,2+kk,"Sokolovská, Praha - Karlín",2.708517811299632,Sokolovská,Praha
+14112,16000,20,1+kk,"Svitavská, Brno - Husovice, Jihomoravský kraj",187.07042737142905,Svitavská,Svitavská
+14116,17500,23,1+kk,"Poděbradská, Praha - Vysočany",7.276152012127442,Poděbradská,Praha
+14137,22400,70,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.43200439984025,Hybešova,Hybešova
+14173,21000,20,1+kk,"Plzeňská, Praha - Smíchov",2.349744511990553,Plzeňská,Praha
+14276,12500,20,1+kk,"Bělohorská, Praha - Břevnov",6.7145042263506935,Bělohorská,Praha
+14317,18000,48,2+kk,"Bělohorská, Praha - Břevnov",3.060701911241788,Bělohorská,Praha
+14367,15500,30,1+kk,"Poděbradská, Praha - Hloubětín",7.6519802412066795,Poděbradská,Praha
+14386,15000,32,1+kk,"Brno - Trnitá, Jihomoravský kraj",187.44732814994737,Brno - Trnitá,Brno
+14389,15000,28,1+kk,"Bělohorská, Praha - Břevnov",6.7145042263506935,Bělohorská,Praha
+14403,11950,66,2+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.30258464967613,Hlavní třída,Hlavní třída
+14426,9500,55,2+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.2445747562518,Hlavní třída,Hlavní třída
+14438,10600,70,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.1602920289691,Hlavní třída,Hlavní třída
+14444,12950,73,3+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.34655284169133,Slovenská,Slovenská
+14452,11000,61,2+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.53383066587503,Hlavní třída,Hlavní třída
+14460,6650,21,1+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.51710718309994,Hlavní třída,Hlavní třída
+14470,11550,55,2+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.41085121017227,Slovenská,Slovenská
+14481,29390,29,atypické,"Plzeňská, Praha - Motol",5.94025874284584,Plzeňská,Praha
+14484,50384,45,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+14485,49165,43,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+14488,19000,29,1+kk,"Sokolovská, Praha - Karlín",2.2219890722588422,Sokolovská,Praha
+14516,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+14520,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská
+14542,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+14548,21500,47,1+kk,"Poděbradská, Praha - Vysočany",7.297307879107369,Poděbradská,Praha
+14640,10550,78,3+kk,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.63706770855225,Hlavní třída,Hlavní třída
+14642,7250,35,1+kk,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3411688110442,Slovenská,Slovenská
+14671,12900,72,3+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3411688110442,Slovenská,Slovenská
+14675,12250,82,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.01802776423375,Hlavní třída,Hlavní třída
+14742,12550,52,2+1,"Hybešova, Havířov - Havířov-město, Moravskoslezský kraj",289.3280264912748,Hybešova,Hybešova
+14754,11350,68,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.0533297061106,Hlavní třída,Hlavní třída
+14758,8750,37,1+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.4140583857465,Slovenská,Slovenská
+14762,26233,36,1+kk,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+14763,11450,77,3+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.6712081627977,Hlavní třída,Hlavní třída
+14791,9750,54,2+1,"Hlavní třída, Havířov - Havířov-město, Moravskoslezský kraj",289.08779022371476,Hlavní třída,Hlavní třída
+14912,8400,35,1+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.4177282902935,Slovenská,Slovenská
+14925,8000,35,1+kk,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.4123494028312,Slovenská,Slovenská
+14947,7400,35,1+kk,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3440535482052,Slovenská,Slovenská
+14972,23000,46,1+kk,"Poděbradská, Praha - Hloubětín",7.381682561913642,Poděbradská,Praha
+14974,18900,46,1+kk,"Bělohorská, Praha - Břevnov",4.166644762934474,Bělohorská,Praha
+14982,8500,40,1+1,"Ostrava - Mariánské Hory, Moravskoslezský kraj",276.559980601535,Ostrava - Mariánské Hory,Ostrava
+14997,22500,33,1+kk,"Poděbradská, Praha - Vysočany",6.4280547864392625,Poděbradská,Praha
+15066,27000,56,2+kk,"Poděbradská, Praha - Hloubětín",7.611044121854354,Poděbradská,Praha
+15098,17990,32,1+kk,"Poděbradská, Praha - Vysočany",6.465538878007063,Poděbradská,Praha
+15100,25900,30,2+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
+15102,15900,22,1+kk,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.28289561211403,Václavská,Václavská
+15103,15900,17,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38108111473176,Hybešova,Hybešova
+15105,25000,53,2+kk,"Pod Harfou, Praha - Vysočany",6.75834170087511,Pod Harfou,Praha
+15108,32900,95,3+1,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
+15114,25900,30,2+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38108111473176,Hybešova,Hybešova
+15117,15900,30,1+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
+15118,15900,27,1+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
+15119,15900,31,1+1,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.2195128947843,Václavská,Václavská
+15122,15900,19,1+kk,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.28289561211403,Václavská,Václavská
+15123,15900,29,1+1,"Václavská, Brno - Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
+15124,15900,20,1+kk,"Václavská, Staré Brno, Jihomoravský kraj",186.16950848646553,Václavská,Václavská
+15125,15900,32,1+1,"Václavská, Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
+15230,21990,48,1+1,"Sokolovská, Praha - Vysočany",6.079887975799933,Sokolovská,Praha
+15270,32000,63,3+kk,"Pod Harfou, Praha - Vysočany",6.782776664444976,Pod Harfou,Praha
+15295,27500,75,3+1,"Svitavská, Brno - Husovice, Jihomoravský kraj",186.89727894789908,Svitavská,Svitavská
+15388,56462,117,atypické,"Plzeňská, Praha - Smíchov",2.029027880407129,Plzeňská,Praha
+15394,28900,80,3+kk,"Bělohorská, Praha - Břevnov",4.166644762934474,Bělohorská,Praha
+15408,18500,32,1+kk,"Bělohorská, Praha - Břevnov",4.425171791584384,Bělohorská,Praha
+15411,12250,53,2+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.34907910943645,Slovenská,Slovenská
+15426,20000,56,2+kk,"Plzeňská, Praha - Smíchov",2.4922936038265315,Plzeňská,Praha
+15469,19500,48,2+1,"Svitavská, Brno - Husovice, Jihomoravský kraj",186.89727894789908,Svitavská,Svitavská
+15470,20500,35,1+kk,"Poděbradská, Praha - Vysočany",6.476538904462471,Poděbradská,Praha
+15484,20990,42,1+kk,"Poděbradská, Praha - Hloubětín",7.702318985293345,Poděbradská,Praha
+15504,22000,50,2+kk,"Pod Harfou, Praha - Vysočany",6.735816079213669,Pod Harfou,Praha
+15529,36496,23,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
+15554,20990,54,2+1,"Poděbradská, Praha - Vysočany",7.214574475343503,Poděbradská,Praha
+15598,24000,54,2+kk,"Pod Harfou, Praha - Vysočany",6.745307314003063,Pod Harfou,Praha
+15600,22900,45,1+1,"Plzeňská, Praha - Smíchov",2.48109126236284,Plzeňská,Praha
+15618,16500,82,3+1,"Sokolovská, Plzeň - Bolevec, Plzeňský kraj",82.985806391835,Sokolovská,Sokolovská
+15634,26500,68,2+1,"Václavská, Praha - Nové Město",1.408441954284853,Václavská,Praha
+15696,46251,51,atypické,"Plzeňská, Praha - Košíře",3.9214606310646105,Plzeňská,Praha
+15706,13200,25,1+kk,"Poděbradská, Praha - Vysočany",6.567117958307079,Poděbradská,Praha
+15772,27000,78,2+1,"Sokolovská, Praha - Karlín",1.5978211364998829,Sokolovská,Praha
+15796,17000,54,2+kk,"Olomouc - Nová Ulice, Olomoucký kraj",209.69968704445793,Olomouc - Nová Ulice,Olomouc
+15816,41038,36,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+15822,16000,32,1+kk,"Bělohorská, Praha - Břevnov",3.6077209386507776,Bělohorská,Praha
+15827,16990,54,2+1,"Poděbradská, Praha - Vysočany",7.214574475343503,Poděbradská,Praha
+15835,41267,35,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
+15894,10000,30,1+1,"Plzeňská, České Budějovice - České Budějovice 3, Jihočeský kraj",122.10432158595482,Plzeňská,Plzeňská
+15977,17990,32,1+kk,"Poděbradská, Praha - Hloubětín",7.6519802412066795,Poděbradská,Praha
+15978,37648,20,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
+15996,15900,17,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
+16004,15900,19,1+kk,"Václavská, Staré Brno, Jihomoravský kraj",186.16950848646553,Václavská,Václavská
+16006,25900,31,2+1,"Václavská, Staré Brno, Jihomoravský kraj",186.19818062388123,Václavská,Václavská
+16007,25900,32,2+1,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38108111473176,Hybešova,Hybešova
+16009,23500,51,2+1,"Bělohorská, Praha - Břevnov",4.186682827997769,Bělohorská,Praha
+16021,19500,28,1+kk,"Poděbradská, Praha - Hloubětín",7.7590542661469275,Poděbradská,Praha
+16026,13490,33,1+kk,"Poděbradská, Praha - Vysočany",6.779946823812635,Poděbradská,Praha
+16036,36559,23,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
+16062,42664,28,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16065,51603,46,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16066,43070,28,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16076,20990,51,2+kk,"Pod Harfou, Praha - Vysočany",6.790567508587046,Pod Harfou,Praha
+16095,19990,39,1+kk,"Poděbradská, Praha - Hloubětín",7.702318985293345,Poděbradská,Praha
+16103,15900,23,1+kk,"Hybešova, Brno - Staré Brno, Jihomoravský kraj",186.38139178047308,Hybešova,Hybešova
+16134,45102,30,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16135,45102,37,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16136,42257,31,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16161,36599,20,atypické,"Plzeňská, Praha - Smíchov",2.3466053104307654,Plzeňská,Praha
+16167,42257,30,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16202,23510,33,atypické,"Sokolovská, Praha - Karlín",2.1892331655216384,Sokolovská,Praha
+16212,50790,45,atypické,"Veletržní, Praha - Bubeneč",1.579924355291973,Veletržní,Praha
+16290,10250,53,2+1,"Slovenská, Karviná - Karviná-město, Moravskoslezský kraj",297.3384865851369,Slovenská,Slovenská
+16293,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+16294,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+16301,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská
+16308,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+16309,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+16316,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská
+16323,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+16324,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+16331,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská
+16338,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+16339,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+16346,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská
+16353,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+16354,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+16361,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská
+16368,44900,150,4+1,"Pod Harfou, Praha - Vysočany",6.595262385101159,Pod Harfou,Praha
+16369,15000,62,2+kk,"Sokolovská, Olomouc - Klášterní Hradisko, Olomoucký kraj",211.94835009679446,Sokolovská,Sokolovská
+16376,13408,56,2+1,"Svitavská, Blansko - Blansko, Jihomoravský kraj",179.53026242252244,Svitavská,Svitavská

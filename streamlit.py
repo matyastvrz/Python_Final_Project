@@ -20,7 +20,7 @@ st.header("About")
 
 st.text("This is an interactive environment for the Data Processing in Python final project created by Matyáš Tvrz and Jonathan Eugenio Gaeta. " \
 "We scrape data from sreality.cz and bezrealitky.cz on rental properties in the Czech Republic. " \
-"In the first part, we present an interactive heatmap (choropleth) based on the median rental prices per meter squared in each region. " \
+"In the first part, we present an interactive heatmap (choropleth) based on the median rental prices per meter squared in each region (data on regions was downloaded from https://github.com/siwekm/czech-geojson). " \
 "The map includes popups with information about specific properties including a link to the public listing. " \
 "The user can filter the properties based on characteristics and price. " \
 "In the second part, we analyze the data. " \
@@ -30,6 +30,10 @@ st.text("This is an interactive environment for the Data Processing in Python fi
 "Finally, we estimate two simple regressions: a level OLS on log-level OLS. " \
 "We allow for the user to toggle controls for districts and flat types, and display the results, along with diagnostic plots and a fixed effects plot for districts." )
 
+st.subheader("Known Issues")
+
+st.text("The sreality.cz dataset cannot be updated, the API site returns a 404 error. Updating the data at this point only requests bezrealitky data. " \
+"Some variables from the old sreality.cz dataset do not fully correspond to real public listings.")
 
 # heatmap
 st.header("Heatmap of Rental Prices")
@@ -62,7 +66,11 @@ with col1:
     )
 
     # area and price sliders
-    df_max = pd.read_parquet("data/processed/df_heatmap.parquet")
+    try:
+        df_max = pd.read_parquet("data/processed/df_heatmap.parquet")
+    except Exception as e:
+        st.error(f"Unable to load heatmap data: {e}")
+        st.stop()
 
     # set correct maximum (999th quantile for extreme outliers) values for sliders
     area_max = int(df_max['area'].quantile(0.999))
@@ -90,7 +98,11 @@ with col2:
 # analysis
 st.header("Analysis of Determinants")
 
-df_reg = pd.read_csv("data/processed/df_reg.csv")
+try:
+    df_reg = pd.read_csv("data/processed/df_reg.csv")
+except Exception as e:
+    st.error(f"Unable to load analysis data: {e}")
+    st.stop()
 
 # filters in sidebar
 st.subheader("Filters")

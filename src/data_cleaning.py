@@ -8,8 +8,16 @@ import re
 import random
 from geopy.distance import geodesic
 
+def _read_json_dataframe(path):
+    """Read JSON data error handling"""
+    try:
+        return pd.read_json(path)
+    except Exception as e:
+        raise FileNotFoundError(f"Unable to load JSON data from {path}: {e}")
+
 def process_data(update = False):
-    """Build cleaned rental property datasets from raw JSON sources.
+    """
+    Build cleaned rental property datasets from raw JSON sources.
 
     Args:
         update (bool): If True, refresh data from live scraping routines; otherwise use saved raw JSON files.
@@ -18,15 +26,22 @@ def process_data(update = False):
         Saves processed CSV and parquet files under data/processed.
     """
 
-    #if update == False:
+    if update == False:
         # get sreality df from last request
-    df_sreality = pd.read_json("data/raw/df_sreality.json")
-    df_sreality = pd.DataFrame(df_sreality)
-    #else:
+        df_sreality = _read_json_dataframe("data/raw/df_sreality.json")
+        df_sreality = pd.DataFrame(df_sreality)
+    else:
         # or get newest sreality df, takes about 6 minutes
-        #from src.function_scripts import request_sreality_all
-        #df_sreality = request_sreality_all() 
-        #df_sreality.to_json("data/raw/df_sreality.json", orient="records")
+        try:
+            from src.function_scripts import request_sreality_all
+            df_sreality = request_sreality_all()
+            if df_sreality.empty:
+                raise ValueError("Sreality update returned no data.")
+            df_sreality.to_json("data/raw/df_sreality.json", orient="records")
+        except Exception as e:
+            print(f"Sreality update failed: {e}. Using existing raw data file.")
+            df_sreality = _read_json_dataframe("data/raw/df_sreality.json")
+            df_sreality = pd.DataFrame(df_sreality)
 
     # get square meters (area) and flat type from name
     from src.function_scripts import name_to_area
@@ -46,14 +61,21 @@ def process_data(update = False):
 
     if update == False:
         # get bezrealitky df from last request
-        df_bezrealitky = pd.read_json("data/raw/df_bezrealitky.json")
+        df_bezrealitky = _read_json_dataframe("data/raw/df_bezrealitky.json")
         df_bezrealitky = pd.DataFrame(df_bezrealitky)
     else:
         # or get newest bezrealitky df, takes about 10 minutes
-        from src.function_scripts import request_bezrealitky
-        bezrealitky_url = "https://www.bezrealitky.cz/vyhledat?estateType=BYT&location=exact&offerType=PRONAJEM&osm_value=%C4%8Cesko&regionOsmIds=R51684&currency=CZK"
-        df_bezrealitky = request_bezrealitky(bezrealitky_url, 171)
-        df_bezrealitky.to_json("data/raw/df_bezrealitky.json", orient="records")
+        try:
+            from src.function_scripts import request_bezrealitky
+            bezrealitky_url = "https://www.bezrealitky.cz/vyhledat?estateType=BYT&location=exact&offerType=PRONAJEM&osm_value=%C4%8Cesko&regionOsmIds=R51684&currency=CZK"
+            df_bezrealitky = request_bezrealitky(bezrealitky_url, 171)
+            if df_bezrealitky.empty:
+                raise ValueError("Bezrealitky update returned no data.")
+            df_bezrealitky.to_json("data/raw/df_bezrealitky.json", orient="records")
+        except Exception as e:
+            print(f"Bezrealitky update failed: {e}. Using existing raw data file.")
+            df_bezrealitky = _read_json_dataframe("data/raw/df_bezrealitky.json")
+            df_bezrealitky = pd.DataFrame(df_bezrealitky)
 
     # convert flat_type to standard nomenclature
     mapping = {
@@ -154,9 +176,6 @@ def process_data(update = False):
     min_obs = 10
     district_counts = df_reg['district'].value_counts()
     df_reg = df_reg[df_reg['district'].isin(district_counts[district_counts >= min_obs].index)]
-
-
-
 
     # Save analysis dataframe
     df_reg.to_csv("data/processed/df_reg.csv")

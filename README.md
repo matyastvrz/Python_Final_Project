@@ -23,8 +23,10 @@ streamlit run streamlit.py
 
 ## Or continue through the main notebook...
 
-### Known Issue:
+### Known Issues:
 The sreality.cz dataset cannot be updated, the API site returns a 404 error. Updating the data at this point only requests bezrealitky data.
+
+Some variables from the old sreality.cz dataset do not fully correspond to real public listings.
 
 ## Project Structure
 

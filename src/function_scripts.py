@@ -114,11 +114,14 @@ def get_link_and_image(df):
 
     def build_url(row):
         """Build the Sreality listing URL from a row's metadata."""
-        seo = row["seo"]
-        type = clean_flat_type(row["flat_type"])
-        locality = slugify(seo["locality"])
-        hid = row["hash_id"]
-        return f"{base}/pronajem/byt/{type}/{locality}/{hid}"
+        try:
+            seo = row["seo"]
+            type = clean_flat_type(row["flat_type"])
+            locality = slugify(seo["locality"])
+            hid = row["hash_id"]
+            return f"{base}/pronajem/byt/{type}/{locality}/{hid}"
+        except Exception:
+            return None
 
     df["url"] = df.apply(build_url, axis=1)
 
@@ -128,16 +131,16 @@ def get_link_and_image(df):
 
 def name_to_area(nm):
     """Extract apartment area in square meters from a listing title string."""
-    splitted_str = nm.split()
-    m2_idx = splitted_str.index('m²')
-    return int(splitted_str[m2_idx - 1])
+    try:
+        splitted_str = nm.split()
+        m2_idx = splitted_str.index('m²')
+        return int(splitted_str[m2_idx - 1])
+    except (ValueError, IndexError) as e:
+        raise ValueError(f"Unable to parse area from '{nm}': {e}")
     
-
-
 
 #---------------------
 # bezrealitky scraping
-#---------------------
 #---------------------
 
 def request_bezrealitky(search_url, max_pages=20):
@@ -152,90 +155,89 @@ def request_bezrealitky(search_url, max_pages=20):
         "Accept-Language": "en-GB,en;q=0.9"
     })
 
-    for page_num in range(1, max_pages + 1):
-        # build url for page
-        current_url = f"{search_url}&page={page_num}"
-        print(f"Fetching: Page {page_num}...")
-        
-        try:
-            response = session.get(current_url, timeout=15)
-            response.raise_for_status()
+    try:
+        for page_num in range(1, max_pages + 1):
+            # build url for page
+            current_url = f"{search_url}&page={page_num}"
+            print(f"Fetching: Page {page_num}...")
             
-            # extract json from the __NEXT_DATA__ script tag
-            html_content = response.text
-            start_marker = '<script id="__NEXT_DATA__" type="application/json">'
-            end_marker = '</script>'
-            
-            start_index = html_content.find(start_marker)
-            if start_index == -1:
-                print("End of results reached or structure changed.")
-                break
+            try:
+                response = session.get(current_url, timeout=15)
+                response.raise_for_status()
                 
-            json_start = start_index + len(start_marker)
-            json_end = html_content.find(end_marker, json_start)
-            json_str = html_content[json_start:json_end]
-            
-            data = json.loads(json_str)
-            apollo_cache = data.get('props', {}).get('pageProps', {}).get('apolloCache', {})
-            
-            # count listings
-            listings_on_page = 0
-            
-            for key, value in apollo_cache.items():
-                if key.startswith('Advert:'):
-                    listings_on_page += 1
+                # extract json from the __NEXT_DATA__ script tag
+                html_content = response.text
+                start_marker = '<script id="__NEXT_DATA__" type="application/json">'
+                end_marker = '</script>'
+                
+                start_index = html_content.find(start_marker)
+                if start_index == -1:
+                    print("End of results reached or structure changed.")
+                    break
                     
-                    # extract variable info
-                    gps = value.get('gps', {})
-                    main_img = value.get('mainImage', {})
-                    img_id = main_img.get('__ref') if isinstance(main_img, dict) else None
-                    
-                    # get image url if exists
-                    image_url = 'N/A'
-                    if img_id and img_id in apollo_cache:
-                        image_url = apollo_cache[img_id].get('url({"filter":"RECORD_MAIN"})', 'N/A')
+                json_start = start_index + len(start_marker)
+                json_end = html_content.find(end_marker, json_start)
+                json_str = html_content[json_start:json_end]
+                
+                data = json.loads(json_str)
+                apollo_cache = data.get('props', {}).get('pageProps', {}).get('apolloCache', {})
+                
+                # count listings
+                listings_on_page = 0
+                
+                for key, value in apollo_cache.items():
+                    if key.startswith('Advert:'):
+                        listings_on_page += 1
+                        
+                        # extract variable info
+                        gps = value.get('gps', {})
+                        main_img = value.get('mainImage', {})
+                        img_id = main_img.get('__ref') if isinstance(main_img, dict) else None
+                        
+                        # get image url if exists
+                        image_url = 'N/A'
+                        if img_id and img_id in apollo_cache:
+                            image_url = apollo_cache[img_id].get('url({"filter":"RECORD_MAIN"})', 'N/A')
 
-                    all_extracted_data.append({
-                        'locality': value.get('address({"locale":"CS"})', 'N/A'),
-                        'price': value.get('price'),
-                        'flat_type': value.get('disposition', 'N/A'),
-                        'area': value.get('surface'),
-                        'url': f"https://www.bezrealitky.cz/nemovitosti-byty-domy/{value.get('uri', '')}",
-                        'image': image_url,
-                        'lat': gps.get('lat') if isinstance(gps, dict) else None,
-                        'lon': gps.get('lng') if isinstance(gps, dict) else None
-                    })
-            
-            print(f"Found {listings_on_page} listings on page {page_num}.")
-            
-            # if no listings, end
-            if listings_on_page == 0:
-                print("No more listings found. Finishing.")
+                        all_extracted_data.append({
+                            'locality': value.get('address({"locale":"CS"})', 'N/A'),
+                            'price': value.get('price'),
+                            'flat_type': value.get('disposition', 'N/A'),
+                            'area': value.get('surface'),
+                            'url': f"https://www.bezrealitky.cz/nemovitosti-byty-domy/{value.get('uri', '')}",
+                            'image': image_url,
+                            'lat': gps.get('lat') if isinstance(gps, dict) else None,
+                            'lon': gps.get('lng') if isinstance(gps, dict) else None
+                        })
+                
+                print(f"Found {listings_on_page} listings on page {page_num}.")
+                
+                # if no listings, end
+                if listings_on_page == 0:
+                    print("No more listings found. Finishing.")
+                    break
+                
+                # wait between requests
+                time.sleep(2.5)
+
+            except Exception as e:
+                print(f"Error on page {page_num}: {e}")
                 break
-            
-            # wait between requests
-            time.sleep(2.5)
 
-        except Exception as e:
-            print(f"Error on page {page_num}: {e}")
-            break
+    except Exception as e:
+        print(f"Bezrealitky scraping failed: {e}")
 
     # convert to df
     df = pd.DataFrame(all_extracted_data)
     
     return df
 
+
 #---------------------
 # chloropleth functions
 #---------------------
 
-def add_choropleth_layer(
-    m,
-    geo_df,
-    properties_gdf,
-    layer_name,
-    fill_color="YlOrRd"
-):
+def add_choropleth_layer(m, geo_df, properties_gdf, layer_name, fill_color="YlOrRd"):
     """Render a choropleth layer of median rent per square meter on a folium map."""
 
     # ensure CRS
@@ -288,9 +290,6 @@ def add_choropleth_layer(
     return choropleth
 
 
-
-
-
 #---------------------
 # streamlit functions
 #---------------------
@@ -298,24 +297,27 @@ def add_choropleth_layer(
 # load data for streamlit heatmap
 def load_data():
     """Load preprocessed heatmap and property datasets for Streamlit visualization."""
+    try:
+        df_heatmap = pd.read_parquet(
+            "data/processed/df_heatmap.parquet"
+        )
 
-    df_heatmap = pd.read_parquet(
-        "data/processed/df_heatmap.parquet"
-    )
+        df_sreality_property = pd.read_parquet(
+            "data/processed/df_sreality_property.parquet"
+        )
 
-    df_sreality_property = pd.read_parquet(
-        "data/processed/df_sreality_property.parquet"
-    )
+        df_bezrealitky_property = pd.read_parquet(
+            "data/processed/df_bezrealitky_property.parquet"
+        )
 
-    df_bezrealitky_property = pd.read_parquet(
-        "data/processed/df_bezrealitky_property.parquet"
-    )
-
-    return (
-        df_heatmap,
-        df_sreality_property,
-        df_bezrealitky_property
-    )
+        return (
+            df_heatmap,
+            df_sreality_property,
+            df_bezrealitky_property
+        )
+    except Exception as e:
+        print(f"Failed to load Streamlit data: {e}")
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
 # filter properties based on toggles and sliders
 def filter_properties(df, selected_flat_types, area_range, price_range):

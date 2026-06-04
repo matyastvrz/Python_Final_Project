@@ -13,15 +13,19 @@ import webbrowser
 def draw_heatmap():
     """Create and open a standalone folium heatmap of rental listings."""
 
-    # read geojson files on administrative regions
-    okresy = gpd.read_file("data/raw/okresy.json") 
-    kraje = gpd.read_file("data/raw/kraje.json") 
-    obce = gpd.read_file("data/raw/obce.json")
+    try:
+        # read geojson files on administrative regions
+        okresy = gpd.read_file("data/raw/okresy.json") 
+        kraje = gpd.read_file("data/raw/kraje.json") 
+        obce = gpd.read_file("data/raw/obce.json")
 
-    #read parquet files on properties 
-    df_heatmap = pd.read_parquet("data/processed/df_heatmap.parquet")
-    df_sreality_property = pd.read_parquet("data/processed/df_sreality_property.parquet")
-    df_bezrealitky_property = pd.read_parquet("data/processed/df_bezrealitky_property.parquet")
+        #read parquet files on properties 
+        df_heatmap = pd.read_parquet("data/processed/df_heatmap.parquet")
+        df_sreality_property = pd.read_parquet("data/processed/df_sreality_property.parquet")
+        df_bezrealitky_property = pd.read_parquet("data/processed/df_bezrealitky_property.parquet")
+    except Exception as e:
+        print(f"Failed to build standalone heatmap: {e}")
+        return None
 
     # base map, centered on CZ
     m = folium.Map(location=(49.75, 15.40), zoom_start = 8)
@@ -211,15 +215,19 @@ def draw_heatmap():
 def draw_heatmap_streamlit(region_level="Okresy", property_layer="All", show_heatmap=True, selected_flat_types=None, area_range=(0, 200), price_range=(0, 100_000)):
     """Build a folium map for Streamlit with filtered rental listings and optional choropleth."""
     
-    # read geojson files on administrative regions
-    okresy = gpd.read_file("data/raw/okresy.json") 
-    kraje = gpd.read_file("data/raw/kraje.json") 
-    obce = gpd.read_file("data/raw/obce.json")
+    try:
+        # read geojson files on administrative regions
+        okresy = gpd.read_file("data/raw/okresy.json") 
+        kraje = gpd.read_file("data/raw/kraje.json") 
+        obce = gpd.read_file("data/raw/obce.json")
 
-    #read parquet files on properties 
-    df_heatmap = pd.read_parquet("data/processed/df_heatmap.parquet")
-    df_sreality_property = pd.read_parquet("data/processed/df_sreality_property.parquet")
-    df_bezrealitky_property = pd.read_parquet("data/processed/df_bezrealitky_property.parquet")
+        #read parquet files on properties 
+        df_heatmap = pd.read_parquet("data/processed/df_heatmap.parquet")
+        df_sreality_property = pd.read_parquet("data/processed/df_sreality_property.parquet")
+        df_bezrealitky_property = pd.read_parquet("data/processed/df_bezrealitky_property.parquet")
+    except Exception as e:
+        print(f"Failed to build Streamlit heatmap: {e}")
+        return folium.Map(location=(49.75, 15.40), zoom_start=7)
 
     # apply filters to heatmap data
     if selected_flat_types is not None:

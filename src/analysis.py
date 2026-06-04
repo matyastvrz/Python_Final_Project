@@ -314,8 +314,8 @@ def run_ols(df_reg, include_flat_type=True, include_district=True):
     a = model.params['area']
     d = model.params['distance_prague_km']
     print(f'\n── Coefficient interpretation ──────────────────────────────')
-    print(f'  area            : {a:.4f}  →  +{a*100:.2f}Kč rent per extra m²')
-    print(f'  dist. to Prague : {d:.4f}  →  {d*100:+.2f}Kč rent per extra km')
+    print(f'  area            : {a:.4f}  →  +{a:.2f}Kč rent per extra m²')
+    print(f'  dist. to Prague : {d:.4f}  →  {d:+.2f}Kč rent per extra km')
     print(f'────────────────────────────────────────────────────────────')
     return model
 
