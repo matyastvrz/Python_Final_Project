@@ -211,3 +211,38 @@ def request_bezrealitky(search_url, max_pages=20):
     df = pd.DataFrame(all_extracted_data)
     
     return df
+
+
+def extract_city(district):
+    """Map a district string to its parent city."""
+    if not isinstance(district, str):
+        return None
+    d = district.strip()
+
+    if d.startswith('Praha'):
+        return 'Praha'
+    if d.startswith('Brno'):
+        return 'Brno'
+    if d.startswith('Ostrava'):
+        return 'Ostrava'
+    if d.startswith('Plzeň') or d.startswith('Plzen'):
+        return 'Plzeň'
+    if d.startswith('Liberec'):
+        return 'Liberec'
+    if d.startswith('Olomouc'):
+        return 'Olomouc'
+    if d.startswith('České Budějovice'):
+        return 'České Budějovice'
+    if d.startswith('Hradec Králové'):
+        return 'Hradec Králové'
+    if d.startswith('Pardubice'):
+        return 'Pardubice'
+    if d.startswith('Zlín'):
+        return 'Zlín'
+    if d.startswith('Havířov'):
+        return 'Havířov'
+    if d.startswith('Kladno'):
+        return 'Kladno'
+
+    # for all other districts, use the district name as city
+    return d
