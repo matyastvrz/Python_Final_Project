@@ -57,6 +57,12 @@ plt.rcParams.update({
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 def _fmt_kczk(ax, axis='x'):
+    """Format axis tick labels as thousands of Czech koruna.
+
+    Args:
+        ax: Matplotlib axis object.
+        axis (str): Which axis to format, either 'x' or 'y'.
+    """
     fmt = mticker.FuncFormatter(lambda v, _: f"{v/1000:.0f}k")
     if axis == 'x': ax.xaxis.set_major_formatter(fmt)
     else:           ax.yaxis.set_major_formatter(fmt)
@@ -66,9 +72,14 @@ def _main_df(df):
     return df[df['flat_type'].isin(MAIN_TYPES)].copy()
 
 def _sample_by_type(df, n=50):
-    """
-    Sample up to n rows per flat type. 
-    Uses a simple loop to stay compatible with pandas 2.x.
+    """Sample up to n rows per flat type for visualization.
+
+    Args:
+        df: DataFrame with a 'flat_type' column.
+        n (int): Maximum rows to sample per flat type.
+
+    Returns:
+        pandas.DataFrame: Sampled rows across the main flat types.
     """
     parts = [
         g.sample(min(len(g), n), random_state=42)
@@ -79,17 +90,20 @@ def _sample_by_type(df, n=50):
     return pd.concat(parts) if parts else df
 
 def _big_title(fig, text, y=0.97):
+    """Render a large centered title on a figure."""
     fig.text(0.5, y, text, ha='center', va='bottom',
              fontsize=15, fontweight='bold', color=TEXT)
 
 
 # ── load data ─────────────────────────────────────────────────────────────────
 def load_data(path="data/processed/df_reg.csv"):
+    """Load the prepared regression dataset from CSV."""
     return pd.read_csv(path)
 
 
 # ── summary stats by flat type ────────────────────────────────────────────────
 def summary_stats_type(df_reg):
+    """Compute summary statistics by flat type."""
     df = df_reg.copy()
     df['price_m2'] = df['price'] / df['area']
     return (
@@ -105,6 +119,7 @@ def summary_stats_type(df_reg):
 
 # ── interactive summary stats ─────────────────────────────────────────────────
 def summary_stats_loc_interactive(df_reg):
+    """Display interactive summary tables for cities and districts."""
     df = df_reg.copy()
     df['price_m2'] = df['price'] / df['area']
  
@@ -137,6 +152,7 @@ def summary_stats_loc_interactive(df_reg):
     out       = widgets.Output()
  
     def show(city):
+        """Render the selected city summary and optional district breakdown."""
         out.clear_output(wait=True)
         with out:
             if city == 'All':
@@ -275,6 +291,16 @@ def plot_eda(df_reg):
 
 # ── OLS (levels) ──────────────────────────────────────────────────────────────
 def run_ols(df_reg, include_flat_type=True, include_district=True):
+    """Fit an OLS regression model for rent levels.
+
+    Args:
+        df_reg: Prepared regression DataFrame.
+        include_flat_type (bool): Include flat type fixed effects.
+        include_district (bool): Include district fixed effects.
+
+    Returns:
+        statsmodels.regression.linear_model.RegressionResultsWrapper: Fitted model.
+    """
     base = 'price ~ area + distance_prague_km'
     if include_flat_type: base += ' + C(flat_type)'
     if include_district:
@@ -344,6 +370,17 @@ def plot_diagnostics(df_reg, model):
 
 # ── log-OLS ───────────────────────────────────────────────────────────────────
 def run_log_ols(df_reg, include_flat_type=True, include_district=True):
+    """Fit a log-level OLS regression model for rent.
+
+    Args:
+        df_reg: Prepared regression DataFrame.
+        include_flat_type (bool): Include flat type fixed effects.
+        include_district (bool): Include district fixed effects.
+
+    Returns:
+        tuple: (fitted model, baseline district label).
+    """
+    baseline_district = None
     df_reg = df_reg.copy()
     df_reg['log_price'] = np.log(df_reg['price'])
     base = 'log_price ~ area + distance_prague_km'

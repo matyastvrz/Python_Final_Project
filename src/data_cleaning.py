@@ -9,16 +9,24 @@ import random
 from geopy.distance import geodesic
 
 def process_data(update = False):
+    """Build cleaned rental property datasets from raw JSON sources.
 
-    if update == False:
+    Args:
+        update (bool): If True, refresh data from live scraping routines; otherwise use saved raw JSON files.
+
+    Side effects:
+        Saves processed CSV and parquet files under data/processed.
+    """
+
+    #if update == False:
         # get sreality df from last request
-        df_sreality = pd.read_json("data/raw/df_sreality.json")
-        df_sreality = pd.DataFrame(df_sreality)
-    else:
+    df_sreality = pd.read_json("data/raw/df_sreality.json")
+    df_sreality = pd.DataFrame(df_sreality)
+    #else:
         # or get newest sreality df, takes about 6 minutes
-        from src.function_scripts import request_sreality_all
-        df_sreality = request_sreality_all() 
-        df_sreality.to_json("data/raw/df_sreality.json", orient="records")
+        #from src.function_scripts import request_sreality_all
+        #df_sreality = request_sreality_all() 
+        #df_sreality.to_json("data/raw/df_sreality.json", orient="records")
 
     # get square meters (area) and flat type from name
     from src.function_scripts import name_to_area

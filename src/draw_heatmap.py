@@ -11,6 +11,7 @@ import webbrowser
 #---------------------
 
 def draw_heatmap():
+    """Create and open a standalone folium heatmap of rental listings."""
 
     # read geojson files on administrative regions
     okresy = gpd.read_file("data/raw/okresy.json") 
@@ -208,6 +209,7 @@ def draw_heatmap():
 #---------------------
 
 def draw_heatmap_streamlit(region_level="Okresy", property_layer="All", show_heatmap=True, selected_flat_types=None, area_range=(0, 200), price_range=(0, 100_000)):
+    """Build a folium map for Streamlit with filtered rental listings and optional choropleth."""
     
     # read geojson files on administrative regions
     okresy = gpd.read_file("data/raw/okresy.json") 

@@ -11,7 +11,7 @@ import folium
 from folium.plugins import HeatMap, MarkerCluster
 
 #---------------------
-# sreality scraping
+# sreality scraping - does not work anymore
 #---------------------
 
 def request_sreality(page, category_main_str, category_type_str, locality_region_id=10):
@@ -48,6 +48,7 @@ def request_sreality(page, category_main_str, category_type_str, locality_region
 
 
 def convert_sreality_data_to_df(sreality_data):
+    """Convert Sreality API response payload into a pandas DataFrame."""
     if not isinstance(sreality_data, dict):
         return pd.DataFrame()
     if '_embedded' not in sreality_data or 'estates' not in sreality_data['_embedded']:
@@ -57,6 +58,7 @@ def convert_sreality_data_to_df(sreality_data):
 
 
 def request_multiple_sreality(category_main_str, category_type_str, locality_region_id=10):
+    """Request multiple pages of Sreality listings and concatenate them into one DataFrame."""
     list_of_dfs = []
     data, n_pages = request_sreality(
         1,
@@ -88,6 +90,7 @@ def request_multiple_sreality(category_main_str, category_type_str, locality_reg
 
 
 def request_sreality_all():
+    """Request all rentable flat listings from Sreality across Czech regions."""
     list_of_dfs = []
     for region_id in range(1, 15):
         df = request_multiple_sreality('flat', 'rent', locality_region_id=region_id)
@@ -97,16 +100,20 @@ def request_sreality_all():
 
 
 def get_link_and_image(df):
+    """Add property listing URLs and image links to a Sreality DataFrame."""
     base = "https://www.sreality.cz/detail"
 
     def slugify(text):
+        """Convert text to a URL-friendly slug."""
         return unidecode.unidecode(text).lower().replace(" ", "-")
     def clean_flat_type(x):
+        """Normalize flat type strings for URL construction."""
         if isinstance(x, str):
             return x.replace(" ", "")
         return ""
 
     def build_url(row):
+        """Build the Sreality listing URL from a row's metadata."""
         seo = row["seo"]
         type = clean_flat_type(row["flat_type"])
         locality = slugify(seo["locality"])
@@ -120,6 +127,7 @@ def get_link_and_image(df):
     return df
 
 def name_to_area(nm):
+    """Extract apartment area in square meters from a listing title string."""
     splitted_str = nm.split()
     m2_idx = splitted_str.index('m²')
     return int(splitted_str[m2_idx - 1])
@@ -130,8 +138,10 @@ def name_to_area(nm):
 #---------------------
 # bezrealitky scraping
 #---------------------
+#---------------------
 
 def request_bezrealitky(search_url, max_pages=20):
+    """Scrape Bezrealitky listing pages and return the extracted data as a DataFrame."""
     all_extracted_data = []
     session = requests.Session()
     
@@ -226,6 +236,7 @@ def add_choropleth_layer(
     layer_name,
     fill_color="YlOrRd"
 ):
+    """Render a choropleth layer of median rent per square meter on a folium map."""
 
     # ensure CRS
     geo_df = geo_df.to_crs("EPSG:4326")
@@ -286,6 +297,7 @@ def add_choropleth_layer(
 
 # load data for streamlit heatmap
 def load_data():
+    """Load preprocessed heatmap and property datasets for Streamlit visualization."""
 
     df_heatmap = pd.read_parquet(
         "data/processed/df_heatmap.parquet"
@@ -307,6 +319,7 @@ def load_data():
 
 # filter properties based on toggles and sliders
 def filter_properties(df, selected_flat_types, area_range, price_range):
+    """Filter property listings by flat type, area range, and price range."""
     df = df.copy()
     if selected_flat_types is not None:
         df = df[df['flat_type'].isin(selected_flat_types)]
@@ -318,6 +331,7 @@ def filter_properties(df, selected_flat_types, area_range, price_range):
 
 
 def add_properties(df, m):
+    """Add clustered property markers with popups to a folium map."""
     cluster = MarkerCluster().add_to(m)
 
     for _, row in df.iterrows():
@@ -347,6 +361,7 @@ def add_properties(df, m):
 
 # Extract city
 def extract_city(district, locality):
+    """Extract a normalized city name from district and locality values."""
     # ensure prague districts or street names dont get counted as cities (sometimes the street names is in the spot of the city)
     if 'Praha' in locality:
         return 'Praha'
